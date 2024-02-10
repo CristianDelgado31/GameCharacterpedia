@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Domain", "ProjectoCodigoFacilito.Domain\ProjectoCodigoFacilito.Domain.csproj", "{9AFCE116-B6D1-49C8-869E-56D6335C64AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Infraestructure", "ProjectoCodigoFacilito.Infraestructure\ProjectoCodigoFacilito.Infraestructure.csproj", "{B8719812-1734-4E9B-9EBF-093AB668A0E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AFCE116-B6D1-49C8-869E-56D6335C64AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFCE116-B6D1-49C8-869E-56D6335C64AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFCE116-B6D1-49C8-869E-56D6335C64AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFCE116-B6D1-49C8-869E-56D6335C64AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8719812-1734-4E9B-9EBF-093AB668A0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8719812-1734-4E9B-9EBF-093AB668A0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8719812-1734-4E9B-9EBF-093AB668A0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8719812-1734-4E9B-9EBF-093AB668A0E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
