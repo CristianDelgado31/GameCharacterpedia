@@ -1,8 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ProjectoCodigoFacilito.Domain.Entities;
 
 public class Character : BaseEntity
 {
-    public int IdCharacter { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
     public string Game { get; set; }
     public bool IsVisible { get; set; }
     public string History { get; set; }

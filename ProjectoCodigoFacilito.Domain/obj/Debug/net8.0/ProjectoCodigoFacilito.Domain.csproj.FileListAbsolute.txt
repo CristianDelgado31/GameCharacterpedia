@@ -1,0 +1,13 @@
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.deps.json
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.AssemblyInfoInputs.cache
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.AssemblyInfo.cs
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.csproj.CoreCompileInputs.cache
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.sourcelink.json
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Domain.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Domain.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.csproj.AssemblyReference.cache

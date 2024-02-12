@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectoCodigoFacilito.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbd6023d255ed44cb65358075357fb9686e07deb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectoCodigoFacilito.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectoCodigoFacilito.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

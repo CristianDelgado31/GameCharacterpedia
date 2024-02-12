@@ -14,12 +14,16 @@ public static class ConfigureServices
         IConfiguration configuration)
     {
         services.AddDbContext<ProjectDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("ProjectDbContext") ??
+            options.UseSqlServer(configuration.GetConnectionString("ProyectoCody") ??
                                  throw new InvalidOperationException(
                                      "Connection string 'ProjectDbContext' not found"))
             );
-        services.AddTransient<IUserRepository<User>, UserRepository>();
-        services.AddTransient<ICharacterRepository<Character>, CharacterRepository>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddTransient<IUserRepository, UserRepository>();
+        services.AddTransient<ICharacterRepository, CharacterRepository>();
+        
+            
         return services;
     }
 }
