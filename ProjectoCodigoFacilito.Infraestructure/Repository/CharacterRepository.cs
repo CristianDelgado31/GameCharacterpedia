@@ -25,9 +25,11 @@ public class CharacterRepository : ICharacterRepository
         throw new NotImplementedException();
     }
 
-    public Task<Character> CreateAsync(Character entity)
+    public async Task<Character> CreateAsync(Character entity)
     {
-        throw new NotImplementedException();
+        await _dbContext.Characters.AddAsync(entity);
+        await UnitOfWork.SaveChangesAsync();
+        return entity;
     }
 
     public Task<int> DeleteAsync(int id)

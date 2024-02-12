@@ -13,7 +13,6 @@ public class UserRepository : IUserRepository
     {
         _dbContext = dbContext;
         UnitOfWork = unitOfWork;
-
     }
 
     public IUnitOfWork UnitOfWork { get; }
@@ -21,9 +20,10 @@ public class UserRepository : IUserRepository
     public async Task<List<User>> GetAllAsync()
      => await _dbContext.Users.ToListAsync();
 
-    public Task<User> GetByIdAsync(int id)
+    public async Task<User?> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var user = await _dbContext.Users.FindAsync(id);
+        return user;
     }
 
     public async Task<User> CreateAsync(User entity)
@@ -34,9 +34,16 @@ public class UserRepository : IUserRepository
         return entity;
     }
 
-    public Task<int> DeleteAsync(int id)
+    public async Task<int> DeleteAsync(int id) // Soft delete (IsDeleted = true) no se borra fisicamente
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users
+            .Where(model => model.Id == id)
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(m => m.IsDeleted, true));
+        
+        // return await _dbContext.Users
+        //     .Where(model => model.Id == id)
+        //     .ExecuteDeleteAsync(); // ExecuteDeleteAsync() usa saveChangesAsync() internamente
     }
 
     public Task<int> UpdateCharacterAsync(int id, Character entity)
