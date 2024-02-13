@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
 using ProjectoCodigoFacilito.Infraestructure.Data;
@@ -15,10 +16,8 @@ public class CharacterRepository : ICharacterRepository
     }
     public IUnitOfWork UnitOfWork { get; }
 
-    public Task<List<Character>> GetAllAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<List<Character>> GetAllAsync()
+     => await _dbContext.Characters.ToListAsync();
 
     public Task<Character> GetByIdAsync(int id)
     {

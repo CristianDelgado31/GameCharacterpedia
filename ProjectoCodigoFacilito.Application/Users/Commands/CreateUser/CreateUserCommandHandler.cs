@@ -9,11 +9,10 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDTO>
     {
         private readonly IUserRepository _userRepository;
-        //private readonly IMapper _mapper;
-        public CreateUserCommandHandler(IUserRepository userRepository)//, IMapper mapper)
+        
+        public CreateUserCommandHandler(IUserRepository userRepository)
         {
             _userRepository = userRepository;
-            //_mapper = mapper;
         }
         public async Task<UserDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
@@ -23,14 +22,14 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
                 Email = request.Email,
                 Password = request.Password,
                 CreatedDate = DateTime.Now,
-                IsDeleted = false
+                IsDeleted = false,
+                ModifiedDate = DateTime.Now,
             };
             
             var result = await _userRepository.CreateAsync(userEntity);
             
-            //await _userRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
-            //return _mapper.Map<UserDTO>(result);
-            return new UserDTO(result.Id, result.Name, result.Email, result.Password, new List<Character>(), result.IsDeleted, result.CreatedDate);
+            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.listFavoriteCharacters,
+                result.IsDeleted, result.CreatedDate, result.ModifiedDate);
 
         }
     }

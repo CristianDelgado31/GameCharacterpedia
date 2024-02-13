@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
+using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 
@@ -32,7 +33,22 @@ public class UserController : ApiControllerBase
     public async Task<ActionResult<UserDTO>> Create(CreateUserCommand command)
     {
         var user = await Mediator.Send(command);
+        
         return Ok(user);    
+    }
+    
+    [HttpPut("{id}")]
+    public async Task<ActionResult<int>> Update(int id, UpdateUserCommand command)
+    {
+        if(id != command.Id)
+            return BadRequest();
+        
+        var result = await Mediator.Send(command);
+        
+        if(result == 0)
+            return NotFound();
+        
+        return Ok(result);
     }
     
     [HttpDelete("{id}")]

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
 using ProjectoCodigoFacilito.Infraestructure.Data;
@@ -18,7 +19,25 @@ public class UserRepository : IUserRepository
     public IUnitOfWork UnitOfWork { get; }
 
     public async Task<List<User>> GetAllAsync()
-     => await _dbContext.Users.ToListAsync();
+    {
+        //Es mas eficiente hacer una sola consulta a la base de datos
+        // var users = await _dbContext.Users
+        //     .Include(u => u.listFavoriteCharacters) // Carga los personajes favoritos de cada usuario
+        //     .ToListAsync();
+        //
+        // return users;
+        
+        var users = await _dbContext.Users.ToListAsync();
+        
+        foreach (var user in users)
+        {
+            user.listFavoriteCharacters = await _dbContext.Characters
+                .Where(character => character.CreatedById == user.Id)
+                .ToListAsync();
+        }
+        
+        return users;
+    }
 
     public async Task<User?> GetByIdAsync(int id)
     {
@@ -46,8 +65,15 @@ public class UserRepository : IUserRepository
         //     .ExecuteDeleteAsync(); // ExecuteDeleteAsync() usa saveChangesAsync() internamente
     }
 
-    public Task<int> UpdateCharacterAsync(int id, Character entity)
+    public async Task<int> UpdateUserAsync(int id, User entity)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users
+            .Where(model => model.Id == id)
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(m => m.Name, entity.Name)
+                .SetProperty(m => m.Email, entity.Email)
+                .SetProperty(m => m.Password, entity.Password)
+                .SetProperty(m => m.ModifiedDate, entity.ModifiedDate)
+            );
     }
 }
