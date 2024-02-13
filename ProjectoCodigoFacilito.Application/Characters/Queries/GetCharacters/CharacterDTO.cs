@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 
 public class CharacterDTO

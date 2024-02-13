@@ -12,8 +12,8 @@ using ProjectoCodigoFacilito.Infraestructure.Data;
 namespace ProjectoCodigoFacilito.Infraestructure.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20240212225747_NewAtributeBaseEntity")]
-    partial class NewAtributeBaseEntity
+    [Migration("20240213041739_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

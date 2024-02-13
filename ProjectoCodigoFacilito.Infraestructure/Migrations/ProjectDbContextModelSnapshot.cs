@@ -64,12 +64,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("CreatedById");
 
                     b.ToTable("Characters");
                 });
@@ -112,7 +109,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                 {
                     b.HasOne("ProjectoCodigoFacilito.Domain.Entities.User", null)
                         .WithMany("listFavoriteCharacters")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.User", b =>

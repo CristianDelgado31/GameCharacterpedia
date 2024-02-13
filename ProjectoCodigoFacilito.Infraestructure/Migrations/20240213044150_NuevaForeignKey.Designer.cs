@@ -12,8 +12,8 @@ using ProjectoCodigoFacilito.Infraestructure.Data;
 namespace ProjectoCodigoFacilito.Infraestructure.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20240211180035_NewInitialMigration")]
-    partial class NewInitialMigration
+    [Migration("20240213044150_NuevaForeignKey")]
+    partial class NuevaForeignKey
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,12 +67,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("CreatedById");
 
                     b.ToTable("Characters");
                 });
@@ -95,6 +92,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -112,7 +112,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                 {
                     b.HasOne("ProjectoCodigoFacilito.Domain.Entities.User", null)
                         .WithMany("listFavoriteCharacters")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.User", b =>
