@@ -20,20 +20,16 @@ public class UserRepository : IUserRepository
 
     public async Task<List<User>> GetAllAsync()
     {
-        //Es mas eficiente hacer una sola consulta a la base de datos
-        // var users = await _dbContext.Users
-        //     .Include(u => u.listFavoriteCharacters) // Carga los personajes favoritos de cada usuario
-        //     .ToListAsync();
-        //
-        // return users;
-        
         var users = await _dbContext.Users.ToListAsync();
+        var listReferencesId = await _dbContext.ReferenceIds.ToListAsync();
+        var listCharacters = await _dbContext.Characters.ToListAsync();
         
         foreach (var user in users)
         {
-            user.listFavoriteCharacters = await _dbContext.Characters
-                .Where(character => character.CreatedById == user.Id)
-                .ToListAsync();
+            user.listFavoriteCharacters = listReferencesId
+                .Where(referenceId => referenceId.UserId == user.Id)
+                .Join(listCharacters, referenceId => referenceId.CharacterId, character => character.Id, (referenceId, character) => character)
+                .ToList();
         }
         
         return users;

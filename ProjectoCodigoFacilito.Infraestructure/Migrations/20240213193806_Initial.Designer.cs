@@ -12,8 +12,8 @@ using ProjectoCodigoFacilito.Infraestructure.Data;
 namespace ProjectoCodigoFacilito.Infraestructure.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20240213041739_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20240213193806_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,14 +67,30 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
+
+                    b.ToTable("Characters");
+                });
+
+            modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.ReferenceId", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CharacterId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Characters");
+                    b.ToTable("ReferenceIds");
                 });
 
             modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.User", b =>
@@ -115,7 +131,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                 {
                     b.HasOne("ProjectoCodigoFacilito.Domain.Entities.User", null)
                         .WithMany("listFavoriteCharacters")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.User", b =>

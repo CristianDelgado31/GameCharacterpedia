@@ -71,6 +71,25 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                     b.ToTable("Characters");
                 });
 
+            modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.ReferenceId", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CharacterId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReferenceIds");
+                });
+
             modelBuilder.Entity("ProjectoCodigoFacilito.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")

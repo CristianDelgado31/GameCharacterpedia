@@ -22,8 +22,8 @@ public static class ConfigureServices
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddTransient<IUserRepository, UserRepository>();
         services.AddTransient<ICharacterRepository, CharacterRepository>();
+        services.AddTransient<IReferenceId, ReferenceIdRepository>();
         
-            
         return services;
     }
 }
