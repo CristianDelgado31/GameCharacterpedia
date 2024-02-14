@@ -12,6 +12,7 @@ public class ReferenceIdController : ApiControllerBase
     public async Task<ActionResult<List<ReferenceIdDTO>>> GetAll()
     {
         return await Mediator.Send(new GetReferenceIdQuery());
+        
     }
     
     [HttpPost]

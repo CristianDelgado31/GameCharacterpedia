@@ -38,6 +38,14 @@ public class UserRepository : IUserRepository
     public async Task<User?> GetByIdAsync(int id)
     {
         var user = await _dbContext.Users.FindAsync(id);
+        var listReferencesId = await _dbContext.ReferenceIds.ToListAsync();
+        var listCharacters = await _dbContext.Characters.ToListAsync();
+        
+        user.listFavoriteCharacters = listReferencesId
+            .Where(referenceId => referenceId.UserId == user.Id)
+            .Join(listCharacters, referenceId => referenceId.CharacterId, character => character.Id, (referenceId, character) => character)
+            .ToList();
+        
         return user;
     }
 
@@ -55,10 +63,6 @@ public class UserRepository : IUserRepository
             .Where(model => model.Id == id)
             .ExecuteUpdateAsync(setters => setters
                 .SetProperty(m => m.IsDeleted, true));
-        
-        // return await _dbContext.Users
-        //     .Where(model => model.Id == id)
-        //     .ExecuteDeleteAsync(); // ExecuteDeleteAsync() usa saveChangesAsync() internamente
     }
 
     public async Task<int> UpdateUserAsync(int id, User entity)
