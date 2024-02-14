@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
@@ -25,16 +26,26 @@ public class UserController : ApiControllerBase
         
         if(userDto == null)
             return NotFound();
+
         
         return Ok(userDto);
+
+
     }
     
     [HttpPost]
     public async Task<ActionResult<UserDTO>> Create(CreateUserCommand command)
     {
-        var user = await Mediator.Send(command);
-        
-        return Ok(user);    
+        try
+        {
+            var user = await Mediator.Send(command);
+
+            return Ok(user);
+        }
+        catch (CreateUserException ex)
+        {
+            return BadRequest(ex.Errors);
+        }
     }
     
     [HttpPut("{id}")]
