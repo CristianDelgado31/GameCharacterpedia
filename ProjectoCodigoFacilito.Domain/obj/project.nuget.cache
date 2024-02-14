@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OzVkRQqTlx1XwAIShsBaSlLitaOVXLw868QhPK270nVvTC/QZhLcaalnDBsotjcT9QqWaLJIXhU7VR489iR6hw==",
+  "dgSpecHash": "+lReL4grZowaaRjrxzIXzFkgaVDpvcbYDL9CHTYmV8mMMABCdU5qWn77T6YKJRSLpLVLH5BRww9NI+x9TNi2nQ==",
   "success": true,
-  "projectFilePath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\crist\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
-    "C:\\Users\\crist\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\crist\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\lucas\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

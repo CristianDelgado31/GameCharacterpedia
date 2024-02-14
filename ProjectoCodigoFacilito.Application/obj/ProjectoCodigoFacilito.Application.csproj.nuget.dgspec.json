@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj": {}
+    "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj": {
+    "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj",
         "projectName": "ProjectoCodigoFacilito.Application",
-        "projectPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj": {
-                "projectPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj"
+              "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj": {
+                "projectPath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj"
               }
             }
           }
@@ -69,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj": {
+    "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
         "projectName": "ProjectoCodigoFacilito.Domain",
-        "projectPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Domain\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\ProjectoCodigoFacilito.Domain.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\source\\repos\\fp forked\\ProjectoCodigoFacilito.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
