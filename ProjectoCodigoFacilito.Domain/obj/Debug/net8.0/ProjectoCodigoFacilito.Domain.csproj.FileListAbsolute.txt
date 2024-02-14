@@ -11,3 +11,16 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Domain.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.deps.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.AssemblyInfo.cs
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.sourcelink.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Domain.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Domain\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Domain.dll
