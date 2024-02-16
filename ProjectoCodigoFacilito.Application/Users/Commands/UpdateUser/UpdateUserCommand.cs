@@ -9,6 +9,6 @@ public class UpdateUserCommand : IRequest<int>
     public string Name { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    //public IEnumerable<Character> ListFavoriteCharacters { get; set; }
-    public DateTime ModifiedDate { get; set; }
+
+    //public DateTime ModifiedDate { get; set; }
 }

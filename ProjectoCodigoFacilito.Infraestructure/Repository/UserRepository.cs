@@ -42,7 +42,7 @@ public class UserRepository : IUserRepository
         var listCharacters = await _dbContext.Characters.ToListAsync();
         
         user.listFavoriteCharacters = listReferencesId
-            .Where(referenceId => referenceId.UserId == user.Id)
+            .Where(referenceId => referenceId.UserId == user.Id && referenceId.IsVisible)
             .Join(listCharacters, referenceId => referenceId.CharacterId, character => character.Id, (referenceId, character) => character)
             .ToList();
         

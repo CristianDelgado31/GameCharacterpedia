@@ -19,7 +19,7 @@ public class CreateCharacterCommandHandler : IRequestHandler<CreateCharacterComm
         {
             Name = request.Name,
             Game = request.Game,
-            IsVisible = request.IsVisible,
+            IsVisible = true,
             History = request.History,
             Role = request.Role,
             CreatedById = request.CreatedById,

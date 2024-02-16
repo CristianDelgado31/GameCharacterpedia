@@ -5,7 +5,7 @@ using ProjectoCodigoFacilito.Infraestructure.Data;
 
 namespace ProjectoCodigoFacilito.Infraestructure.Repository;
 
-public class ReferenceIdRepository : IReferenceId
+public class ReferenceIdRepository : IReferenceIdRepository
 {
     private readonly ProjectDbContext _dbContext;
     
@@ -19,12 +19,21 @@ public class ReferenceIdRepository : IReferenceId
     
     public async Task<List<ReferenceId>> GetAllAsync()
      => await _dbContext.ReferenceIds.ToListAsync();
-
-    public Task<ReferenceId?> GetByIdAsync(int id)
+    
+    //No se si se va a usar esto heredado de IBaseRepository pero lo dejo por las dudas
+    public async Task<ReferenceId?> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await _dbContext.ReferenceIds.FindAsync(id);
     }
-
+    
+    public async Task<int> DeleteReferenceAsync(int userId, int characterId)
+    {
+        return await _dbContext.ReferenceIds
+            .Where(r => r.UserId == userId && r.CharacterId == characterId)
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(r => r.IsVisible, false));
+    }
+    
     public async Task<ReferenceId> CreateAsync(ReferenceId entity)
     {
         await _dbContext.ReferenceIds.AddAsync(entity);

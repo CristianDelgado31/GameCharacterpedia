@@ -8,4 +8,6 @@ public class ReferenceId
     public int Id { get; set; }
     public int UserId { get; set; }
     public int CharacterId { get; set; }
+    
+    public bool IsVisible { get; set; }
 }

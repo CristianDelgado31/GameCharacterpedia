@@ -6,9 +6,9 @@ namespace ProjectoCodigoFacilito.Application.ReferenceId.Commands.CreateReferenc
 
 public class CreateReferenceIdCommandHandler : IRequestHandler<CreateReferenceIdCommand, ReferenceIdDTO>
 {
-    private readonly IReferenceId _repository;
+    private readonly IReferenceIdRepository _repository;
     
-    public CreateReferenceIdCommandHandler(IReferenceId repository)
+    public CreateReferenceIdCommandHandler(IReferenceIdRepository repository)
     {
         _repository = repository;
     }
@@ -18,10 +18,11 @@ public class CreateReferenceIdCommandHandler : IRequestHandler<CreateReferenceId
         var referenceId = new Domain.Entities.ReferenceId
         {
             UserId = request.UserId,
-            CharacterId = request.CharacterId
+            CharacterId = request.CharacterId,
+            IsVisible = true
         };
         await _repository.CreateAsync(referenceId);
         
-        return new ReferenceIdDTO(referenceId.Id, referenceId.UserId, referenceId.CharacterId);
+        return new ReferenceIdDTO(referenceId.Id, referenceId.UserId, referenceId.CharacterId, referenceId.IsVisible);
     }
 }
