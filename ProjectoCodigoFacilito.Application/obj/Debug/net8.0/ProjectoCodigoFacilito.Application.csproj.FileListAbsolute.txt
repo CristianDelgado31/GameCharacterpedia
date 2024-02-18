@@ -14,3 +14,34 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Applica
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Application.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Application.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.deps.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.AssemblyInfo.cs
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.sourcelink.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.CopyComplete
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Application.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Application.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.deps.json
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.AssemblyReference.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.AssemblyInfo.cs
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.csproj.CopyComplete
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Application.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Application\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Application.dll
