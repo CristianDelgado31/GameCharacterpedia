@@ -18,3 +18,42 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraes
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Infraestructure.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.deps.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.runtimeconfig.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.AssemblyInfo.cs
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.sourcelink.json
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CopyComplete
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.pdb
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.genruntimeconfig.cache
+C:\Users\lucas\source\repos\fp forked\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.deps.json
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.runtimeconfig.json
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.AssemblyInfo.cs
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CopyComplete
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Infraestructure.dll
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.pdb
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.genruntimeconfig.cache
+C:\Users\crist\Desktop\aaaa\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Infraestructure.dll

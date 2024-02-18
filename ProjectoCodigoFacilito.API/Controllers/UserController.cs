@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
@@ -14,51 +15,123 @@ public class UserController : ApiControllerBase
     [HttpGet]
     public async Task<ActionResult<List<UserDTO>>> Get()
     {
-        var users = await Mediator.Send(new GetUserQuery());
-        return Ok(users);
+        try
+        {
+            var users = await Mediator.Send(new GetUserQuery());
+            return Ok(users);
+        }catch(ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+       
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<UserDTO>> GetById(int id)
     {
-        var userDto = await Mediator.Send(new GetUserByIdQuery {UserId = id});
-        
-        if(userDto == null)
-            return NotFound();
-        
-        return Ok(userDto);
+        try
+        {
+            var userDto = await Mediator.Send(new GetUserByIdQuery { UserId = id });
+
+            if (userDto == null)
+                return NotFound();
+
+
+            return Ok(userDto);
+
+        }catch(ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+
+
+
     }
     
     [HttpPost]
     public async Task<ActionResult<UserDTO>> Create(CreateUserCommand command)
     {
-        var user = await Mediator.Send(command);
-        
-        return Ok(user);    
+        try
+        {
+            var user = await Mediator.Send(command);
+
+            return Ok(user);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+            return BadRequest(errorResponse);
+        }
     }
     
     [HttpPut("{id}")]
     public async Task<ActionResult<int>> Update(int id, UpdateUserCommand command)
     {
-        if(id != command.Id)
-            return BadRequest();
+        try
+        {
+            if (id != command.Id)
+                return BadRequest();
+
+            var result = await Mediator.Send(command);
+
+            if (result == 0)
+                return NotFound();
+
+            return Ok(result);
+        }
+        catch(ValidationExceptionFV ex) { 
+            
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
         
-        var result = await Mediator.Send(command);
-        
-        if(result == 0)
-            return NotFound();
-        
-        return Ok(result);
+        }
+       
     }
-    
+
     [HttpDelete("{id}")]
     public async Task<ActionResult<int>> Delete(int id)
     {
-        var result = await Mediator.Send(new DeleteUserCommand {Id = id});
-        
-        if(result == 0)
-            return NotFound();
-        
-        return Ok(result);
+        try
+        {
+
+            var result = await Mediator.Send(new DeleteUserCommand { Id = id });
+
+            if (result == 0)
+                return NotFound();
+
+            return Ok(result);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
     }
+        
 }

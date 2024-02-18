@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
 using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
+using ProjectoCodigoFacilito.Application.Common.Exceptions;
 
 namespace ProjectoCodigoFacilito.API.Controllers;
 
@@ -17,8 +18,22 @@ public class CharacterController : ApiControllerBase
      
      [HttpPost]
      public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
-     { 
-         var character = await Mediator.Send(command);
-         return Ok(character);
+     {
+        try {
+
+            var character = await Mediator.Send(command);
+            return Ok(character);
+
+        }catch(ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        
      }
 }
