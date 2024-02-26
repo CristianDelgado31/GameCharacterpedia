@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
 using ProjectoCodigoFacilito.Infraestructure.Data;
+using ProjectoCodigoFacilito.Infraestructure.FireBaseService;
 using ProjectoCodigoFacilito.Infraestructure.Repository;
 
 namespace ProjectoCodigoFacilito.Infraestructure;
@@ -23,6 +24,7 @@ public static class ConfigureServices
         services.AddTransient<IUserRepository, UserRepository>();
         services.AddTransient<ICharacterRepository, CharacterRepository>();
         services.AddTransient<IReferenceIdRepository, ReferenceIdRepository>();
+        services.AddTransient<IFirebaseService, FirebaseService>();
         
         return services;
     }

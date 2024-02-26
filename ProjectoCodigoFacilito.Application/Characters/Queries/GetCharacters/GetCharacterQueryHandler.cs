@@ -23,7 +23,8 @@ public class GetCharacterQueryHandler : IRequestHandler<GetCharacterQuery, List<
             History = c.History,
             Role = c.Role,
             CreatedById = c.CreatedById,
-            ModifiedById = c.ModifiedById
+            ModifiedById = c.ModifiedById,
+            ImageUrl = c.ImageUrl
         }).ToList();
     }
 }

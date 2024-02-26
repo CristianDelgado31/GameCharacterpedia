@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ProjectoCodigoFacilito.Client.props" />
+</Project>

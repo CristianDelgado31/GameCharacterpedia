@@ -11,4 +11,6 @@ public class CreateCharacterCommand : IRequest<CharacterDTO>
     public string History { get; set; }
     public string Role { get; set; }
     public int CreatedById { get; set; }
+    public byte[] ImageStream { get; set; }
+    public string nameImageStream { get; set; }
 }

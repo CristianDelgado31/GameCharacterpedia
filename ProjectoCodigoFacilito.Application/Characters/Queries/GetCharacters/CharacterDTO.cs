@@ -14,4 +14,6 @@ public class CharacterDTO
     public int ModifiedById { get; set; }
     
     public DateTime CreatedDate { get; set; }
+    
+    public string ImageUrl { get; set; }
 }

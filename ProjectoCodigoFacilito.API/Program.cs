@@ -28,7 +28,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
+// Configure CORS
+app.UseCors(builder =>
+{
+    builder.WithOrigins("https://localhost:7134")
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
+
 app.MapControllers();
 
 app.Run();
-

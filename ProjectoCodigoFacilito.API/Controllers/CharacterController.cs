@@ -10,21 +10,22 @@ namespace ProjectoCodigoFacilito.API.Controllers;
 public class CharacterController : ApiControllerBase
 {
      [HttpGet]
-     public async Task<ActionResult<List<CharacterDTO>>> Get()
+     public async Task<ActionResult<List<CharacterDTO>>> GetAllCharacters()
      {
          var characters = await Mediator.Send(new GetCharacterQuery());
          return Ok(characters);
      }
-     
-     [HttpPost]
-     public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
-     {
-        try {
 
+    [HttpPost]
+    public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
+    {
+        try
+        {
             var character = await Mediator.Send(command);
             return Ok(character);
 
-        }catch(ValidationExceptionFV ex)
+        }
+        catch (ValidationExceptionFV ex)
         {
             var errorResponse = new
             {
@@ -34,6 +35,7 @@ public class CharacterController : ApiControllerBase
 
             return BadRequest(errorResponse);
         }
-        
-     }
+
+    }
+
 }

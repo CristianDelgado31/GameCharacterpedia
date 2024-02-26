@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Domain", "ProjectoCodigoFacilito.Domain\ProjectoCodigoFacilito.Domain.csproj", "{9AFCE116-B6D1-49C8-869E-56D6335C64AD}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Domain", "ProjectoCodigoFacilito.Domain\ProjectoCodigoFacilito.Domain.csproj", "{9AFCE116-B6D1-49C8-869E-56D6335C64AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Infraestructure", "ProjectoCodigoFacilito.Infraestructure\ProjectoCodigoFacilito.Infraestructure.csproj", "{B8719812-1734-4E9B-9EBF-093AB668A0E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Infraestructure", "ProjectoCodigoFacilito.Infraestructure\ProjectoCodigoFacilito.Infraestructure.csproj", "{B8719812-1734-4E9B-9EBF-093AB668A0E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.API", "ProjectoCodigoFacilito.API\ProjectoCodigoFacilito.API.csproj", "{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.API", "ProjectoCodigoFacilito.API\ProjectoCodigoFacilito.API.csproj", "{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Application", "ProjectoCodigoFacilito.Application\ProjectoCodigoFacilito.Application.csproj", "{2D950102-227C-48C2-AEB5-0CC352283E4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Application", "ProjectoCodigoFacilito.Application\ProjectoCodigoFacilito.Application.csproj", "{2D950102-227C-48C2-AEB5-0CC352283E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Client", "ProjectoCodigoFacilito.Client\ProjectoCodigoFacilito.Client.csproj", "{7D254883-A1E3-4A1B-9E3F-59920820D30B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +35,15 @@ Global
 		{2D950102-227C-48C2-AEB5-0CC352283E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D950102-227C-48C2-AEB5-0CC352283E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D950102-227C-48C2-AEB5-0CC352283E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0CCB71A-076D-4096-BEA0-524BB5A67863}
 	EndGlobalSection
 EndGlobal
