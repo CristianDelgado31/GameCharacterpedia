@@ -2,16 +2,23 @@
 using System.Text.Json;
 using System.Text;
 using Microsoft.AspNetCore.Components.Forms;
+using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
+using System.Net.Http.Json;
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
-    public class CharacterService
+    public class CharacterService : ICharacterService
     {
         private readonly HttpClient _httpClient;
 
         public CharacterService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+        }
+
+        public async Task<List<CharacterDTO>> GetCharacters()
+        {
+            return await _httpClient.GetFromJsonAsync<List<CharacterDTO>>("api/Character");
         }
 
         public async Task<string> CreateCharacter(CreateCharacterCommand command, IBrowserFile imageFile)

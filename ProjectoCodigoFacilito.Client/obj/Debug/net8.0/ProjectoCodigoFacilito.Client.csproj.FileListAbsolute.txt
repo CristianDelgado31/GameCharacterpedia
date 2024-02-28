@@ -1070,8 +1070,8 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\wojm75tkf0.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\i7wc3f3xll.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\fveyapdap7.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.csproj.CopyComplete
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Client.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Client.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\Projecto.BFB2975B.Up2Date

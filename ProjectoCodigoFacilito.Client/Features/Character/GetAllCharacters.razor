@@ -1,0 +1,65 @@
+﻿@page "/get-all-characters"
+@using System.Net.Http.Json
+@using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters
+@using ProjectoCodigoFacilito.Client.Services
+@using ProjectoCodigoFacilito.Client.Features.Components
+
+@inject ICharacterService characterService
+
+<Header />
+
+<h1>Characters</h1>
+<ul class="character-list">
+    @foreach (var character in characters)
+    {
+        @if (character != null && character.ImageUrl != null)
+        {
+            <li class="character-item">
+                <img src="@character.ImageUrl" alt="@character.Name" onclick="alert('Haz hecho click en @character.Name')" />
+                <p>@character.Name</p>
+            </li>
+        }
+    }
+</ul>
+
+
+@code {
+    private List<CharacterDTO> characters;
+
+    protected override async Task OnInitializedAsync()
+    {
+        characters = await characterService.GetCharacters();
+    }
+}
+
+<style>
+    .character-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .character-item {
+        max-width: 300px;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+
+    .character-item img {
+        max-width: 200px;
+        max-height: 200px;
+        display: block;
+        margin: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+</style>
+

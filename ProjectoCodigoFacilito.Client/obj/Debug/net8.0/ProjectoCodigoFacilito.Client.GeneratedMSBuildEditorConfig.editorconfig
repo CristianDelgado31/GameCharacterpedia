@@ -26,16 +26,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/CreateCharacter.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXENyZWF0ZUNoYXJhY3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/GetAllCharacters.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXEdldEFsbENoYXJhY3RlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/GetCharacterById.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXEdldENoYXJhY3RlckJ5SWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Components/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ29tcG9uZW50c1xIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Pages/TestCreateCharacter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdENyZWF0ZUNoYXJhY3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/_Imports.razor]

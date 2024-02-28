@@ -1,0 +1,57 @@
+﻿<div class="header">
+    <button @onclick="GoToHome">Index</button>
+    <button @onclick="GoToFavorites">Favorites</button>
+    <button @onclick="GoToProfile">Profile</button>
+</div>
+
+@code {
+    private void GoToHome()
+    {
+        // Lógica para ir a la página de Inicio
+    }
+
+    private void GoToFavorites()
+    {
+        // Lógica para ir a la página de Favoritos
+    }
+
+    private void GoToProfile()
+    {
+        // Lógica para ir a la página de Perfil
+    }
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        height: 50px; /* Ajusta la altura según tus necesidades */
+    }
+
+        .header button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .header button:hover {
+                text-decoration: underline;
+            }
+
+    .container {
+        max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+        margin: auto;
+    }
+
+</style>

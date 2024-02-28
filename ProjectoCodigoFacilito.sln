@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.API"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Application", "ProjectoCodigoFacilito.Application\ProjectoCodigoFacilito.Application.csproj", "{2D950102-227C-48C2-AEB5-0CC352283E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.Client", "ProjectoCodigoFacilito.Client\ProjectoCodigoFacilito.Client.csproj", "{7D254883-A1E3-4A1B-9E3F-59920820D30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Client", "ProjectoCodigoFacilito.Client\ProjectoCodigoFacilito.Client.csproj", "{7D254883-A1E3-4A1B-9E3F-59920820D30B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -51,9 +51,9 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraes
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.AssemblyInfo.cs
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CoreCompileInputs.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.sourcelink.json
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.csproj.CopyComplete
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.Infraestructure.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ProjectoCodigoFacilito.Infraestructure.genruntimeconfig.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Infraestructure.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Infraestructure\obj\Debug\net8.0\Projecto.EB49003E.Up2Date

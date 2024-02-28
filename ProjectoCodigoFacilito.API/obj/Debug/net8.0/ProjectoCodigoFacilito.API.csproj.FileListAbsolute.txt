@@ -812,9 +812,9 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjectoCodigoFacilito.API.props
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\staticwebassets.pack.json
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\scopedcss\bundle\ProjectoCodigoFacilito.API.styles.css
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ProjectoCodigoFacilito.API.csproj.CopyComplete
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ProjectoCodigoFacilito.API.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\refint\ProjectoCodigoFacilito.API.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ProjectoCodigoFacilito.API.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ProjectoCodigoFacilito.API.genruntimeconfig.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.API.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\Projecto.77FB6284.Up2Date
