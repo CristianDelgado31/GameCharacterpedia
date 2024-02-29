@@ -1,0 +1,47 @@
+﻿@page "/create-user"
+@using ProjectoCodigoFacilito.Client.Models.UserModel;
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+
+@inject IUserService userService
+@inject NavigationManager navigationManager
+
+<h1>Create User</h1>
+
+<form @onsubmit="Create">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" @bind="user.Name" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" @bind="user.Email" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" @bind="user.Password" />
+    </div>
+    <button type="submit">Create User</button>
+</form>
+
+@if (responseMessage != null)
+{
+    <p>@responseMessage</p>
+}
+
+@code {
+    private CreateUserModel user = new CreateUserModel();
+    private string responseMessage;
+
+    private async Task Create()
+    {
+        try
+        {
+            responseMessage = await userService.CreateUser(user);
+        }
+        catch (Exception ex)
+        {
+            responseMessage = "Error: " + ex.Message;
+        }
+
+    }
+}

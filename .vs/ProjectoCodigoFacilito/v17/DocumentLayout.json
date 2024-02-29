@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\user\\createuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,26 +38,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowFEAAAAEAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowFEAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T05:49:46.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
               "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
               "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAADwvyAAAAAIAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAADwvw8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T05:43:54.284Z",
               "EditorCaption": ""
@@ -83,7 +83,7 @@
               "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\User\\CreateUser.razor",
               "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\CreateUser.razor",
               "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\User\\CreateUser.razor",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAABAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-02-29T05:28:39.986Z",
               "EditorCaption": ""
