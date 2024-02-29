@@ -25,7 +25,6 @@ public class CreateCharacterCommandHandler : IRequestHandler<CreateCharacterComm
             Role = request.Role,
             CreatedById = 1,  //request.CreatedById, -> esta hardcodeado
             CreatedDate = DateTime.Now,
-            //ImageUrl = await _firebaseService.UploadStorage(request.nameImageStream, request.ImageStream)
         };
 
         MemoryStream stream = new MemoryStream(request.ImageStream);

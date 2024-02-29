@@ -5,9 +5,12 @@
 </div>
 
 @code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
     private void GoToHome()
     {
-        // Lógica para ir a la página de Inicio
+        NavigationManager.NavigateTo("/get-all-characters"); // Cambiar por la ruta correcta
     }
 
     private void GoToFavorites()

@@ -1,5 +1,3 @@
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.Extensions.Microsoft.DependencyInjection.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
@@ -8,13 +6,9 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.2.zak3h9uwcn.js
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\FluentValidation.DependencyInjectionExtensions.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\FluentValidation.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm
@@ -44,12 +38,8 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Registry.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\netstandard.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Application.pdb
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Application.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Client.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Client.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Domain.pdb
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Domain.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Buffers.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm
@@ -234,12 +224,10 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Data.DataSetExtensions.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.DriveInfo.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.ServiceModel.Web.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Requests.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlSerializer.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.NonGeneric.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Application.pdb.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.X509Certificates.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.TypeExtensions.wasm.gz
@@ -279,13 +267,11 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Console.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Application.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Primitives.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.Local.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.NetworkInformation.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlDocument.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Claims.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.wasm.gz
@@ -318,7 +304,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encoding.CodePages.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Client.pdb.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\FluentValidation.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Data.Common.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encodings.Web.wasm.gz
@@ -334,7 +319,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Windows.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.AppContext.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Principal.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.InteropServices.wasm.gz
@@ -359,7 +343,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Ping.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Private.Uri.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Immutable.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.Extensions.Microsoft.DependencyInjection.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.Serialization.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.wasm.gz
@@ -386,7 +369,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Contracts.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.RegularExpressions.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\FluentValidation.DependencyInjectionExtensions.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Drawing.Primitives.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.Http.Json.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm.gz
@@ -408,7 +390,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Extensions.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Web.HttpUtility.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.OpenSsl.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Domain.pdb.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.Calendars.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Json.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.ZipFile.wasm.gz
@@ -419,7 +400,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Tools.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\ProjectoCodigoFacilito.Domain.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.IsolatedStorage.wasm.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.2.zak3h9uwcn.js.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.Linq.wasm.gz
@@ -429,12 +409,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Client.staticwebassets.runtime.json
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Client.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Client.pdb
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\AutoMapper.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\FluentValidation.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\MediatR.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -635,10 +609,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\icudt_CJK.dat
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\icudt_EFIGS.dat
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\icudt_no_CJK.dat
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Application.pdb
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\ProjectoCodigoFacilito.Domain.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.csproj.AssemblyReference.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.GeneratedMSBuildEditorConfig.editorconfig
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.AssemblyInfoInputs.cache
@@ -646,12 +616,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.csproj.CoreCompileInputs.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.MvcApplicationPartsAssemblyInfo.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.sourcelink.json
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\AutoMapper.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\AutoMapper.Extensions.Microsoft.DependencyInjection.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\FluentValidation.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\FluentValidation.DependencyInjectionExtensions.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\MediatR.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\MediatR.Contracts.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -843,8 +807,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\mscorlib.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\netstandard.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\System.Private.CoreLib.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\ProjectoCodigoFacilito.Application.wasm
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\ProjectoCodigoFacilito.Domain.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\ProjectoCodigoFacilito.Client.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\blazor.build.boot-extension.json
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\blazor.boot.json
@@ -857,12 +819,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\staticwebassets.pack.json
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\scopedcss\bundle\ProjectoCodigoFacilito.Client.styles.css
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\exj3bj9wly.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\e570j01xjg.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\p6861jwxln.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\ihlw98uxn9.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\ul2xcb6q1r.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\l5aqh2pmpa.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\3sj4qyzuka.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\i6lo54ik16.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\8ycdplvxih.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\092ymcsre6.gz
@@ -1063,10 +1019,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\imsdxpxax6.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\rk4obmcg98.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\0z1wqvc9lk.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\dadfmx7l5d.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\z5nm3swo99.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\51ohnq91uf.gz
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\wzna8rjyyx.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\wojm75tkf0.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\i7wc3f3xll.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\fveyapdap7.gz

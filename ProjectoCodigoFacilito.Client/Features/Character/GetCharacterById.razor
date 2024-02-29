@@ -1,5 +1,70 @@
-﻿<h3>GetCharacterById</h3>
+﻿@page "/get-character-by-id/{id:int}"
+@using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+@using ProjectoCodigoFacilito.Client.Features.Components
+
+@inject ICharacterService CharacterService
+@inject NavigationManager NavigationManager
+
+<Header />
+
+<div class="character-details">
+    <h1>Character Details</h1>
+
+    @if (Character != null)
+    {
+        <div class="character-info">
+            <h2>@Character.Name</h2>
+            <p><strong>Game:</strong> @Character.Game</p>
+            <p><strong>History:</strong> @Character.History</p>
+            <p><strong>Role:</strong> @Character.Role</p>
+            <img src="@Character.ImageUrl" alt="@Character.Name" class="character-image" />
+        </div>
+    }
+    else
+    {
+        <p>Character not found.</p>
+    }
+</div>
 
 @code {
+    [Parameter]
+    public int Id { get; set; }
 
+    private GetCharacterModel Character;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Character = await CharacterService.GetCharacterById(Id);
+    }
 }
+
+<style>
+    .character-details {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        margin: 20px auto;
+        max-width: 600px;
+    }
+
+    .character-info {
+        margin-bottom: 20px;
+    }
+
+        .character-info h2 {
+            margin-top: 0;
+        }
+
+        .character-info p {
+            margin-bottom: 10px;
+        }
+
+        .character-info img.character-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+        }
+</style>

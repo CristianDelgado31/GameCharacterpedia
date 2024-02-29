@@ -1,6 +1,6 @@
 ﻿@page "/create-character"
-@using ProjectoCodigoFacilito.Client.Services
-@using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter
+@using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
 @using ProjectoCodigoFacilito.Client.Features.Components
 
 @inject ICharacterService characterService
@@ -44,7 +44,7 @@
 }
 
 @code {
-    private CreateCharacterCommand model = new CreateCharacterCommand();
+    private CreateCharacterModel model = new CreateCharacterModel();
     private string responseMessage;
     private IBrowserFile uploadedImage;
 

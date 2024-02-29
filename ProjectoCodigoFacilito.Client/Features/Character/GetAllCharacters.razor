@@ -1,34 +1,42 @@
 ﻿@page "/get-all-characters"
 @using System.Net.Http.Json
-@using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters
-@using ProjectoCodigoFacilito.Client.Services
+@using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
 @using ProjectoCodigoFacilito.Client.Features.Components
 
 @inject ICharacterService characterService
+@inject NavigationManager NavigationManager
 
 <Header />
-
 <h1>Characters</h1>
 <ul class="character-list">
     @foreach (var character in characters)
     {
-        @if (character != null && character.ImageUrl != null)
+        if (character != null && character.ImageUrl != null)
         {
             <li class="character-item">
-                <img src="@character.ImageUrl" alt="@character.Name" onclick="alert('Haz hecho click en @character.Name')" />
-                <p>@character.Name</p>
+                <a href="javascript:void(0);" @onclick="(() => NavigateToCharacter(character.Id))" style="text-decoration: none;">
+                    <img src="@character.ImageUrl" alt="@character.Name" />
+                    <p>@character.Name</p>
+                </a>
             </li>
         }
     }
+
 </ul>
 
 
 @code {
-    private List<CharacterDTO> characters;
+    private List<GetCharacterModel> characters = new List<GetCharacterModel>();
 
     protected override async Task OnInitializedAsync()
     {
         characters = await characterService.GetCharacters();
+    }
+    ///////
+    private async Task NavigateToCharacter(int characterId)
+    {
+        NavigationManager.NavigateTo($"/get-character-by-id/{characterId}");
     }
 }
 
@@ -58,8 +66,7 @@
         margin: auto;
     }
 
-    h1{
+    h1 {
         text-align: center;
     }
 </style>
-

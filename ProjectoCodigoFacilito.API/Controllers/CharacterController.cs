@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
+using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacterById;
 using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
 
@@ -15,6 +16,13 @@ public class CharacterController : ApiControllerBase
          var characters = await Mediator.Send(new GetCharacterQuery());
          return Ok(characters);
      }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<CharacterDTO>> GetCharacterById(int id)
+    {
+        var character = await Mediator.Send(new GetCharacterByIdQuery { CharacterId = id });
+        return Ok(character);
+    }
 
     [HttpPost]
     public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)

@@ -19,9 +19,10 @@ public class CharacterRepository : ICharacterRepository
     public async Task<List<Character>> GetAllAsync()
      => await _dbContext.Characters.ToListAsync();
 
-    public Task<Character> GetByIdAsync(int id)
+    public async Task<Character> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var character = await _dbContext.Characters.FindAsync(id);
+        return character;
     }
 
     public async Task<Character> CreateAsync(Character entity)

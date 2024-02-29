@@ -1,9 +1,9 @@
-﻿using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text;
 using Microsoft.AspNetCore.Components.Forms;
-using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 using System.Net.Http.Json;
+using ProjectoCodigoFacilito.Client.Models.CharacterModel;
+using ProjectoCodigoFacilito.Client.Services.Interfaces;
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
@@ -16,12 +16,17 @@ namespace ProjectoCodigoFacilito.Client.Services
             _httpClient = httpClient;
         }
 
-        public async Task<List<CharacterDTO>> GetCharacters()
+        public async Task<List<GetCharacterModel>> GetCharacters()
         {
-            return await _httpClient.GetFromJsonAsync<List<CharacterDTO>>("api/Character");
+            return await _httpClient.GetFromJsonAsync<List<GetCharacterModel>>("api/Character");
         }
 
-        public async Task<string> CreateCharacter(CreateCharacterCommand command, IBrowserFile imageFile)
+        public async Task<GetCharacterModel> GetCharacterById(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<GetCharacterModel>($"api/Character/{id}");
+        }
+
+        public async Task<string> CreateCharacter(CreateCharacterModel command, IBrowserFile imageFile)
         {
             try
             {
