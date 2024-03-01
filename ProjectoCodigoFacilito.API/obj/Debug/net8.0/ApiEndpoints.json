@@ -276,5 +276,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
+    "Method": "CheckUser",
+    "RelativePath": "api/User/check",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkUser",
+        "Type": "ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn.CheckUserQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProjectoCodigoFacilito.Application.Users.Queries.GetUsers.UserDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

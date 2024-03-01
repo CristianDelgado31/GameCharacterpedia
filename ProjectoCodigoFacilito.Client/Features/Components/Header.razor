@@ -1,7 +1,10 @@
 ﻿<div class="header">
-    <button @onclick="GoToHome">Index</button>
+    <button @onclick="GoToHome">Home</button>
     <button @onclick="GoToFavorites">Favorites</button>
-    <button @onclick="GoToProfile">Profile</button>
+    <div>
+        <button @onclick="SignIn">Sign In</button>
+        <button @onclick="SignUp">Sign Up</button>
+    </div>
 </div>
 
 @code {
@@ -18,9 +21,14 @@
         // Lógica para ir a la página de Favoritos
     }
 
-    private void GoToProfile()
+    private void SignUp()
     {
         // Lógica para ir a la página de Perfil
+        NavigationManager.NavigateTo("/create-user"); // Cambiar por la ruta correcta
+    }
+    private void SignIn()
+    {
+
     }
 }
 
@@ -40,21 +48,25 @@
         height: 50px; /* Ajusta la altura según tus necesidades */
     }
 
-        .header button {
-            background-color: transparent;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    .header button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-            .header button:hover {
-                text-decoration: underline;
-            }
+    .header button:hover {
+        text-decoration: underline;
+    }
 
     .container {
         max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
         margin: auto;
     }
 
+    .header div {
+        display: flex;
+        align-items: center;
+    }
 </style>

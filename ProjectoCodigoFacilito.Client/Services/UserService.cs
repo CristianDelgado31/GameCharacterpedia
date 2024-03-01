@@ -1,6 +1,8 @@
 ﻿using ProjectoCodigoFacilito.Client.Models.UserModel;
 using ProjectoCodigoFacilito.Client.Services.Interfaces;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text;
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
@@ -30,6 +32,28 @@ namespace ProjectoCodigoFacilito.Client.Services
             {
                 return "Error: " + ex.Message;
             }
+        }
+
+        public async Task<string> SignInUser(SignInUserModel user)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("api/User/check", user);
+                response.EnsureSuccessStatusCode();
+                
+                if(!response.IsSuccessStatusCode)
+                {
+                    throw new ApplicationException(response.Content.ToString());
+                }
+                
+            
+                return "Ok";
+            }
+            catch (Exception ex)
+            {
+                return "Error: " + ex.Message;
+            }
+
         }
     }
 }

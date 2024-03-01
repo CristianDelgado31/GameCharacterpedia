@@ -5,6 +5,7 @@ using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
+using ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn;
 
 namespace ProjectoCodigoFacilito.API.Controllers;
 
@@ -56,10 +57,20 @@ public class UserController : ApiControllerBase
             return BadRequest(errorResponse);
         }
 
+    }
 
+    [HttpPost("check")]
+    public async Task<ActionResult<UserDTO>> CheckUser(CheckUserQuery checkUser)
+    {   
+        var userDto = await Mediator.Send(checkUser);
+
+        if (userDto == null)
+            return NotFound();
+
+        return Ok(userDto);
 
     }
-    
+
     [HttpPost]
     public async Task<ActionResult<UserDTO>> Create(CreateUserCommand command)
     {

@@ -49,6 +49,19 @@ public class UserRepository : IUserRepository
         return user;
     }
 
+    //No esta en la interface User
+    public async Task<User?> GetUserSignIn(User user)
+    {
+        var userEntity = await _dbContext.Users
+            .Where(model => model.Email == user.Email && model.Password == user.Password)
+            .FirstOrDefaultAsync();
+        
+        //if (userEntity == null)
+        //    throw new Exception("Usuario no encontrado");
+        
+        return userEntity;
+    }
+
     public async Task<User> CreateAsync(User entity)
     {
         await _dbContext.Users.AddAsync(entity);
