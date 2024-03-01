@@ -7,9 +7,9 @@
 @inject NavigationManager navigationManager
 
 <Header />
-<h1>Sign In</h1>
 
 <form class="form-container" @onsubmit="CheckUser">
+    <h1>Sign In</h1>
     <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" class="form-control" @bind="user.Email" />
@@ -19,6 +19,7 @@
         <input type="password" id="password" class="form-control" @bind="user.Password" />
     </div>
     <button type="submit" class="btn btn-primary">Sign In</button>
+    <p>Not a user yet? <a href="/create-user">Sign up!</a></p>
 </form>
 
 @if(responseMessage != null)
@@ -50,7 +51,9 @@
     .form-container {
         max-width: 400px;
         margin: auto;
-        padding: 20px;
+        margin-top: 60px;
+        padding: 40px;
+        padding-bottom: 50px;
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #f9f9f9;
@@ -71,7 +74,7 @@
         width: 100%;
         padding: 10px;
         margin: 5px 0;
-        margin-top: 10px;
+        margin-top: 40px;
         border: none;
         border-radius: 4px;
         background-color: #4CAF50;
@@ -84,9 +87,9 @@
         color: #fff;
     }
 
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
 
     /* Estilo para el mensaje de respuesta */
     .response-message {
@@ -104,5 +107,9 @@
     h1 {
         text-align: center;
         margin-top: 20px;
+    }
+
+    p{
+        text-align: center;
     }
 </style>

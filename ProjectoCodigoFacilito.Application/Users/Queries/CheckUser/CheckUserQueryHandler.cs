@@ -20,6 +20,7 @@ namespace ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn
 
         public async Task<UserDTO> Handle(CheckUserQuery request, CancellationToken cancellationToken)
         {
+
             var userEntity = new User
             {
                 Email = request.Email,

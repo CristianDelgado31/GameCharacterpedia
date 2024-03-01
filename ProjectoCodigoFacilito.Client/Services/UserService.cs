@@ -14,10 +14,23 @@ namespace ProjectoCodigoFacilito.Client.Services
             _httpClient = httpClient;
         }
 
-        public async Task<string> CreateUser(CreateUserModel user)
+        public async Task<string> CreateUser(CreateUserModel user) //Sign up
         {
             try
-            { 
+            {
+                // Validar que las contraseñas coincidan
+                if (user.Password != user.ConfirmPassword)
+                {
+                    return "Error: Passwords do not match";
+                }
+
+                byte[] bytesUserName = Encoding.UTF8.GetBytes(user.Name);
+                byte[] bytesEmail = Encoding.UTF8.GetBytes(user.Email);
+                byte[] bytesPassword = Encoding.UTF8.GetBytes(user.Password);
+                user.Name = Convert.ToBase64String(bytesUserName);
+                user.Email = Convert.ToBase64String(bytesEmail);
+                user.Password = Convert.ToBase64String(bytesPassword);
+
                 var response = await _httpClient.PostAsJsonAsync("api/User", user);
                 response.EnsureSuccessStatusCode();
 

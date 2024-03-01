@@ -1,3 +1,4 @@
+using Azure.Core;
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
@@ -6,6 +7,7 @@ using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn;
+using System.Text;
 
 namespace ProjectoCodigoFacilito.API.Controllers;
 
@@ -76,6 +78,13 @@ public class UserController : ApiControllerBase
     {
         try
         {
+            var chainEmailBase64 = Convert.FromBase64String(command.Email);
+            var chainUserNameBase64 = Convert.FromBase64String(command.Name);
+            var chainPasswordBase64 = Convert.FromBase64String(command.Password);
+            command.Email = Encoding.UTF8.GetString(chainEmailBase64);
+            command.Password = Encoding.UTF8.GetString(chainPasswordBase64);
+            command.Name = Encoding.UTF8.GetString(chainUserNameBase64);
+
             var user = await Mediator.Send(command);
 
             return Ok(user);

@@ -3,6 +3,7 @@ using MediatR;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
+using System.Text;
 
 namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
 {
@@ -16,6 +17,13 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
         }
         public async Task<UserDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            //var chainEmailBase64 = Encoding.UTF8.GetBytes(request.Email);
+            //var chainUserNameBase64 = Encoding.UTF8.GetBytes(request.Name);
+            //var chainPasswordBase64 = Encoding.UTF8.GetBytes(request.Password);
+            //request.Email = Convert.ToBase64String(chainEmailBase64);
+            //request.Password = Convert.ToBase64String(chainPasswordBase64);
+            //request.Name = Convert.ToBase64String(chainUserNameBase64);
+
             var userEntity = new User
             {
                 Name = request.Name,
