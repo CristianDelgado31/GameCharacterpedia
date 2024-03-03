@@ -1,24 +1,50 @@
 ﻿@page "/get-character-by-id/{id:int}"
+@using Blazored.LocalStorage
 @using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Models.ReferenceModel
+@using ProjectoCodigoFacilito.Client.Models.UserModel
 @using ProjectoCodigoFacilito.Client.Services.Interfaces
 @using ProjectoCodigoFacilito.Client.Features.Components
 
 @inject ICharacterService CharacterService
 @inject NavigationManager NavigationManager
+@inject ILocalStorageService localStorage
+@inject IReferenceIdService referenceIdService
+
 
 @* <Header /> *@
 
-<div class="character-details">
-    <h1>Character Details</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+
+    <div class="character-details">
+
+        <h1>
+            Character Details
+            <AuthorizeView>
+                <Authorized>
+                    <i class="fa fa-heart like-icon" @onclick="ToggleLike" style="@likeIconStyle"></i>
+                </Authorized>
+            </AuthorizeView>
+        </h1>
+
+
+
 
     @if (Character != null)
     {
         <div class="character-info">
+
             <h2>@Character.Name</h2>
             <p><strong>Game:</strong> @Character.Game</p>
             <p><strong>History:</strong> @Character.History</p>
             <p><strong>Role:</strong> @Character.Role</p>
             <img src="@Character.ImageUrl" alt="@Character.Name" class="character-image" />
+
         </div>
     }
     else
@@ -27,19 +53,101 @@
     }
 </div>
 
+    <style>
+        .character-details {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .character-info {
+            margin-bottom: 20px;
+        }
+
+        .character-info h2 {
+            margin-top: 0;
+        }
+
+        .character-info p {
+            margin-bottom: 10px;
+        }
+
+        .character-info img.character-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .like-icon {
+            float: right;
+        }
+    </style>
+
+</body>
+
+</html>
+
+
+
+
 @code {
     [Parameter]
     public int Id { get; set; }
 
     private GetCharacterModel Character;
+    private bool IsLiked { get; set; }
+    //private List<GetCharacterModel> favouriteCharacters = new List<GetCharacterModel>();
+    private SignInUserModel user;
+
+    private string likeIconStyle => IsLiked ? "color: red;" : "color: black;";
 
     protected override async Task OnInitializedAsync()
     {
         Character = await CharacterService.GetCharacterById(Id);
+        user = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
+
+        // favouriteCharacters = user.ListFavoriteCharacters;
+
+        if(user.ListFavoriteCharacters.Any(c => c.Id == Id))
+        {
+            IsLiked = true;
+        };
+    }
+
+    private async void ToggleLike()
+    {
+        IsLiked = !IsLiked;
+        if(IsLiked)
+        {
+            var result = await referenceIdService.GetReferenceId(new ReferenceIdModel { UserId = user.Id, CharacterId = Character.Id });
+            if (result == null)
+            {
+                user.ListFavoriteCharacters.Add(Character);
+                await localStorage.SetItemAsync("UserFavouriteCharacters", user);
+                await referenceIdService.CreateReferenceId(new ReferenceIdModel { UserId = user.Id, CharacterId = Character.Id});
+            }
+            else
+            {
+                user.ListFavoriteCharacters.Add(Character);
+                await localStorage.SetItemAsync("UserFavouriteCharacters", user);
+                referenceIdService.ModifyReferenceId(new ReferenceIdModel { UserId = user.Id, CharacterId = Character.Id });
+            }
+        }
+        else
+        {
+            user.ListFavoriteCharacters.RemoveAll(c => c.Id == Character.Id);
+            await localStorage.SetItemAsync("UserFavouriteCharacters", user);
+            await referenceIdService.DeleteReferenceId(new ReferenceIdModel { UserId = user.Id, CharacterId = Character.Id });
+        }
     }
 }
 
-<style>
+
+@* <style>
     .character-details {
         padding: 20px;
         border: 1px solid #ccc;
@@ -67,4 +175,4 @@
             display: block;
             margin-top: 20px;
         }
-</style>
+</style> *@

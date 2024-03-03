@@ -13,10 +13,15 @@
  *@
 
  @using Microsoft.AspNetCore.Components.Authorization
+@using ProjectoCodigoFacilito.Client.Features.Components
 
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
-        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+            <NotAuthorized>
+                <RedirectToLogin /> <!-- En esta parte de codigo redijo al login si no esta autorizado el usuario al ingresar a ciertas paginas/componentes -->
+            </NotAuthorized>
+        </AuthorizeRouteView>
     </Found>
     <NotFound>
         <CascadingAuthenticationState>

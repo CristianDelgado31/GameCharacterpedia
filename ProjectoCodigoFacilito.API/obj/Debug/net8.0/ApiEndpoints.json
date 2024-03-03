@@ -119,6 +119,63 @@
   },
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.ReferenceIdController",
+    "Method": "ModifyReferenceId",
+    "RelativePath": "api/ReferenceId",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "ProjectoCodigoFacilito.Application.ReferenceId.Commands.ModifyReferenceId.ModifiyReferenceIdCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectoCodigoFacilito.API.Controllers.ReferenceIdController",
+    "Method": "GetReferenceIdById",
+    "RelativePath": "api/ReferenceId/{userId}/{characterId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "characterId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProjectoCodigoFacilito.Application.ReferenceId.Queries.GetReferenceId.ReferenceIdDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectoCodigoFacilito.API.Controllers.ReferenceIdController",
     "Method": "Delete",
     "RelativePath": "api/ReferenceId/{userId}/{characterId}",
     "HttpMethod": "DELETE",

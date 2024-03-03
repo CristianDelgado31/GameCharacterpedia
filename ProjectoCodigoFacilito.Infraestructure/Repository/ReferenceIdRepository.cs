@@ -21,7 +21,7 @@ public class ReferenceIdRepository : IReferenceIdRepository
      => await _dbContext.ReferenceIds.ToListAsync();
     
     //No se si se va a usar esto heredado de IBaseRepository pero lo dejo por las dudas
-    public async Task<ReferenceId?> GetByIdAsync(int id)
+    public async Task<ReferenceId?> GetByIdAsync(int id) //No lo estoy usando
     {
         return await _dbContext.ReferenceIds.FindAsync(id);
     }
@@ -44,5 +44,21 @@ public class ReferenceIdRepository : IReferenceIdRepository
     public Task<int> DeleteAsync(int id)
     {
         throw new NotImplementedException();
+    }
+
+    //En uso este get by id
+    public async Task<ReferenceId?> GetByReferenceIdAsync(int userId, int characterId)
+    {
+        return await _dbContext.ReferenceIds
+            .Where(r => r.UserId == userId && r.CharacterId == characterId)
+            .FirstOrDefaultAsync();
+    }
+
+    public async Task<int> UpdateReferenceAsync(int userId, int characterId)
+    {
+        return await _dbContext.ReferenceIds
+            .Where(r => r.UserId == userId && r.CharacterId == characterId)
+            .ExecuteUpdateAsync(setters => setters
+                           .SetProperty(r => r.IsVisible, true));
     }
 }

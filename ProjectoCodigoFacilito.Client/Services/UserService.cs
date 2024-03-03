@@ -58,7 +58,7 @@ namespace ProjectoCodigoFacilito.Client.Services
             }
         }
 
-        public async Task<SignInResult> SignInUser(SignInUserModel user)
+        public async Task<SignInResult?> SignInUser(SignInUserModel user)
         {
             try
             {
@@ -78,8 +78,8 @@ namespace ProjectoCodigoFacilito.Client.Services
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", loginResult.Token);
 
 
-                var characterList = await GetUserFavouriteCharactersById(loginResult.Id);
-                await _localStorage.SetItemAsync("FavouriteCharacters", characterList);
+                var userCharacterList = await GetUserFavouriteCharactersById(loginResult.Id);
+                await _localStorage.SetItemAsync("UserFavouriteCharacters", userCharacterList);
 
 
                 return loginResult;
@@ -95,16 +95,15 @@ namespace ProjectoCodigoFacilito.Client.Services
         public async Task Logout()
         {
             await _localStorage.RemoveItemAsync("authToken");
-            await _localStorage.RemoveItemAsync("FavouriteCharacters");
+            await _localStorage.RemoveItemAsync("UserFavouriteCharacters");
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
 
         }
 
-        public async Task<List<GetCharacterModel>> GetUserFavouriteCharactersById(int id)
+        public async Task<SignInUserModel?> GetUserFavouriteCharactersById(int id)
         {
-            var response = await _httpClient.GetFromJsonAsync<SignInUserModel>($"api/User/{id}");
-            return response.ListFavoriteCharacters;
+            return await _httpClient.GetFromJsonAsync<SignInUserModel>($"api/User/{id}");
         }
     }
 

@@ -3,6 +3,7 @@
 @using Blazored.LocalStorage
 @using Microsoft.AspNetCore.Authorization
 @using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Models.UserModel
 @using ProjectoCodigoFacilito.Client.Services.Interfaces
 @using ProjectoCodigoFacilito.Client.Features.Components
 
@@ -29,9 +30,8 @@
 </ul>
 
 @code {
-    [Parameter]
-    public List<GetCharacterModel> FavouriteCharacters { get; set; }
 
+    private SignInUserModel user = new SignInUserModel();
     private List<GetCharacterModel> favouriteCharacters = new List<GetCharacterModel>();
 
     protected override async Task OnInitializedAsync()
@@ -39,8 +39,9 @@
         try
         {
             // Recuperar la lista de personajes favoritos del almacenamiento local del navegador
-            favouriteCharacters = await localStorage.GetItemAsync<List<GetCharacterModel>>("FavouriteCharacters") ?? new List<GetCharacterModel>();
-            Console.WriteLine("FavouriteCharacters: " + favouriteCharacters.Count);
+            user = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
+            favouriteCharacters = user.ListFavoriteCharacters;
+            Console.WriteLine("UserFavouriteCharacters: " + user.ListFavoriteCharacters.Count);
         }
         catch (Exception ex)
         {
