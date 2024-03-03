@@ -7,4 +7,6 @@ public abstract class BaseEntity
     
     public DateTime ModifiedDate { get; set; }
     public bool IsDeleted { get; set; }
+
+    public string Role { get; set; }
 }

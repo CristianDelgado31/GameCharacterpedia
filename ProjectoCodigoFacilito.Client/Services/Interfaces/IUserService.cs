@@ -5,6 +5,7 @@ namespace ProjectoCodigoFacilito.Client.Services.Interfaces
     public interface IUserService
     {
         Task<string> CreateUser(CreateUserModel user);
-        Task<string> SignInUser(SignInUserModel user);
+        Task<SignInResult> SignInUser(SignInUserModel user);
+        Task Logout();
     }
 }

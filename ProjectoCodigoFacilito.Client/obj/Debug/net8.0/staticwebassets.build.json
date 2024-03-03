@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X1DM7Eb4eboAi2tdq/r5g3YFWJQ1lTXAZp8702voiHY=",
+  "Hash": "Dx1NeRA3YSJ0mqVzgwlS/yIwez22kVZzN6DH+UpqPR4=",
   "Source": "ProjectoCodigoFacilito.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\crist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.2\\build\\net8.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "SourceId": "ProjectoCodigoFacilito.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\webcil\\Blazored.LocalStorage.wasm"
     },
     {
       "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
@@ -243,6 +262,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Authorization.wasm"
+    },
+    {
+      "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
+      "SourceId": "ProjectoCodigoFacilito.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Components.Authorization.wasm"
     },
     {
       "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm",
@@ -5926,6 +5964,25 @@
       "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Globalization.Extensions.wasm"
     },
     {
+      "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\compressed\\jtczcfy5lb.gz",
+      "SourceId": "ProjectoCodigoFacilito.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm"
+    },
+    {
       "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\compressed\\jvk8s4332w.gz",
       "SourceId": "ProjectoCodigoFacilito.Client",
       "SourceType": "Computed",
@@ -7444,6 +7501,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Web.HttpUtility.wasm"
+    },
+    {
+      "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\compressed\\wyiqnztbku.gz",
+      "SourceId": "ProjectoCodigoFacilito.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm"
     },
     {
       "Identity": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\compressed\\wz4ojx9bbo.gz",

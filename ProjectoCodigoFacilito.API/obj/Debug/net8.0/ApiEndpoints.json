@@ -280,7 +280,7 @@
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
     "Method": "CheckUser",
-    "RelativePath": "api/User/check",
+    "RelativePath": "api/User/signin-user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -293,7 +293,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.Application.Users.Queries.GetUsers.UserDTO",
+        "Type": "ProjectoCodigoFacilito.Application.CheckUser.UserResult",
         "MediaTypes": [
           "text/plain",
           "application/json",

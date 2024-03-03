@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectoCodigoFacilito.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af417e4aa56a953e468b58967cd6c34a5fe3873e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a7ac92c9bdd7086e8e3676045192030ced0e949")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectoCodigoFacilito.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectoCodigoFacilito.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

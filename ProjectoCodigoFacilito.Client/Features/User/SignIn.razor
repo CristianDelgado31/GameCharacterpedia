@@ -5,8 +5,8 @@
 
 @inject IUserService userService
 @inject NavigationManager navigationManager
+@inject IJSRuntime JSRuntime
 
-<Header />
 
 <form class="form-container" @onsubmit="CheckUser">
     <h1>Sign In</h1>
@@ -22,28 +22,31 @@
     <p>Not a user yet? <a href="/create-user">Sign up!</a></p>
 </form>
 
-@if(responseMessage != null)
+@if (Message != null)
 {
-    <p class="response-message">@responseMessage</p>
+    <p class="response-message">@Message</p>
 }
 
 @code {
     private SignInUserModel user = new SignInUserModel();
-    private string responseMessage;
+    private SignInResult responseMessage;
+    private string Message;
 
     private async Task CheckUser()
     {
-        try
-        {
-            responseMessage = await userService.SignInUser(user);
-        }
-        catch (Exception ex)
-        {
-            responseMessage = "Error: " + ex.Message;
-        }
+        var result = await userService.SignInUser(user);
 
+        if(result.Error != null)
+        {
+            Message = result.Error;
+        }
+        else
+        {
+            navigationManager.NavigateTo("/");
+        }
     }
 }
+
 
 
 <style>

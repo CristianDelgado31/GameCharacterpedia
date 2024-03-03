@@ -20,7 +20,7 @@ public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDTO
         if (user == null)
             return null;
         
-        return new UserDTO(user.Id, user.Name, user.Email, user.Password, user.listFavoriteCharacters,
+        return new UserDTO(user.Id, user.Name, user.Email, user.Password, user.Role, user.listFavoriteCharacters,
             user.IsDeleted, user.CreatedDate, user.ModifiedDate);
 
     }

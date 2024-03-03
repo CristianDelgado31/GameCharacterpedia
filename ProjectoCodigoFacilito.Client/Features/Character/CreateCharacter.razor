@@ -1,11 +1,15 @@
 ﻿@page "/create-character"
+@using Microsoft.AspNetCore.Authorization
 @using ProjectoCodigoFacilito.Client.Models.CharacterModel
 @using ProjectoCodigoFacilito.Client.Services.Interfaces
 @using ProjectoCodigoFacilito.Client.Features.Components
+@using Microsoft.AspNetCore.Components.Authorization
 
 @inject ICharacterService characterService
 
-<Header />
+@attribute [Authorize]
+
+@* <Header /> *@
 <h1>Create Character</h1>
 
 <EditForm Model="@model" OnValidSubmit="@CreateNewCharacter">

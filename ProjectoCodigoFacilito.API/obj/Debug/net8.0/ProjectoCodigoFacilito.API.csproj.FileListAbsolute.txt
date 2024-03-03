@@ -818,3 +818,5 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ProjectoCodigoFacilito.API.genruntimeconfig.cache
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.API.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\Projecto.77FB6284.Up2Date
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\IdentityModel.dll

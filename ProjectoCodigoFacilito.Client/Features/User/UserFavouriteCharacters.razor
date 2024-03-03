@@ -1,0 +1,88 @@
+﻿@page "/user-favourite-characters"
+@using System.Net.Http.Json
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Authorization
+@using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+@using ProjectoCodigoFacilito.Client.Features.Components
+
+@inject IUserService userService
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService localStorage
+
+@attribute [Authorize]
+
+<h1>Favorite Characters</h1>
+<ul class="character-list">
+    @foreach (var character in favouriteCharacters)
+    {
+        if (character != null && character.ImageUrl != null)
+        {
+            <li class="character-item">
+                <a href="javascript:void(0);" @onclick="(() => NavigateToCharacter(character.Id))" style="text-decoration: none;">
+                    <img src="@character.ImageUrl" alt="@character.Name" />
+                    <p>@character.Name</p>
+                </a>
+            </li>
+        }
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public List<GetCharacterModel> FavouriteCharacters { get; set; }
+
+    private List<GetCharacterModel> favouriteCharacters = new List<GetCharacterModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Recuperar la lista de personajes favoritos del almacenamiento local del navegador
+            favouriteCharacters = await localStorage.GetItemAsync<List<GetCharacterModel>>("FavouriteCharacters") ?? new List<GetCharacterModel>();
+            Console.WriteLine("FavouriteCharacters: " + favouriteCharacters.Count);
+        }
+        catch (Exception ex)
+        {
+            // Manejar la excepción adecuadamente, por ejemplo, mostrando un mensaje de error al usuario
+            Console.WriteLine($"Error al recuperar la lista de personajes favoritos: {ex.Message}");
+        }
+    }
+
+
+    private async Task NavigateToCharacter(int characterId)
+    {
+        NavigationManager.NavigateTo($"/get-character-by-id/{characterId}");
+    }
+}
+
+<style>
+    .character-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .character-item {
+        max-width: 300px;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+
+        .character-item img {
+            max-width: 200px;
+            max-height: 200px;
+            display: block;
+            margin: auto;
+        }
+
+    h1 {
+        text-align: center;
+    }
+</style>

@@ -6,7 +6,7 @@
 @inject IUserService userService
 @inject NavigationManager navigationManager
 
-<Header/>
+@* <Header/> *@
 
 <form class="form-container" @onsubmit="Create">
     <h1>Create User</h1>
@@ -44,6 +44,7 @@
         try
         {
             responseMessage = await userService.CreateUser(user);
+            navigationManager.NavigateTo("/sign-in");
         }
         catch (Exception ex)
         {

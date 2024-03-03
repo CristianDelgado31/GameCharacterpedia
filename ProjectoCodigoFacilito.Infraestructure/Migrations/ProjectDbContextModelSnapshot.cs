@@ -51,9 +51,6 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsVisible")
-                        .HasColumnType("bit");
-
                     b.Property<int>("ModifiedById")
                         .HasColumnType("int");
 
@@ -123,6 +120,10 @@ namespace ProjectoCodigoFacilito.Infraestructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

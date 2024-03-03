@@ -1,5 +1,9 @@
 using Azure.Core;
+using IdentityModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using ProjectoCodigoFacilito.Application.CheckUser;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
@@ -7,6 +11,8 @@ using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace ProjectoCodigoFacilito.API.Controllers;
@@ -15,7 +21,15 @@ namespace ProjectoCodigoFacilito.API.Controllers;
 [ApiController]
 public class UserController : ApiControllerBase
 {
+    //private readonly IConfiguration _config;
+
+    public UserController(IConfiguration config)
+    {
+        _config = config;
+    }
+
     [HttpGet]
+    [Authorize(Roles = "Administrator")]
     public async Task<ActionResult<List<UserDTO>>> Get()
     {
         try
@@ -36,6 +50,7 @@ public class UserController : ApiControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize(Roles = "User, Administrator")]
     public async Task<ActionResult<UserDTO>> GetById(int id)
     {
         try
@@ -61,15 +76,29 @@ public class UserController : ApiControllerBase
 
     }
 
-    [HttpPost("check")]
-    public async Task<ActionResult<UserDTO>> CheckUser(CheckUserQuery checkUser)
+    [HttpPost("signin-user")]
+    public async Task<ActionResult<UserResult>> CheckUser(CheckUserQuery checkUser)
     {   
         var userDto = await Mediator.Send(checkUser);
 
         if (userDto == null)
             return NotFound();
 
-        return Ok(userDto);
+        //return Ok(userDto);
+
+        ///////////////////////////////////////////
+        //Esto me sirve para generar el token y enviarlo al cliente o probarlo en el swagger
+        var token = GenerateJwt(userDto);
+        //return Ok(token);
+        ///////////////////////////////////////////
+        
+        return Ok(new UserResult
+        {
+            Success = true,
+            Token = token,
+            Error = null,
+            Id = userDto.Id
+        });
 
     }
 
@@ -78,6 +107,8 @@ public class UserController : ApiControllerBase
     {
         try
         {
+            //Descomentar esto despues de hacer la prueba con el JWT en swagger
+
             var chainEmailBase64 = Convert.FromBase64String(command.Email);
             var chainUserNameBase64 = Convert.FromBase64String(command.Name);
             var chainPasswordBase64 = Convert.FromBase64String(command.Password);
@@ -101,6 +132,7 @@ public class UserController : ApiControllerBase
     }
     
     [HttpPut("{id}")]
+    //[Authorize(Roles = "User, Administrator")]
     public async Task<ActionResult<int>> Update(int id, UpdateUserCommand command)
     {
         try
@@ -153,5 +185,32 @@ public class UserController : ApiControllerBase
             return BadRequest(errorResponse);
         }
     }
-        
+
+
+    private string GenerateJwt(UserDTO user)
+    {
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        // Crear los claims
+        var claims = new[]
+        {
+             new Claim("Name", user.Name),
+             new Claim(JwtClaimTypes.Email, user.Email),
+             new Claim("Password", user.Password),
+             new Claim(JwtClaimTypes.Role, user.Role)
+         };
+
+
+        // Crear el token
+
+        var token = new JwtSecurityToken(
+            _config["Jwt:Issuer"],
+            _config["Jwt:Audience"],
+            claims,
+            expires: DateTime.Now.AddMinutes(60),
+            signingCredentials: credentials);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
 }

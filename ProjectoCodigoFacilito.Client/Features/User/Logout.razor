@@ -1,0 +1,14 @@
+﻿@page "/logout"
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+
+@inject IUserService userService
+@inject NavigationManager navigationManager
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await userService.Logout();
+        navigationManager.NavigateTo("/");
+    }
+}
+

@@ -29,6 +29,7 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
                 Name = request.Name,
                 Email = request.Email,
                 Password = request.Password,
+                Role = request.Role,
                 CreatedDate = DateTime.Now,
                 IsDeleted = false,
                 ModifiedDate = DateTime.Now,
@@ -36,7 +37,7 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
             
             var result = await _userRepository.CreateAsync(userEntity);
             
-            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.listFavoriteCharacters,
+            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.Role, result.listFavoriteCharacters,
                 result.IsDeleted, result.CreatedDate, result.ModifiedDate);
 
         }

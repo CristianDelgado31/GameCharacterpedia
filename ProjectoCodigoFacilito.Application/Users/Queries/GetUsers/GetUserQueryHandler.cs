@@ -15,7 +15,7 @@ public class GetUserQueryHandler : IRequestHandler<GetUserQuery, List<UserDTO>>
     {
         var users = await _userRepository.GetAllAsync();
         
-        var userList = users.Select(u => new UserDTO(u.Id, u.Name, u.Email, u.Password,u.listFavoriteCharacters,
+        var userList = users.Select(u => new UserDTO(u.Id, u.Name, u.Email, u.Password, u.Role, u.listFavoriteCharacters,
             u.IsDeleted, u.CreatedDate, u.ModifiedDate)).ToList();
         return userList;
     }   

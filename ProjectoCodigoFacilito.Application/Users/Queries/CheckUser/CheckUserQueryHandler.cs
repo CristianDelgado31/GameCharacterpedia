@@ -32,7 +32,7 @@ namespace ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn
             if (result == null)
                 return null;
 
-            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.listFavoriteCharacters,
+            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.Role, result.listFavoriteCharacters,
                 result.IsDeleted, result.CreatedDate, result.ModifiedDate);
         }
     }

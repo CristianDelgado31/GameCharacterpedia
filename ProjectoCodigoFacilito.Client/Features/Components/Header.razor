@@ -2,8 +2,15 @@
     <button @onclick="GoToHome">Home</button>
     <button @onclick="GoToFavorites">Favorites</button>
     <div>
-        <button @onclick="SignIn">Sign In</button>
-        <button @onclick="SignUp">Sign Up</button>
+        <AuthorizeView>
+            <Authorized>
+                <button @onclick="Logout">Logout</button>
+            </Authorized>
+            <NotAuthorized>
+                <button @onclick="SignIn">Sign In</button>
+                <button @onclick="SignUp">Sign Up</button>
+            </NotAuthorized>
+        </AuthorizeView>
     </div>
 </div>
 
@@ -19,6 +26,7 @@
     private void GoToFavorites()
     {
         // Lógica para ir a la página de Favoritos
+        NavigationManager.NavigateTo("/user-favourite-characters"); // Cambiar por la ruta correcta
     }
 
     private void SignUp()
@@ -29,6 +37,13 @@
     private void SignIn()
     {
         NavigationManager.NavigateTo("/sign-in"); // Cambiar por la ruta correcta
+    }
+
+    private void Logout()
+    {
+        // Lógica para cerrar la sesión del usuario
+        // Por ejemplo, puedes borrar el token de autenticación del almacenamiento local y redirigir al usuario a la página de inicio
+        NavigationManager.NavigateTo("/logout"); // Cambiar por la ruta correcta
     }
 }
 
@@ -48,17 +63,17 @@
         height: 50px; /* Ajusta la altura según tus necesidades */
     }
 
-    .header button {
-        background-color: transparent;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-    }
+        .header button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-    .header button:hover {
-        text-decoration: underline;
-    }
+            .header button:hover {
+                text-decoration: underline;
+            }
 
     .container {
         max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */

@@ -19,6 +19,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, int>
             Id = request.Id,
             Name = request.Name,
             Email = request.Email,
+            Role = request.Role,
             Password = request.Password,
             ModifiedDate = DateTime.Now
         };

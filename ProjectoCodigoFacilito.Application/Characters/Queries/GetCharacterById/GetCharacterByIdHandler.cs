@@ -25,7 +25,7 @@ namespace ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacterById
                 Id = character.Id,
                 Name =character.Name,
                 Game = character.Game,
-                IsVisible = character.IsVisible,
+                //IsVisible = character.IsVisible,
                 History = character.History,
                 Role = character.Role,
                 CreatedById = character.CreatedById,

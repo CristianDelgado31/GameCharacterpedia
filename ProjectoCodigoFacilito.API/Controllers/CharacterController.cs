@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
 using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacterById;
@@ -10,7 +11,12 @@ namespace ProjectoCodigoFacilito.API.Controllers;
 [ApiController]
 public class CharacterController : ApiControllerBase
 {
-     [HttpGet]
+    public CharacterController(IConfiguration configuration)
+    {
+        _config = configuration;
+    }
+
+    [HttpGet]
      public async Task<ActionResult<List<CharacterDTO>>> GetAllCharacters()
      {
          var characters = await Mediator.Send(new GetCharacterQuery());
@@ -18,6 +24,7 @@ public class CharacterController : ApiControllerBase
      }
 
     [HttpGet("{id}")]
+    [Authorize(Roles = "User, Administrator")]
     public async Task<ActionResult<CharacterDTO>> GetCharacterById(int id)
     {
         var character = await Mediator.Send(new GetCharacterByIdQuery { CharacterId = id });
@@ -25,6 +32,8 @@ public class CharacterController : ApiControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Administrator")]
+    //[Authorize] // para probar en cliente
     public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
     {
         try

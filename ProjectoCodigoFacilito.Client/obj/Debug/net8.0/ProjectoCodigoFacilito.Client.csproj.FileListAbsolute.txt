@@ -1027,3 +1027,13 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ProjectoCodigoFacilito.Client.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\ref\ProjectoCodigoFacilito.Client.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\Projecto.BFB2975B.Up2Date
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm.gz
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm.gz
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Blazored.LocalStorage.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Authorization.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\jtczcfy5lb.gz
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\wyiqnztbku.gz

@@ -19,7 +19,7 @@ public class GetCharacterQueryHandler : IRequestHandler<GetCharacterQuery, List<
             Id = c.Id,
             Name = c.Name,
             Game = c.Game,
-            IsVisible = c.IsVisible,
+            //IsVisible = c.IsVisible,
             History = c.History,
             Role = c.Role,
             CreatedById = c.CreatedById,
