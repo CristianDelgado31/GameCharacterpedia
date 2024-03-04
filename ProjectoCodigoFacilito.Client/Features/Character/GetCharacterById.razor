@@ -112,10 +112,11 @@
 
         // favouriteCharacters = user.ListFavoriteCharacters;
 
-        if(user.ListFavoriteCharacters.Any(c => c.Id == Id))
-        {
-            IsLiked = true;
-        };
+        if(user.Id != 0)
+            if(user.ListFavoriteCharacters.Any(c => c.Id == Id))
+            {
+                IsLiked = true;
+            };
     }
 
     private async void ToggleLike()
