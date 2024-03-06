@@ -53,7 +53,7 @@ namespace ProjectoCodigoFacilito.Client.Utility
             var jsonBytes = ParseBase64WithoutPadding(payload);
             var keyValuePairs = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonBytes);
 
-            keyValuePairs.TryGetValue(ClaimTypes.Role, out object roles);
+            keyValuePairs.TryGetValue("role", out object roles);
 
             if (roles != null)
             {
@@ -90,5 +90,22 @@ namespace ProjectoCodigoFacilito.Client.Utility
             return Convert.FromBase64String(base64);
         }
 
+
+        /* Este metodo tambien me funciona para usar el [Authorize(Roles = "Administrator")]
+          
+         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
+        {
+            var savedToken = await _localStorage.GetItemAsync<string>("authToken");
+
+            if (string.IsNullOrWhiteSpace(savedToken))
+            {
+                return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
+            }
+
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", savedToken);
+
+            return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(ParseClaimsFromJwt(savedToken), "jwt")));
+        }
+        */
     }
 }

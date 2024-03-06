@@ -3,12 +3,10 @@ using ProjectoCodigoFacilito.Client.Services.Interfaces;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text;
-using ProjectoCodigoFacilito.Client.Models;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using ProjectoCodigoFacilito.Client.Utility;
-using ProjectoCodigoFacilito.Client.Models.CharacterModel;
-using Microsoft.AspNetCore.Components;
+
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
@@ -25,7 +23,7 @@ namespace ProjectoCodigoFacilito.Client.Services
             _authenticationStateProvider = authenticationStateProvider;
         }
 
-        public async Task<string> CreateUser(CreateUserModel user) //Sign up
+        public async Task<string?> CreateUser(CreateUserModel user) //Sign up
         {
             try
             {
@@ -34,23 +32,23 @@ namespace ProjectoCodigoFacilito.Client.Services
                 {
                     return "Error: Passwords do not match";
                 }
-
+                
                 byte[] bytesUserName = Encoding.UTF8.GetBytes(user.Name);
                 byte[] bytesEmail = Encoding.UTF8.GetBytes(user.Email);
                 byte[] bytesPassword = Encoding.UTF8.GetBytes(user.Password);
-                user.Name = Convert.ToBase64String(bytesUserName);
-                user.Email = Convert.ToBase64String(bytesEmail);
-                user.Password = Convert.ToBase64String(bytesPassword);
+                var userName = Convert.ToBase64String(bytesUserName);
+                var userEmail = Convert.ToBase64String(bytesEmail);
+                var userPassword = Convert.ToBase64String(bytesPassword);
 
-                var response = await _httpClient.PostAsJsonAsync("api/User", user);
+                var response = await _httpClient.PostAsJsonAsync("api/User", new CreateUserModel { Name = userName, Email = userEmail, Password = userPassword});
                 response.EnsureSuccessStatusCode();
 
                 if(!response.IsSuccessStatusCode)
                 {
-                    throw new ApplicationException(response.Content.ToString());
+                    return "Email is already in use";
                 }
 
-                return "Ok";
+                return null;
             }
             catch (Exception ex)
             {
@@ -77,10 +75,20 @@ namespace ProjectoCodigoFacilito.Client.Services
                 ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(user.Email!);
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", loginResult.Token);
 
+                var getTokenId = await _httpClient.GetFromJsonAsync<SignInUserModel>($"api/User/GetTokenId/{loginResult.Token}");
 
-                var userCharacterList = await GetUserFavouriteCharactersById(loginResult.Id);
+                var userCharacterList = await GetUserFavouriteCharactersById(getTokenId.Id);
+
+                if(userCharacterList != null)
+                {
+                    await Console.Out.WriteLineAsync("hola");
+                }
+                else
+                {
+                    await Console.Out.WriteLineAsync("adios");
+                }
+
                 await _localStorage.SetItemAsync("UserFavouriteCharacters", userCharacterList);
-
 
                 return loginResult;
             }
@@ -96,6 +104,7 @@ namespace ProjectoCodigoFacilito.Client.Services
         {
             await _localStorage.RemoveItemAsync("authToken");
             await _localStorage.RemoveItemAsync("UserFavouriteCharacters");
+            await _localStorage.RemoveItemAsync("CharactersList");
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
 
@@ -104,6 +113,31 @@ namespace ProjectoCodigoFacilito.Client.Services
         public async Task<SignInUserModel?> GetUserFavouriteCharactersById(int id)
         {
             return await _httpClient.GetFromJsonAsync<SignInUserModel>($"api/User/{id}");
+        }
+
+
+        public async Task<bool> UpdateProfile(SignInUserModel user)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"api/User/{user.Id}", user);
+            response.EnsureSuccessStatusCode();
+            if(!response.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(response.Content.ToString());
+            }
+            return true;
+        }
+
+        public async Task<bool> DeleteUser(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"api/User/{id}");
+            response.EnsureSuccessStatusCode();
+            if(!response.IsSuccessStatusCode)
+            {
+                throw new ApplicationException(response.Content.ToString());
+            }
+            await Logout();
+
+            return true;
         }
     }
 

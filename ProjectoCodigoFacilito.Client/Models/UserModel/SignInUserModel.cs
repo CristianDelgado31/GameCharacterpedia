@@ -6,5 +6,8 @@ namespace ProjectoCodigoFacilito.Client.Models.UserModel
     {
         public List<GetCharacterModel> ListFavoriteCharacters { get; set; }
         public int Id { get; set; }
+        public string Name { get; set; }
+        public string Role { get; set; }
+
     }
 }

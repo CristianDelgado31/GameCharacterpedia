@@ -336,6 +336,32 @@
   },
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
+    "Method": "GetUserIdFromToken",
+    "RelativePath": "api/User/GetTokenId/{jwtToken}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jwtToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProjectoCodigoFacilito.API.Controllers.UserController\u002BGetTokenIdResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
     "Method": "CheckUser",
     "RelativePath": "api/User/signin-user",
     "HttpMethod": "POST",

@@ -1,10 +1,15 @@
 ﻿<div class="header">
     <button @onclick="GoToHome">Home</button>
     <button @onclick="GoToFavorites">Favorites</button>
+    <AuthorizeView Roles="Administrator">
+        <Authorized>
+            <button class="btn-create-character" @onclick="GoToCreateCharacter">Create Character</button>
+        </Authorized>
+    </AuthorizeView>
     <div>
         <AuthorizeView>
             <Authorized>
-                <button @onclick="Logout">Logout</button>
+                <button @onclick="GoToProfile">Profile</button>
             </Authorized>
             <NotAuthorized>
                 <button @onclick="SignIn">Sign In</button>
@@ -20,30 +25,33 @@
 
     private void GoToHome()
     {
-        NavigationManager.NavigateTo("/get-all-characters"); // Cambiar por la ruta correcta
+        NavigationManager.NavigateTo("/get-all-characters");
     }
 
     private void GoToFavorites()
     {
         // Lógica para ir a la página de Favoritos
-        NavigationManager.NavigateTo("/user-favourite-characters"); // Cambiar por la ruta correcta
+        NavigationManager.NavigateTo("/user-favourite-characters");
+    }
+
+    private void GoToCreateCharacter()
+    {
+        NavigationManager.NavigateTo("/create-character");
     }
 
     private void SignUp()
     {
         // Lógica para ir a la página de Perfil
-        NavigationManager.NavigateTo("/create-user"); // Cambiar por la ruta correcta
+        NavigationManager.NavigateTo("/create-user");
     }
     private void SignIn()
     {
-        NavigationManager.NavigateTo("/sign-in"); // Cambiar por la ruta correcta
+        NavigationManager.NavigateTo("/sign-in");
     }
 
-    private void Logout()
+    private void GoToProfile()
     {
-        // Lógica para cerrar la sesión del usuario
-        // Por ejemplo, puedes borrar el token de autenticación del almacenamiento local y redirigir al usuario a la página de inicio
-        NavigationManager.NavigateTo("/logout"); // Cambiar por la ruta correcta
+        NavigationManager.NavigateTo("/profile");
     }
 }
 
@@ -84,4 +92,16 @@
         display: flex;
         align-items: center;
     }
+
+    .btn-create-character {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .btn-create-character:hover {
+            text-decoration: underline;
+        }
 </style>

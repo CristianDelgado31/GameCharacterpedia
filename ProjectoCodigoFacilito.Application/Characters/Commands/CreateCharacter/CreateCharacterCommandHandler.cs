@@ -20,10 +20,9 @@ public class CreateCharacterCommandHandler : IRequestHandler<CreateCharacterComm
         {
             Name = request.Name,
             Game = request.Game,
-            //IsVisible = true,
             History = request.History,
             Role = request.Role,
-            CreatedById = 1,  //request.CreatedById, -> esta hardcodeado
+            CreatedById = request.CreatedById,
             CreatedDate = DateTime.Now,
         };
 
@@ -38,7 +37,6 @@ public class CreateCharacterCommandHandler : IRequestHandler<CreateCharacterComm
             Id = createdCharacter.Id,
             Name = createdCharacter.Name,
             Game = createdCharacter.Game,
-            //IsVisible = createdCharacter.IsVisible,
             History = createdCharacter.History,
             Role = createdCharacter.Role,
             CreatedById = createdCharacter.CreatedById,

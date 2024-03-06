@@ -4,21 +4,27 @@ using Microsoft.AspNetCore.Components.Forms;
 using System.Net.Http.Json;
 using ProjectoCodigoFacilito.Client.Models.CharacterModel;
 using ProjectoCodigoFacilito.Client.Services.Interfaces;
+using Blazored.LocalStorage;
+using ProjectoCodigoFacilito.Client.Models.UserModel;
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
     public class CharacterService : ICharacterService
     {
         private readonly HttpClient _httpClient;
+        private ILocalStorageService _localStorage;
 
-        public CharacterService(HttpClient httpClient)
+        public CharacterService(HttpClient httpClient, ILocalStorageService localStorageService)
         {
             _httpClient = httpClient;
+            _localStorage = localStorageService;
         }
 
         public async Task<List<GetCharacterModel>> GetCharacters()
         {
-            return await _httpClient.GetFromJsonAsync<List<GetCharacterModel>>("api/Character");
+            var characterList = await _httpClient.GetFromJsonAsync<List<GetCharacterModel>>("api/Character");
+            await _localStorage.SetItemAsync("CharactersList", characterList);
+            return characterList;
         }
 
         public async Task<GetCharacterModel> GetCharacterById(int id)
@@ -41,6 +47,8 @@ namespace ProjectoCodigoFacilito.Client.Services
                 // Establecer atributos en CreateCharacterCommand
                 command.nameImageStream = imageFile.Name;
                 command.ImageStream = fileBytes;
+                var user = await _localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters");
+                command.CreatedById = user.Id;
 
                 // Realizar la llamada HTTP
                 var json = JsonSerializer.Serialize(command);

@@ -24,7 +24,6 @@ public class CharacterController : ApiControllerBase
      }
 
     [HttpGet("{id}")]
-    //[Authorize(Roles = "User, Administrator")]
     public async Task<ActionResult<CharacterDTO>> GetCharacterById(int id)
     {
         var character = await Mediator.Send(new GetCharacterByIdQuery { CharacterId = id });
@@ -33,7 +32,6 @@ public class CharacterController : ApiControllerBase
 
     [HttpPost]
     [Authorize(Roles = "Administrator")]
-    //[Authorize] // para probar en cliente
     public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
     {
         try

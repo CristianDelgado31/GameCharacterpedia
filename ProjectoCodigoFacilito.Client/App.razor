@@ -1,25 +1,14 @@
-﻿@* <Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
- *@
-
- @using Microsoft.AspNetCore.Components.Authorization
+﻿@using Microsoft.AspNetCore.Components.Authorization
 @using ProjectoCodigoFacilito.Client.Features.Components
+@using ProjectoCodigoFacilito.Client.Features.User
+@using Microsoft.AspNetCore.Authorization
+
 
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
         <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
             <NotAuthorized>
-                <RedirectToLogin /> <!-- En esta parte de codigo redijo al login si no esta autorizado el usuario al ingresar a ciertas paginas/componentes -->
+                <RedirectToLogin/> <!-- En esta parte de codigo redijo al login si no esta autorizado el usuario al ingresar a ciertas paginas/componentes -->
             </NotAuthorized>
         </AuthorizeRouteView>
     </Found>
@@ -32,7 +21,7 @@
     </NotFound>
 </Router>
 
- @code{
+@*  @code{
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
     
@@ -50,4 +39,31 @@
             Console.WriteLine("User is not authenticated");
         }
     }
- }
+ } *@
+
+ @code {
+    [Inject] AuthenticationStateProvider AuthStateProvider { get; set; }
+    [Inject] NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthStateProvider.GetAuthenticationStateAsync();
+
+        /*-----------------------------------------------------------------------*/
+
+        // var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        // var user = authState.User;
+
+        // if (!user.Identity.IsAuthenticated)
+        // {
+        //     // Si el usuario no está autenticado, redirige a la página de inicio de sesión
+        //     NavigationManager.NavigateTo("/get-all-characters");
+        // }
+        // else if (!user.IsInRole("Administrator"))
+        // {
+        //     // Si el usuario está autenticado pero no tiene el rol de "Administrator",
+        //     // puedes redirigirlo a una página de acceso no autorizado o mostrar un mensaje de error.
+        //     NavigationManager.NavigateTo("/");
+        // }
+    }
+}

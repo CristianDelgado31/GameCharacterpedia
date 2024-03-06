@@ -11,7 +11,5 @@ namespace ProjectoCodigoFacilito.Application.CheckUser
         public bool Success { get; set; }
         public string Token { get; set; }
         public string Error { get; set; }
-
-        public int Id { get; set; }
     }
 }

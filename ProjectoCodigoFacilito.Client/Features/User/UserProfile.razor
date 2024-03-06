@@ -1,0 +1,250 @@
+﻿@page "/profile"
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Authorization
+@using ProjectoCodigoFacilito.Client.Models.UserModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+@inject ILocalStorageService localStorage
+@inject IUserService userService
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+
+<div class="container profile-container">
+    <div class="col-md-6 profile-card">
+        <div class="profile-title">
+            <h1>Your Profile</h1>
+            <button class="btn btn-danger btn-logout" @onclick="Logout">Logout</button>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="profile-item">
+                    <strong>Name:</strong> @Profile.Name
+                </div>
+                <div class="profile-item">
+                    <strong>Email:</strong> @Profile.Email
+                </div>
+                <div class="profile-item">
+                    <strong type="password">Password:</strong> @passwordType 
+                        <i class="fa fa-eye" @onclick="TogglePasswordVisibility"></i>
+                </div>
+                <div class="profile-item">
+                    <strong>Role:</strong> @Profile.Role
+                </div>
+                <!-- Contenedor para los botones "Modify" y "Delete User" -->
+                <div class="profile-item text-center">
+                    <button class="btn btn-primary btn-modify" @onclick="ShowForm">Modify</button>
+                    <!-- Botón "Delete User" -->
+                    <button class="btn btn-danger btn-delete ml-2" style="@(showForm ? "display: none;" : "")" @onclick="DeleteUser">Delete User</button>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-4" style="@(showForm ? "" : "display: none;")">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Complete the fields</h2>
+                <form @onsubmit="UpdateProfile">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" @bind=updateProfile.Name required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" @bind=updateProfile.Email required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" @bind=updateProfile.Password required>
+                    </div>
+                    <button type="submit" class="btn btn-submit btn-block">Confirm</button>
+                </form>
+
+            </div>
+        </div
+    </div>
+</div>
+
+
+@code {
+    private SignInUserModel Profile = new SignInUserModel();
+    private SignInUserModel updateProfile = new SignInUserModel();
+    private bool showForm = false;
+    private string passwordType = "****";
+    private bool showPassword = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Profile = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
+    }
+
+    private void Logout()
+    {
+        NavigationManager.NavigateTo("/logout");
+    }
+
+    private async Task UpdateProfile()
+    {
+        Console.WriteLine("Update profile");
+
+        //Editar los cambios en Profile
+        Profile.Email = updateProfile.Email;
+        Profile.Name = updateProfile.Name;
+        Profile.Password = updateProfile.Password;
+
+        //Guardar los cambios en el local storage
+        await localStorage.SetItemAsync("UserFavouriteCharacters", Profile);
+        //Hacer los cambios en la base de datos
+        await userService.UpdateProfile(Profile);
+
+        //Ocultar y limpiar el formulario
+        updateProfile = new SignInUserModel();
+        showForm = false;
+
+    }
+
+    private void ShowForm()
+    {
+        showForm = !showForm;
+    }
+
+    private void TogglePasswordVisibility()
+    {
+        showPassword = !showPassword;
+        //Mostrar la contraseña
+        if (showPassword)
+            passwordType = Profile.Password;
+        else
+            passwordType = "****";
+    }
+    private async Task DeleteUser()
+    {
+        // Lógica para eliminar al usuario
+        // Por ejemplo, realizar una llamada al servicio para eliminar el usuario
+        await userService.DeleteUser(Profile.Id);
+
+        // // Una vez que se ha eliminado el usuario, podrías redirigir al usuario a otra página
+        NavigationManager.NavigateTo("/logout");
+    }
+}
+
+<style>
+    /* Estilos para el contenedor principal */
+    .profile-container {
+        margin-top: 70px;
+        padding: 20px; /* Espacio interior para mejorar la apariencia */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Alinear el contenido en columna */
+        text-align: center; /* Centrar el texto */
+        border-radius: 10px; /* Borde redondeado */
+        background-color: #d2b48c; /* Color de fondo */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    /* Estilos para el título */
+    .profile-title {
+        display: flex;
+        justify-content: space-between; /* Alinea los elementos a los extremos del contenedor */
+        align-items: center;
+    }
+
+    /* Estilos para los elementos del perfil */
+    .profile-item {
+        margin-bottom: 15px; /* Espacio entre elementos */
+    }
+
+    /* Estilos para el botón de logout */
+    .btn-logout {
+        background-color: #c82333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-logout:hover {
+            background-color: #dc3545;
+    }
+
+    .btn-modify {
+        background-color: #c0a700; /* Amarillo */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-modify:hover {
+        background-color: #ecd233; /* Amarillo oscurecido al pasar el ratón */
+    }
+
+    .btn-delete {
+    background-color: #333; /* Rojo */
+    color: #dc3545;
+    border: none;
+    margin-left : 120px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .btn-delete:hover {
+        /* background-color: #333; *//* Rojo oscurecido al pasar el ratón */
+        color: #dc2110;
+    }
+
+    /* Estilos para la tarjeta */
+    .profile-card {
+        width: 100%;
+        background-color: #f8f9fa;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --------------------------------------- */
+    /* Estilos para los campos de formulario */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        max-width: 300px; /* Ancho máximo ajustado para los inputs */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Estilos para el botón de envío */
+    .btn-submit {
+        background-color: #9ACD32; /* Verde claro */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+        background-color: #7CFC00; /* Verde más claro al pasar el ratón */
+    }
+
+
+</style>
+
+
+

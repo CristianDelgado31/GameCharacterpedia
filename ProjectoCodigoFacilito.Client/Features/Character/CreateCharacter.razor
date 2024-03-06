@@ -7,7 +7,7 @@
 
 @inject ICharacterService characterService
 
-@attribute [Authorize]
+@attribute [Authorize(Roles = "Administrator")]
 
 @* <Header /> *@
 <h1>Create Character</h1>
@@ -18,7 +18,7 @@
 
     <label>
         Name:
-        <InputText @bind-Value="@model.Name" class="input-text" />
+        <InputText @bind-Value="@model.Name" class="input-text"/>
     </label>
 
     <label>
@@ -57,6 +57,8 @@
         try
         {
             responseMessage = await characterService.CreateCharacter(model, uploadedImage);
+            model = new CreateCharacterModel();
+            responseMessage = null;
         }
         catch (Exception ex)
         {

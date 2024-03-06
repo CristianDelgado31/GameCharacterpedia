@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXEdldENoYXJhY3RlckJ5SWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Components/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ29tcG9uZW50c1xGb290ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Components/Header.razor]
 build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ29tcG9uZW50c1xIZWFkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/User/UserFavouriteCharacters.razor]
 build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcVXNlclxVc2VyRmF2b3VyaXRlQ2hhcmFjdGVycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/User/UserProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcVXNlclxVc2VyUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Layout/MainLayout.razor]

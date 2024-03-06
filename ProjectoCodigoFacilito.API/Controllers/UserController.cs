@@ -84,20 +84,13 @@ public class UserController : ApiControllerBase
         if (userDto == null)
             return NotFound();
 
-        //return Ok(userDto);
-
-        ///////////////////////////////////////////
-        //Esto me sirve para generar el token y enviarlo al cliente o probarlo en el swagger
         var token = GenerateJwt(userDto);
-        //return Ok(token);
-        ///////////////////////////////////////////
         
         return Ok(new UserResult
         {
             Success = true,
             Token = token,
-            Error = null,
-            Id = userDto.Id
+            Error = null
         });
 
     }
@@ -118,6 +111,9 @@ public class UserController : ApiControllerBase
 
             var user = await Mediator.Send(command);
 
+            if (user == null)
+                return BadRequest();
+
             return Ok(user);
         }
         catch (ValidationExceptionFV ex)
@@ -132,7 +128,7 @@ public class UserController : ApiControllerBase
     }
     
     [HttpPut("{id}")]
-    //[Authorize(Roles = "User, Administrator")]
+    [Authorize]
     public async Task<ActionResult<int>> Update(int id, UpdateUserCommand command)
     {
         try
@@ -162,6 +158,7 @@ public class UserController : ApiControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<ActionResult<int>> Delete(int id)
     {
         try
@@ -172,7 +169,7 @@ public class UserController : ApiControllerBase
             if (result == 0)
                 return NotFound();
 
-            return Ok(result);
+            return Ok(result); //devuelve 1 si elimino el user correctamente
         }
         catch (ValidationExceptionFV ex)
         {
@@ -195,12 +192,9 @@ public class UserController : ApiControllerBase
         // Crear los claims
         var claims = new[]
         {
-             new Claim("Name", user.Name),
-             new Claim(JwtClaimTypes.Email, user.Email),
-             new Claim("Password", user.Password),
+             new Claim(JwtClaimTypes.Id, user.Id.ToString()),
              new Claim(JwtClaimTypes.Role, user.Role)
          };
-
 
         // Crear el token
 
@@ -212,5 +206,28 @@ public class UserController : ApiControllerBase
             signingCredentials: credentials);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+
+    [HttpGet("GetTokenId/{jwtToken}")]
+    [Authorize]
+    public GetTokenIdResult GetUserIdFromToken(string jwtToken)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var token = tokenHandler.ReadJwtToken(jwtToken);
+
+        var userIdClaim = token.Claims.FirstOrDefault(c => c.Type == JwtClaimTypes.Id);
+        if (userIdClaim == null)
+        {
+            return null;
+        }
+
+        return new GetTokenIdResult { Id = userIdClaim.Value };
+    }
+
+    // clase de prueba para la funcion de arriba
+    public class GetTokenIdResult
+    {
+        public string Id { get; set; }
     }
 }

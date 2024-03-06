@@ -100,17 +100,17 @@
 
     private GetCharacterModel Character;
     private bool IsLiked { get; set; }
-    //private List<GetCharacterModel> favouriteCharacters = new List<GetCharacterModel>();
     private SignInUserModel user;
 
     private string likeIconStyle => IsLiked ? "color: red;" : "color: black;";
 
     protected override async Task OnInitializedAsync()
     {
-        Character = await CharacterService.GetCharacterById(Id);
-        user = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
+        //Character = await CharacterService.GetCharacterById(Id);
+        var CharacterList = await localStorage.GetItemAsync<List<GetCharacterModel>>("CharactersList") ?? new List<GetCharacterModel>();
+        Character = CharacterList.FirstOrDefault(c => c.Id == Id);
 
-        // favouriteCharacters = user.ListFavoriteCharacters;
+        user = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
 
         if(user.Id != 0)
             if(user.ListFavoriteCharacters.Any(c => c.Id == Id))
@@ -146,34 +146,3 @@
         }
     }
 }
-
-
-@* <style>
-    .character-details {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        margin: 20px auto;
-        max-width: 600px;
-    }
-
-    .character-info {
-        margin-bottom: 20px;
-    }
-
-        .character-info h2 {
-            margin-top: 0;
-        }
-
-        .character-info p {
-            margin-bottom: 10px;
-        }
-
-        .character-info img.character-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-top: 20px;
-        }
-</style> *@

@@ -37,7 +37,13 @@ public class UserRepository : IUserRepository
 
     public async Task<User?> GetByIdAsync(int id)
     {
-        var user = await _dbContext.Users.FindAsync(id);
+        var user = await _dbContext.Users
+            .Where(user => user.Id == id && user.IsDeleted == false)
+            .FirstOrDefaultAsync();
+
+        if (user == null)
+            return null;
+
         var listReferencesId = await _dbContext.ReferenceIds.ToListAsync();
         var listCharacters = await _dbContext.Characters.ToListAsync();
         
@@ -56,14 +62,20 @@ public class UserRepository : IUserRepository
             .Where(model => model.Email == user.Email && model.Password == user.Password)
             .FirstOrDefaultAsync();
         
-        //if (userEntity == null)
-        //    throw new Exception("Usuario no encontrado");
-        
         return userEntity;
     }
 
-    public async Task<User> CreateAsync(User entity)
+    public async Task<User?> CreateAsync(User entity)
     {
+        var user = await _dbContext.Users
+            .Where(model => model.Email == entity.Email)
+            .FirstOrDefaultAsync();
+
+        if (user != null)
+        {
+            return null;
+        }
+
         await _dbContext.Users.AddAsync(entity);
         await UnitOfWork.SaveChangesAsync();
         

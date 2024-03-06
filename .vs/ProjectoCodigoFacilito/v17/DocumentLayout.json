@@ -3,44 +3,32 @@
   "WorkspaceRootPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\features\\character\\getcharacterbyid.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\character\\getcharacterbyid.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\controllers\\charactercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\charactercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\features\\character\\getallcharacters.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\character\\getallcharacters.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.application\\characters\\commands\\createcharacter\\createcharactercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|solutionrelative:projectocodigofacilito.application\\characters\\commands\\createcharacter\\createcharactercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\services\\referenceidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\referenceidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\features\\character\\createcharacter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\character\\createcharacter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.application\\referenceid\\queries\\getreferenceidbyid\\getreferenceidbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|solutionrelative:projectocodigofacilito.application\\referenceid\\queries\\getreferenceidbyid\\getreferenceidbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\services\\characterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\characterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\features\\user\\signin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\user\\signin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\features\\user\\userfavouritecharacters.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\user\\userfavouritecharacters.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.infraestructure\\repository\\referenceidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|solutionrelative:projectocodigofacilito.infraestructure\\repository\\referenceidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.api\\controllers\\referenceidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\referenceidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.infraestructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|solutionrelative:projectocodigofacilito.infraestructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,79 +50,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SignIn.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\SignIn.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\User\\SignIn.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\SignIn.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\User\\SignIn.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-03T23:28:48.74Z"
+              "DocumentIndex": 1,
+              "Title": "CreateCharacterCommandHandler.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\Characters\\Commands\\CreateCharacter\\CreateCharacterCommandHandler.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Application\\Characters\\Commands\\CreateCharacter\\CreateCharacterCommandHandler.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\Characters\\Commands\\CreateCharacter\\CreateCharacterCommandHandler.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Application\\Characters\\Commands\\CreateCharacter\\CreateCharacterCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T03:25:02.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllCharacters.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetAllCharacters.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetAllCharacters.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetAllCharacters.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetAllCharacters.razor",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-03T23:28:28.247Z",
+              "DocumentIndex": 0,
+              "Title": "CharacterController.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wCEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T03:20:10.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GetReferenceIdByIdQueryHandler.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ReferenceId\\Queries\\GetReferenceIdById\\GetReferenceIdByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Application\\ReferenceId\\Queries\\GetReferenceIdById\\GetReferenceIdByIdQueryHandler.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\ReferenceId\\Queries\\GetReferenceIdById\\GetReferenceIdByIdQueryHandler.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Application\\ReferenceId\\Queries\\GetReferenceIdById\\GetReferenceIdByIdQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAByAAAA",
+              "Title": "CharacterService.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA5wDIAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T23:03:33.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReferenceIdRepository.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\ReferenceIdRepository.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Infraestructure\\Repository\\ReferenceIdRepository.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\ReferenceIdRepository.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Infraestructure\\Repository\\ReferenceIdRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T22:04:31.827Z"
+              "WhenOpened": "2024-03-06T00:14:39.33Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ReferenceIdService.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\ReferenceIdService.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\ReferenceIdService.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\ReferenceIdService.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\ReferenceIdService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAApwCIAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T21:55:11.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetCharacterById.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAAAG4AAAB0AAAA",
+              "Title": "CreateCharacter.razor",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\CreateCharacter.razor",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Character\\CreateCharacter.razor",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\CreateCharacter.razor",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Character\\CreateCharacter.razor",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-03T17:44:26.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-06T00:14:02.288Z"
             },
             {
               "$type": "Document",
@@ -144,45 +105,33 @@
               "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
               "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
               "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAnwDsAAAAAAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAwwGcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T02:35:04.548Z"
+              "WhenOpened": "2024-03-05T03:52:57.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReferenceIdController.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\ReferenceIdController.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\ReferenceIdController.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\ReferenceIdController.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\ReferenceIdController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAiwCMAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T17:00:22.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserFavouriteCharacters.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\UserFavouriteCharacters.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\User\\UserFavouriteCharacters.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\UserFavouriteCharacters.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\User\\UserFavouriteCharacters.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-03T04:23:46.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
               "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAAADUAAAA8AAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAADwv4EAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T05:49:46.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAnwEEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T21:16:20.455Z"
             }
           ]
         }

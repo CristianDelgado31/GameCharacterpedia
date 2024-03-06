@@ -5,6 +5,7 @@
 
 @inject IUserService userService
 @inject NavigationManager navigationManager
+@inject AuthenticationStateProvider AuthStateProvider
 
 @* <Header/> *@
 
@@ -12,19 +13,19 @@
     <h1>Create User</h1>
     <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" class="form-control" @bind="user.Name" />
+        <input type="text" id="name" class="form-control" @bind="user.Name" required/>
     </div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" @bind="user.Email" />
+        <input type="email" id="email" class="form-control" @bind="user.Email" required/>
     </div>
     <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" id="password" class="form-control" @bind="user.Password" />
+        <input type="password" id="password" class="form-control" @bind="user.Password" required/>
     </div>
     <div class="form-group">
         <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" class="form-control" @bind="user.ConfirmPassword" />
+        <input type="password" id="confirmPassword" class="form-control" @bind="user.ConfirmPassword" required/>
     </div>
     <button type="submit" class="btn btn-primary">Create User</button>
     <p>Already a member? <a href="/sign-in">Sign in!</a></p>
@@ -37,14 +38,28 @@
 
 @code {
     private CreateUserModel user = new CreateUserModel();
-    private string responseMessage;
+    private string? responseMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            navigationManager.NavigateTo("/get-all-characters");
+        }
+    }
 
     private async Task Create()
     {
         try
         {
             responseMessage = await userService.CreateUser(user);
-            navigationManager.NavigateTo("/sign-in");
+            if(responseMessage == null)
+                navigationManager.NavigateTo("/sign-in");
+                
+            user = new CreateUserModel();
         }
         catch (Exception ex)
         {

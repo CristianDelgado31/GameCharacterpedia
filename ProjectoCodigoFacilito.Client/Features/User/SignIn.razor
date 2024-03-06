@@ -6,17 +6,17 @@
 @inject IUserService userService
 @inject NavigationManager navigationManager
 @inject IJSRuntime JSRuntime
-
+@inject AuthenticationStateProvider AuthStateProvider
 
 <form class="form-container" @onsubmit="CheckUser">
     <h1>Sign In</h1>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" @bind="user.Email" />
+        <input type="email" id="email" class="form-control" @bind="user.Email" required/>
     </div>
     <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" id="password" class="form-control" @bind="user.Password" />
+        <input type="password" id="password" class="form-control" @bind="user.Password" required/>
     </div>
     <button type="submit" class="btn btn-primary">Sign In</button>
     <p>Not a user yet? <a href="/create-user">Sign up!</a></p>
@@ -31,6 +31,17 @@
     private SignInUserModel user = new SignInUserModel();
     private string Message;
 
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            navigationManager.NavigateTo("/get-all-characters");
+        }
+    }
+
     private async Task CheckUser()
     {
         var result = await userService.SignInUser(user);
@@ -41,8 +52,14 @@
         }
         else
         {
-            navigationManager.NavigateTo("/");
+            // // navigationManager.NavigateTo("/get-all-characters");
+            await ReloadPage();
         }
+    }
+
+    private async Task ReloadPage()
+    {
+        await JSRuntime.InvokeVoidAsync("window.location.reload");
     }
 }
 

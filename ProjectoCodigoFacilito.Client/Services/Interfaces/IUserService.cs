@@ -7,5 +7,7 @@ namespace ProjectoCodigoFacilito.Client.Services.Interfaces
         Task<string> CreateUser(CreateUserModel user);
         Task<SignInResult> SignInUser(SignInUserModel user);
         Task Logout();
+        Task<bool> UpdateProfile(SignInUserModel user);
+        Task<bool> DeleteUser(int id);
     }
 }

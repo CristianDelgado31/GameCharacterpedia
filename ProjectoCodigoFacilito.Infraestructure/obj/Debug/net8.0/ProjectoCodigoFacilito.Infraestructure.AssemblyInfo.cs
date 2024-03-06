@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectoCodigoFacilito.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3eb26b2e4142d434ac538ffac90658cc14be1af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56b4e5fc1f668e6d98a4d5d79e5a07662807927c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectoCodigoFacilito.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectoCodigoFacilito.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
