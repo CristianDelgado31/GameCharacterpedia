@@ -13,7 +13,9 @@
 
 @attribute [Authorize]
 
+<CheckExpirationToken />
 
+<PageTitle>Favorites</PageTitle>
 <h1>Favorite Characters</h1>
 <ul class="character-list">
     @foreach (var character in favouriteCharacters)

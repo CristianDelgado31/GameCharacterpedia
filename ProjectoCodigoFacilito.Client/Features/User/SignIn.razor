@@ -8,6 +8,8 @@
 @inject IJSRuntime JSRuntime
 @inject AuthenticationStateProvider AuthStateProvider
 
+<PageTitle>Sign In</PageTitle>
+
 <form class="form-container" @onsubmit="CheckUser">
     <h1>Sign In</h1>
     <div class="form-group">
@@ -38,7 +40,8 @@
 
         if (user.Identity.IsAuthenticated)
         {
-            navigationManager.NavigateTo("/get-all-characters");
+            // navigationManager.NavigateTo("/get-all-characters");
+            navigationManager.NavigateTo("/");
         }
     }
 

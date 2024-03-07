@@ -1,0 +1,21 @@
+﻿@page "/check-token-expiration"
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Authorization
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService localStorage
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        var expirationToken = await localStorage.GetItemAsync<DateTime>("authTokenExpiration");
+
+        // var timeNow = DateTime.Now;
+        if (expirationToken < DateTime.Now)
+        {
+            NavigationManager.NavigateTo("/logout");
+        };
+        
+        
+    }
+}

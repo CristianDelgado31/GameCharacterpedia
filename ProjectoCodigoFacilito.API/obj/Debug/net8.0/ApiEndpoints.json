@@ -402,7 +402,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.API.Controllers.UserController\u002BGetTokenIdResult",
+        "Type": "ProjectoCodigoFacilito.API.Controllers.UserController\u002BGetTokenResult",
         "MediaTypes": [
           "text/plain",
           "application/json",

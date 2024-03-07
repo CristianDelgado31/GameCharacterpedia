@@ -6,6 +6,7 @@ using System.Text;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using ProjectoCodigoFacilito.Client.Utility;
+using ProjectoCodigoFacilito.Client.Models.UserModel.UserToken;
 
 
 namespace ProjectoCodigoFacilito.Client.Services
@@ -75,9 +76,16 @@ namespace ProjectoCodigoFacilito.Client.Services
                 ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(user.Email!);
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", loginResult.Token);
 
-                var getTokenId = await _httpClient.GetFromJsonAsync<SignInUserModel>($"api/User/GetTokenId/{loginResult.Token}");
+                // solo se usa para obtener el id y el tokenExp del usuario
+                var getTokenId = await _httpClient.GetFromJsonAsync<GetTokenResult>($"api/User/GetTokenId/{loginResult.Token}");
 
-                var userCharacterList = await GetUserFavouriteCharactersById(getTokenId.Id);
+                var expirationToken = getTokenId.ExpirationToken;
+                //var expDate = getTokenId.ExpirationDate;
+
+                //var expirationToken = new DateTime(expDate.Year, expDate.Month, expDate.Day, expTime.Hour, expTime.Minute, expTime.Second);
+
+                await _localStorage.SetItemAsync("authTokenExpiration", expirationToken);
+                var userCharacterList = await GetUserFavouriteCharactersById(getTokenId!.Id);
 
 
                 await _localStorage.SetItemAsync("UserFavouriteCharacters", userCharacterList);
@@ -97,6 +105,7 @@ namespace ProjectoCodigoFacilito.Client.Services
             await _localStorage.RemoveItemAsync("authToken");
             await _localStorage.RemoveItemAsync("UserFavouriteCharacters");
             await _localStorage.RemoveItemAsync("CharactersList");
+            await _localStorage.RemoveItemAsync("authTokenExpiration"); //test
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
 

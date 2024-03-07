@@ -9,6 +9,8 @@
 @inject ICharacterService characterService
 @attribute [Authorize(Roles = "Administrator")]
 
+<CheckExpirationToken />
+<PageTitle>Character operations</PageTitle>
 @* FORM CREATE CHARACTER *@
 <div style="display: flex; justify-content: space-around;">
     <div style="flex:1;">

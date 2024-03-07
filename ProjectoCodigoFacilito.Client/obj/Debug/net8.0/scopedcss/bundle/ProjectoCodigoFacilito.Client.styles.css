@@ -1,0 +1,15 @@
+/* /Features/Home.razor.rz.scp.css */
+/* TuComponente.razor.css */
+.container[b-f1xj04zieq] {
+    background-color: lightblue; /* Cambia el color de fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title[b-f1xj04zieq] {
+    color: navy; /* Cambia el color del título */
+}
+
+.message[b-f1xj04zieq] {
+    color: darkblue; /* Cambia el color del mensaje */
+}

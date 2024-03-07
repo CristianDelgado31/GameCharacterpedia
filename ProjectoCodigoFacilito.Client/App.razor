@@ -8,7 +8,7 @@
     <Found Context="routeData">
         <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
             <NotAuthorized>
-                <RedirectToLogin/> <!-- En esta parte de codigo redijo al login si no esta autorizado el usuario al ingresar a ciertas paginas/componentes -->
+                <RedirectToLogin/>
             </NotAuthorized>
         </AuthorizeRouteView>
     </Found>
@@ -21,25 +21,6 @@
     </NotFound>
 </Router>
 
-@*  @code{
-    [CascadingParameter]
-    private Task<AuthenticationState> authenticationStateTask { get; set; }
-    
-    private async Task LogUserAuthenticationState()
-    {
-        var authState = await authenticationStateTask;
-        var user = authState.User;
-
-        if (user.Identity!.IsAuthenticated)
-        {
-            Console.WriteLine($"User {user.Identity.Name} authenticated");
-        }
-        else
-        {
-            Console.WriteLine("User is not authenticated");
-        }
-    }
- } *@
 
  @code {
     [Inject] AuthenticationStateProvider AuthStateProvider { get; set; }
@@ -48,22 +29,5 @@
     protected override async Task OnInitializedAsync()
     {
         await AuthStateProvider.GetAuthenticationStateAsync();
-
-        /*-----------------------------------------------------------------------*/
-
-        // var authState = await AuthStateProvider.GetAuthenticationStateAsync();
-        // var user = authState.User;
-
-        // if (!user.Identity.IsAuthenticated)
-        // {
-        //     // Si el usuario no está autenticado, redirige a la página de inicio de sesión
-        //     NavigationManager.NavigateTo("/get-all-characters");
-        // }
-        // else if (!user.IsInRole("Administrator"))
-        // {
-        //     // Si el usuario está autenticado pero no tiene el rol de "Administrator",
-        //     // puedes redirigirlo a una página de acceso no autorizado o mostrar un mensaje de error.
-        //     NavigationManager.NavigateTo("/");
-        // }
     }
 }

@@ -1,6 +1,7 @@
 ﻿@page "/profile"
 @using Blazored.LocalStorage
 @using Microsoft.AspNetCore.Authorization
+@using ProjectoCodigoFacilito.Client.Features.Components
 @using ProjectoCodigoFacilito.Client.Models.UserModel
 @using ProjectoCodigoFacilito.Client.Services.Interfaces
 @inject ILocalStorageService localStorage
@@ -8,7 +9,8 @@
 @inject NavigationManager NavigationManager
 @attribute [Authorize]
 
-
+<CheckExpirationToken />
+<PageTitle>Profiles</PageTitle>
 <div class="container profile-container">
     <div class="col-md-6 profile-card">
         <div class="profile-title">

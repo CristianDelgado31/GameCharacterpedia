@@ -211,7 +211,7 @@ public class UserController : ApiControllerBase
 
     [HttpGet("GetTokenId/{jwtToken}")]
     [Authorize]
-    public GetTokenIdResult GetUserIdFromToken(string jwtToken)
+    public GetTokenResult GetUserIdFromToken(string jwtToken)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.ReadJwtToken(jwtToken);
@@ -222,12 +222,25 @@ public class UserController : ApiControllerBase
             return null;
         }
 
-        return new GetTokenIdResult { Id = userIdClaim.Value };
+        // Leer la fecha de expiración del token en formato UTC
+        var expirationTimeUtc = token.ValidTo;
+
+        // Obtener información de la zona horaria UTC-3
+        TimeZoneInfo timeZone = TimeZoneInfo.FindSystemTimeZoneById("Argentina Standard Time");
+
+
+        // Convertir la fecha y hora de expiración a la zona horaria UTC-3
+        var expirationTimeUtcMinus3 = TimeZoneInfo.ConvertTimeFromUtc(expirationTimeUtc, timeZone);
+
+        // Retornar el resultado con la fecha y hora en la zona horaria UTC-3
+        return new GetTokenResult { Id = userIdClaim.Value, ExpirationToken = expirationTimeUtcMinus3 };
     }
 
     // clase de prueba para la funcion de arriba
-    public class GetTokenIdResult
+    public class GetTokenResult
     {
         public string Id { get; set; }
+        public DateTime ExpirationToken { get; set; }
+
     }
 }

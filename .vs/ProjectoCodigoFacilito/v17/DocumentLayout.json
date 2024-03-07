@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\features\\components\\footer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\components\\footer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\features\\character\\characteroperations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\character\\characteroperations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.infraestructure\\repository\\characterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|solutionrelative:projectocodigofacilito.infraestructure\\repository\\characterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\features\\character\\getcharacterbyid.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\character\\getcharacterbyid.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.api\\controllers\\charactercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A742E6E9-6ACF-40A2-82B4-7D5B4E5E8C3D}|ProjectoCodigoFacilito.API\\ProjectoCodigoFacilito.API.csproj|solutionrelative:projectocodigofacilito.api\\controllers\\charactercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.infraestructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8719812-1734-4E9B-9EBF-093AB668A0E9}|ProjectoCodigoFacilito.Infraestructure\\ProjectoCodigoFacilito.Infraestructure.csproj|solutionrelative:projectocodigofacilito.infraestructure\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\projectocodigofacilito.client\\services\\characterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\characterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.application\\characters\\commands\\deletecharacter\\deletecharactervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D950102-227C-48C2-AEB5-0CC352283E4C}|ProjectoCodigoFacilito.Application\\ProjectoCodigoFacilito.Application.csproj|solutionrelative:projectocodigofacilito.application\\characters\\commands\\deletecharacter\\deletecharactervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|d:\\programas\\riderprojects\\projectocodigofacilito\\projectocodigofacilito.client\\features\\user\\userprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D254883-A1E3-4A1B-9E3F-59920820D30B}|ProjectoCodigoFacilito.Client\\ProjectoCodigoFacilito.Client.csproj|solutionrelative:projectocodigofacilito.client\\features\\user\\userprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,118 +47,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Layout\\MainLayout.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T03:12:18.734Z",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAAwMgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T22:51:08.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Footer.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Components\\Footer.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Components\\Footer.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Components\\Footer.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Components\\Footer.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T02:52:14.17Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Program.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Program.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.API\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T22:50:15.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CharacterRepository.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\CharacterRepository.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Infraestructure\\Repository\\CharacterRepository.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\CharacterRepository.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Infraestructure\\Repository\\CharacterRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:43:16.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Infraestructure\\Repository\\UserRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:34:29.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DeleteCharacterValidator.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\Characters\\Commands\\DeleteCharacter\\DeleteCharacterValidator.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Application\\Characters\\Commands\\DeleteCharacter\\DeleteCharacterValidator.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Application\\Characters\\Commands\\DeleteCharacter\\DeleteCharacterValidator.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Application\\Characters\\Commands\\DeleteCharacter\\DeleteCharacterValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T00:23:38.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\UserService.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAIwIEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T23:59:51.259Z",
+              "Title": "GetCharacterById.razor",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Character\\GetCharacterById.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T21:38:49.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CharacterController.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.API\\Controllers\\CharacterController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAiwFsAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T03:20:10.398Z",
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\wwwroot\\index.html",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\wwwroot\\index.html",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\wwwroot\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-07T21:27:16.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserProfile.razor",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\UserProfile.razor",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\User\\UserProfile.razor",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\User\\UserProfile.razor",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\User\\UserProfile.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T21:25:48.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CharacterOperations.razor",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\CharacterOperations.razor",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Features\\Character\\CharacterOperations.razor",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Features\\Character\\CharacterOperations.razor",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Features\\Character\\CharacterOperations.razor",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAQwIMAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-06T15:13:41.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CharacterService.cs",
-              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
-              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
-              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
-              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Services\\CharacterService.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAQwGkAAAAxAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectoCodigoFacilito.Client\\Program.cs",
+              "ToolTip": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\Program.cs",
+              "RelativeToolTip": "ProjectoCodigoFacilito.Client\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T00:14:39.33Z",
+              "WhenOpened": "2024-03-07T21:09:40.079Z",
               "EditorCaption": ""
             }
           ]
