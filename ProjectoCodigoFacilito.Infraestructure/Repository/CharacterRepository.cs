@@ -17,7 +17,7 @@ public class CharacterRepository : ICharacterRepository
     public IUnitOfWork UnitOfWork { get; }
 
     public async Task<List<Character>> GetAllAsync()
-     => await _dbContext.Characters.ToListAsync();
+     => await _dbContext.Characters.Where(character => character.IsDeleted == false).ToListAsync();
 
     public async Task<Character> GetByIdAsync(int id)
     {
@@ -35,5 +35,32 @@ public class CharacterRepository : ICharacterRepository
     public Task<int> DeleteAsync(int id)
     {
         throw new NotImplementedException();
+    }
+
+    public async Task<int> UpdateAsync(Character entity)
+    {
+        return await _dbContext.Characters
+            .Where(model => model.Id == entity.Id)
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(m => m.Name, entity.Name)
+                .SetProperty(m => m.Game, entity.Game)
+                .SetProperty(m => m.Role, entity.Role)
+                .SetProperty(m => m.History, entity.History)
+                .SetProperty(m => m.ModifiedById, entity.ModifiedById)
+                .SetProperty(m => m.ModifiedDate, entity.ModifiedDate)
+                .SetProperty(m => m.ImageUrl, entity.ImageUrl)
+            );
+
+    }
+
+    public async Task<int> DeleteAsync(Character entity)
+    {
+        return await _dbContext.Characters
+            .Where(model => model.Id == entity.Id)
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(m => m.IsDeleted, true)
+                .SetProperty(m => m.ModifiedById, entity.ModifiedById)
+                .SetProperty(m => m.ModifiedDate, entity.ModifiedDate)
+            );
     }
 }

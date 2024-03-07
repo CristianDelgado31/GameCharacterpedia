@@ -1,0 +1,224 @@
+﻿@page "/character-operations"
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Authorization
+@using ProjectoCodigoFacilito.Client.Models.CharacterModel
+@using ProjectoCodigoFacilito.Client.Services.Interfaces
+@using ProjectoCodigoFacilito.Client.Features.Components
+@using Microsoft.AspNetCore.Components.Authorization
+@inject ILocalStorageService localStorage
+@inject ICharacterService characterService
+@attribute [Authorize(Roles = "Administrator")]
+
+@* FORM CREATE CHARACTER *@
+<div style="display: flex; justify-content: space-around;">
+    <div style="flex:1;">
+        <EditForm Model="@createModel" OnValidSubmit="@CreateNewCharacter">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <h1>Create Character</h1>
+            <label>
+                Name:
+                <InputText @bind-Value="@createModel.Name" class="input-text" />
+            </label>
+
+            <label>
+                Game:
+                <InputText @bind-Value="@createModel.Game" class="input-text" />
+            </label>
+
+            <label>
+                History:
+                <InputText @bind-Value="@createModel.History" class="input-text" />
+            </label>
+
+            <label>
+                Role:
+                <InputText @bind-Value="@createModel.Role" class="input-text" />
+            </label>
+
+            <label>Image:</label>
+            <InputFile OnChange="@HandleFileSelected" />
+            <button type="submit" class="submit-button">Create Character</button>
+        </EditForm>
+    </div>
+    <div style="flex: 1;">
+        @* FORM UPDATE CHARACTER *@
+        <EditForm Model="@updateModel" OnValidSubmit="@UpdateCharacter">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <h1>Update Character</h1>
+                Search Name:
+            <label>
+                <InputText @bind-Value="@searchName" class="input-text" />
+            </label>
+            <label>
+                New Name:
+                <InputText @bind-Value="@updateModel.Name" class="input-text" />
+            </label>
+
+            <label>
+                New Game:
+                <InputText @bind-Value="@updateModel.Game" class="input-text" />
+            </label>
+
+            <label>
+                New History:
+                <InputText @bind-Value="@updateModel.History" class="input-text" />
+            </label>
+
+            <label>
+                New Role:
+                <InputText @bind-Value="@updateModel.Role" class="input-text" />
+            </label>
+
+            <label>New Image:</label>
+            <InputFile OnChange="@HandleFileSelected" />
+            <button type="submit" class="submit-button">Update Character</button>
+        </EditForm>
+    </div>
+    <div style="flex: 1;">
+        @* FORM DELETE CHARACTER*@
+        <EditForm Model="@deleteModel" OnValidSubmit="@Delete">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <h1>Delete Character</h1>
+            <label>
+                Name:
+                <InputText @bind-Value="@deleteModel.Name" class="input-text" />
+            </label>
+
+            <label>
+                Game:
+                <InputText @bind-Value="@deleteModel.Game" class="input-text" />
+            </label>
+            <button type="submit" class="submit-button">Delete Character</button>
+        </EditForm>
+    </div>
+</div>
+
+@if (responseMessage != null)
+{
+    <p>@responseMessage</p>
+}
+
+@code {
+    private CreateCharacterModel createModel = new CreateCharacterModel();
+    private DeleteCharacterModel deleteModel = new DeleteCharacterModel();
+    private UpdateCharacterModel updateModel = new UpdateCharacterModel();
+    private string searchName;
+    private string responseMessage;
+    private IBrowserFile uploadedImage;
+
+    private async Task CreateNewCharacter()
+    {
+        try
+        {
+            responseMessage = await characterService.CreateCharacter(createModel, uploadedImage);
+            createModel = new CreateCharacterModel();
+            //responseMessage = null;
+        }
+        catch (Exception ex)
+        {
+            responseMessage = "Error: " + ex.Message;
+        }
+    }
+
+    private async Task Delete()
+    {
+        try
+        {
+            var characterList = await localStorage.GetItemAsync<List<GetCharacterModel>>("CharactersList");
+            var character = characterList.FirstOrDefault(c => c.Name == deleteModel.Name && c.Game == deleteModel.Game);
+            deleteModel.Id = character.Id;
+            responseMessage = await characterService.DeleteCharacter(deleteModel);
+
+        }
+        catch (Exception ex)
+        {
+            responseMessage = "Error: " + ex.Message;
+        }
+    }
+
+    private async Task UpdateCharacter()
+    {
+        try
+        {
+            var characterList = await localStorage.GetItemAsync<List<GetCharacterModel>>("CharactersList");
+            var character = characterList.FirstOrDefault(c => c.Name == searchName);
+            updateModel.Id = character.Id;
+            responseMessage = await characterService.UpdateCharacter(updateModel, uploadedImage);
+
+            updateModel = new UpdateCharacterModel();
+
+        }
+        catch (Exception ex)
+        {
+            responseMessage = "Error: " + ex.Message;
+        }
+    }
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        uploadedImage = e.File;
+    }
+}
+
+<style>
+    /* Tu CSS aquí */
+    /* Estilo para el formulario */
+    form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    /* Estilo para los campos de entrada */
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Estilo para el botón de enviar */
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Estilo para el mensaje de respuesta */
+    .response-message {
+        margin-top: 10px;
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .input-text {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+</style>

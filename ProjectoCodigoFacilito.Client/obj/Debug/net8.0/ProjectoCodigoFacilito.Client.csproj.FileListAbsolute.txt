@@ -1037,3 +1037,8 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Authorization.wasm
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\jtczcfy5lb.gz
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\wyiqnztbku.gz
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\wwwroot\_framework\Newtonsoft.Json.wasm.gz
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\webcil\Newtonsoft.Json.wasm
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.Client\obj\Debug\net8.0\compressed\1l9ttyppu6.gz

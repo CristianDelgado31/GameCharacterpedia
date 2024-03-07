@@ -26,8 +26,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/CreateCharacter.razor]
-build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXENyZWF0ZUNoYXJhY3Rlci5yYXpvcg==
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/CharacterOperations.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXENoYXJhY3Rlck9wZXJhdGlvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/DeleteCharacter.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcQ2hhcmFjdGVyXERlbGV0ZUNoYXJhY3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PROGRAMAS/RiderProjects/ProjectoCodigoFacilito/ProjectoCodigoFacilito.Client/Features/Character/GetAllCharacters.razor]

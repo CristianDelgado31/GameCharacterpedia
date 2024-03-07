@@ -41,7 +41,10 @@
         {
             // Recuperar la lista de personajes favoritos del almacenamiento local del navegador
             user = await localStorage.GetItemAsync<SignInUserModel>("UserFavouriteCharacters") ?? new SignInUserModel();
-            favouriteCharacters = user.ListFavoriteCharacters;
+
+            var userRefresh = await userService.GetUserFavouriteCharactersById(user.Id);
+            favouriteCharacters = userRefresh.ListFavoriteCharacters;
+            // favouriteCharacters = user.ListFavoriteCharacters;
             Console.WriteLine("UserFavouriteCharacters: " + user.ListFavoriteCharacters.Count);
         }
         catch (Exception ex)

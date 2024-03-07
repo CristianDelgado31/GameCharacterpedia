@@ -3,7 +3,7 @@
     <button @onclick="GoToFavorites">Favorites</button>
     <AuthorizeView Roles="Administrator">
         <Authorized>
-            <button class="btn-create-character" @onclick="GoToCreateCharacter">Create Character</button>
+            <button class="btn-create-character" @onclick="GoToCharacterOperations">Character operations</button>
         </Authorized>
     </AuthorizeView>
     <div>
@@ -34,9 +34,9 @@
         NavigationManager.NavigateTo("/user-favourite-characters");
     }
 
-    private void GoToCreateCharacter()
+    private void GoToCharacterOperations()
     {
-        NavigationManager.NavigateTo("/create-character");
+        NavigationManager.NavigateTo("/character-operations");
     }
 
     private void SignUp()

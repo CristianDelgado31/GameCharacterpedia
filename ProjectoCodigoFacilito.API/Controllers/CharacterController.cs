@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
+using ProjectoCodigoFacilito.Application.Characters.Commands.DeleteCharacter;
+using ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter;
 using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacterById;
 using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
@@ -51,6 +53,58 @@ public class CharacterController : ApiControllerBase
             return BadRequest(errorResponse);
         }
 
+    }
+
+    [HttpPut("update")]
+    [Authorize(Roles = "Administrator")]
+    public async Task<ActionResult<int>> UpdateCharacter(UpdateCharacterCommand command)
+    {
+        try
+        {
+            var result = await Mediator.Send(command);
+
+            if (result == 0)
+                return BadRequest("Error updating character");
+
+            return Ok(result);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        
+    }
+
+    [HttpDelete("delete")]
+    [Authorize(Roles = "Administrator")]
+    public async Task<ActionResult<int>> DeleteCharacter(DeleteCharacterCommand command)
+    {
+        try
+        {
+            var result = await Mediator.Send(command);
+
+            if (result == 0)
+                return BadRequest("Error deleting character");
+
+            return Ok(result);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        
     }
 
 }

@@ -79,14 +79,6 @@ namespace ProjectoCodigoFacilito.Client.Services
 
                 var userCharacterList = await GetUserFavouriteCharactersById(getTokenId.Id);
 
-                if(userCharacterList != null)
-                {
-                    await Console.Out.WriteLineAsync("hola");
-                }
-                else
-                {
-                    await Console.Out.WriteLineAsync("adios");
-                }
 
                 await _localStorage.SetItemAsync("UserFavouriteCharacters", userCharacterList);
 

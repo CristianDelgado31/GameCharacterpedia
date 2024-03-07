@@ -9,5 +9,7 @@ namespace ProjectoCodigoFacilito.Client.Services.Interfaces
         Task Logout();
         Task<bool> UpdateProfile(SignInUserModel user);
         Task<bool> DeleteUser(int id);
+        Task<SignInUserModel?> GetUserFavouriteCharactersById(int id);
+
     }
 }

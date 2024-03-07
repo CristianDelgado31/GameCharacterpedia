@@ -1,42 +1,33 @@
-﻿<div class="content">
-    <!-- Contenido de tu página -->
-</div>
+﻿<!-- Footer.razor -->
 
 <div class="footer">
     <div class="container">
         <!-- Contenido del footer -->
+        Este es el contenido del footer
     </div>
 </div>
 
-@code {
-    // Código de tu componente
-}
-
 <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Establece una altura mínima para el contenedor principal */
     }
 
     .content {
-        min-height: calc(100% - 50px); /* Resta el alto del footer */
+        flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
     }
 
     .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
         background-color: #333;
         color: white;
         height: 50px; /* Altura del footer */
     }
 
-    .footer .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+        .footer .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
 </style>

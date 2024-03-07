@@ -45,7 +45,7 @@ public class UserRepository : IUserRepository
             return null;
 
         var listReferencesId = await _dbContext.ReferenceIds.ToListAsync();
-        var listCharacters = await _dbContext.Characters.ToListAsync();
+        var listCharacters = await _dbContext.Characters.Where(character => character.IsDeleted == false).ToListAsync();
         
         user.listFavoriteCharacters = listReferencesId
             .Where(referenceId => referenceId.UserId == user.Id && referenceId.IsVisible)

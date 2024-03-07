@@ -15,9 +15,4 @@
       <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Characters\Commands\DeleteCharacter\" />
-      <Folder Include="Characters\Commands\UpdateCharacter\" />
-    </ItemGroup>
-
 </Project>
