@@ -20,11 +20,6 @@ public class ReferenceIdRepository : IReferenceIdRepository
     public async Task<List<ReferenceId>> GetAllAsync()
      => await _dbContext.ReferenceIds.ToListAsync();
     
-    //No se si se va a usar esto heredado de IBaseRepository pero lo dejo por las dudas
-    public async Task<ReferenceId?> GetByIdAsync(int id) //No lo estoy usando
-    {
-        return await _dbContext.ReferenceIds.FindAsync(id);
-    }
     
     public async Task<int> DeleteReferenceAsync(int userId, int characterId)
     {
@@ -39,11 +34,6 @@ public class ReferenceIdRepository : IReferenceIdRepository
         await _dbContext.ReferenceIds.AddAsync(entity);
         await UnitOfWork.SaveChangesAsync();
         return entity;
-    }
-
-    public Task<int> DeleteAsync(int id)
-    {
-        throw new NotImplementedException();
     }
 
     //En uso este get by id

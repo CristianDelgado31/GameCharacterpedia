@@ -388,7 +388,7 @@
   },
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
-    "Method": "GetUserIdFromToken",
+    "Method": "GetValuesFromToken",
     "RelativePath": "api/User/GetTokenId/{jwtToken}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -402,7 +402,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.API.Controllers.UserController\u002BGetTokenResult",
+        "Type": "ProjectoCodigoFacilito.Application.GetTokenResult.GetTokenResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -428,7 +428,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.Application.CheckUser.UserResult",
+        "Type": "ProjectoCodigoFacilito.Application.Users.Queries.CheckUser.CheckUserResult",
         "MediaTypes": [
           "text/plain",
           "application/json",

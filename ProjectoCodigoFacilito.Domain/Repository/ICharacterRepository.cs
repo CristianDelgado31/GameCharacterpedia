@@ -1,8 +1,9 @@
 using ProjectoCodigoFacilito.Domain.Entities;
+using ProjectoCodigoFacilito.Domain.Repository.SingleInterfaceResponsibility;
 
 namespace ProjectoCodigoFacilito.Domain.Repository;
 
-public interface ICharacterRepository : IBaseRepository<Character>
+public interface ICharacterRepository : IBaseRepository<Character>, IGetByIdAsync<Character>
 {
     Task<int> UpdateAsync(Character entity);
 

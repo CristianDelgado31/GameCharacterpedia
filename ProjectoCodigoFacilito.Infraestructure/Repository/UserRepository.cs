@@ -55,7 +55,6 @@ public class UserRepository : IUserRepository
         return user;
     }
 
-    //No esta en la interface User
     public async Task<User?> GetUserSignIn(User user)
     {
         var userEntity = await _dbContext.Users
@@ -65,7 +64,7 @@ public class UserRepository : IUserRepository
         return userEntity;
     }
 
-    public async Task<User?> CreateAsync(User entity)
+    public async Task<User> CreateAsync(User entity)
     {
         var user = await _dbContext.Users
             .Where(model => model.Email == entity.Email)

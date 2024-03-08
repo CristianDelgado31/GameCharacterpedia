@@ -19,7 +19,7 @@ public class CharacterRepository : ICharacterRepository
     public async Task<List<Character>> GetAllAsync()
      => await _dbContext.Characters.Where(character => character.IsDeleted == false).ToListAsync();
 
-    public async Task<Character> GetByIdAsync(int id)
+    public async Task<Character?> GetByIdAsync(int id)
     {
         var character = await _dbContext.Characters.FindAsync(id);
         return character;
@@ -30,11 +30,6 @@ public class CharacterRepository : ICharacterRepository
         await _dbContext.Characters.AddAsync(entity);
         await UnitOfWork.SaveChangesAsync();
         return entity;
-    }
-
-    public Task<int> DeleteAsync(int id)
-    {
-        throw new NotImplementedException();
     }
 
     public async Task<int> UpdateAsync(Character entity)

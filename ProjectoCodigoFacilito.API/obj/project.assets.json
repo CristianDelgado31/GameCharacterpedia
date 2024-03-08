@@ -787,10 +787,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Authentication.Negotiate/8.0.1": {
+      "Microsoft.AspNetCore.Authentication.Negotiate/8.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.1",
+          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.2",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "System.DirectoryServices.Protocols": "8.0.0"
         },
@@ -808,10 +808,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/8.0.1": {
+      "Microsoft.AspNetCore.Connections.Abstractions/8.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Features": "8.0.1",
+          "Microsoft.Extensions.Features": "8.0.2",
           "System.IO.Pipelines": "8.0.0"
         },
         "compile": {
@@ -1788,7 +1788,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Features/8.0.1": {
+      "Microsoft.Extensions.Features/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Features.dll": {
@@ -4367,6 +4367,9 @@
         "dependencies": {
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseStorage.net": "1.0.3",
+          "IdentityModel": "6.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.2",
+          "Microsoft.AspNetCore.Authentication.Negotiate": "8.0.2",
           "Microsoft.EntityFrameworkCore": "8.0.1",
           "Microsoft.EntityFrameworkCore.Abstractions": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
@@ -5330,10 +5333,10 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.Negotiate/8.0.1": {
-      "sha512": "kNiUieNT4egBO154DBnwWN+JAZ2pTuXqMgj8Mfkg+67L3pJsFPcCmPNsHSQ8sffIa5fby+y+U1QBEZhGlxNVrA==",
+    "Microsoft.AspNetCore.Authentication.Negotiate/8.0.2": {
+      "sha512": "2u48w1gEfHRAAc+ns9m5yKj7J6aPy0AmZrSnzOQMOLjriqfWRpb+oRLdzZ0mV7TkwUgoZLMVjqaH9Jjbd4KtyA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.negotiate/8.0.1",
+      "path": "microsoft.aspnetcore.authentication.negotiate/8.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5341,14 +5344,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.Negotiate.dll",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.Negotiate.xml",
-        "microsoft.aspnetcore.authentication.negotiate.8.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.negotiate.8.0.2.nupkg.sha512",
         "microsoft.aspnetcore.authentication.negotiate.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Connections.Abstractions/8.0.1": {
-      "sha512": "F65Oe4garTqUmicSwdh/6817o4AJri6kfdUZ6KFX8xoWFEDInIZNWtO4rkRXN+q2LYerQ9Gm9tJYfLqVRL5E/w==",
+    "Microsoft.AspNetCore.Connections.Abstractions/8.0.2": {
+      "sha512": "2+ZKSOSoC1EOYoki1iZNp49Gkt0Xy3zpsY8GEkBkl+aIjq4jHo2s2lZ4tpnIl3Z4FprGDaBUXAgaxVyCGQpZOA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.connections.abstractions/8.0.1",
+      "path": "microsoft.aspnetcore.connections.abstractions/8.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5362,7 +5365,7 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
-        "microsoft.aspnetcore.connections.abstractions.8.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.connections.abstractions.8.0.2.nupkg.sha512",
         "microsoft.aspnetcore.connections.abstractions.nuspec"
       ]
     },
@@ -7294,10 +7297,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Features/8.0.1": {
-      "sha512": "NvMvu+dkfE3YtLFSIeSDOyY4qxdDRSS5zsBlK53TVifWOzdW9K3O60lwJfuRtoeczAQIrA9pQ6J59n/qXm6R9g==",
+    "Microsoft.Extensions.Features/8.0.2": {
+      "sha512": "AUye08dSpkaJu1RBM0uIn053FdkTeBFMZKtC0N/0GJz3dYHrVPdjfxuHNu5/hqzvSjLA6rADJMzF3gUe6V/+bg==",
       "type": "package",
-      "path": "microsoft.extensions.features/8.0.1",
+      "path": "microsoft.extensions.features/8.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7309,7 +7312,7 @@
         "lib/net8.0/Microsoft.Extensions.Features.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Features.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Features.xml",
-        "microsoft.extensions.features.8.0.1.nupkg.sha512",
+        "microsoft.extensions.features.8.0.2.nupkg.sha512",
         "microsoft.extensions.features.nuspec"
       ]
     },
@@ -13079,9 +13082,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "IdentityModel >= 6.2.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.2",
-      "Microsoft.AspNetCore.Authentication.Negotiate >= 8.0.1",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1",
@@ -13143,18 +13143,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "IdentityModel": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "Microsoft.AspNetCore.Authentication.Negotiate": {
-            "target": "Package",
-            "version": "[8.0.1, )"
-          },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
             "version": "[2.2.0, )"

@@ -6,7 +6,7 @@ using System.Text;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using ProjectoCodigoFacilito.Client.Utility;
-using ProjectoCodigoFacilito.Client.Models.UserModel.UserToken;
+using ProjectoCodigoFacilito.Client.Models.GetTokenResult;
 
 
 namespace ProjectoCodigoFacilito.Client.Services

@@ -3,14 +3,16 @@ using IdentityModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using ProjectoCodigoFacilito.Application.CheckUser;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
+using ProjectoCodigoFacilito.Application.GetTokenResult;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser;
 using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
+using ProjectoCodigoFacilito.Application.Users.Queries.CheckUser;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn;
+using ProjectoCodigoFacilito.Infraestructure.Security;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -77,16 +79,17 @@ public class UserController : ApiControllerBase
     }
 
     [HttpPost("signin-user")]
-    public async Task<ActionResult<UserResult>> CheckUser(CheckUserQuery checkUser)
+    public async Task<ActionResult<CheckUserResult>> CheckUser(CheckUserQuery checkUser)
     {   
         var userDto = await Mediator.Send(checkUser);
 
         if (userDto == null)
             return NotFound();
 
-        var token = GenerateJwt(userDto);
+        var generateToken = new JwtTokenGenerator(_config);
+        var token = generateToken.GenerateJwt(userDto);
         
-        return Ok(new UserResult
+        return Ok(new CheckUserResult
         {
             Success = true,
             Token = token,
@@ -184,63 +187,13 @@ public class UserController : ApiControllerBase
     }
 
 
-    private string GenerateJwt(UserDTO user)
-    {
-        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-        // Crear los claims
-        var claims = new[]
-        {
-             new Claim(JwtClaimTypes.Id, user.Id.ToString()),
-             new Claim(JwtClaimTypes.Role, user.Role)
-         };
-
-        // Crear el token
-
-        var token = new JwtSecurityToken(
-            _config["Jwt:Issuer"],
-            _config["Jwt:Audience"],
-            claims,
-            expires: DateTime.Now.AddMinutes(60),
-            signingCredentials: credentials);
-
-        return new JwtSecurityTokenHandler().WriteToken(token);
-    }
-
-
     [HttpGet("GetTokenId/{jwtToken}")]
     [Authorize]
-    public GetTokenResult GetUserIdFromToken(string jwtToken)
+    public GetTokenResult GetValuesFromToken(string jwtToken)
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var token = tokenHandler.ReadJwtToken(jwtToken);
-
-        var userIdClaim = token.Claims.FirstOrDefault(c => c.Type == JwtClaimTypes.Id);
-        if (userIdClaim == null)
-        {
-            return null;
-        }
-
-        // Leer la fecha de expiración del token en formato UTC
-        var expirationTimeUtc = token.ValidTo;
-
-        // Obtener información de la zona horaria UTC-3
-        TimeZoneInfo timeZone = TimeZoneInfo.FindSystemTimeZoneById("Argentina Standard Time");
-
-
-        // Convertir la fecha y hora de expiración a la zona horaria UTC-3
-        var expirationTimeUtcMinus3 = TimeZoneInfo.ConvertTimeFromUtc(expirationTimeUtc, timeZone);
-
-        // Retornar el resultado con la fecha y hora en la zona horaria UTC-3
-        return new GetTokenResult { Id = userIdClaim.Value, ExpirationToken = expirationTimeUtcMinus3 };
+        var result = new JwtTokenGenerator(_config).GetValuesFromToken(jwtToken);
+        return result;
     }
 
-    // clase de prueba para la funcion de arriba
-    public class GetTokenResult
-    {
-        public string Id { get; set; }
-        public DateTime ExpirationToken { get; set; }
 
-    }
 }
