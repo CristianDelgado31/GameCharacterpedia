@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectoCodigoFacilito.Application.ReferenceId.Commands.ModifyReferenceId
 {
-    public class ModifiyReferenceIdCommand : IRequest<int>
+    public class UpdateReferenceIdCommand : IRequest<int>
     {
         public int UserId { get; set; }
         public int CharacterId { get; set; }

@@ -1,9 +1,9 @@
-﻿namespace ProjectoCodigoFacilito.Client.Models.UserModel
+﻿using ProjectoCodigoFacilito.Client.Models.ApiResponse;
+
+namespace ProjectoCodigoFacilito.Client.Models.UserModel
 {
-    public class SignInResult
+    public class SignInResult : BaseApiResponse
     {
-        public bool Success { get; set; }
         public string Token { get; set; }
-        public string Error { get; set; }
     }
 }

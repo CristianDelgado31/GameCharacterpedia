@@ -1,6 +1,7 @@
 using Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.ReferenceId.Commands.CreateReferenceId;
 using ProjectoCodigoFacilito.Application.ReferenceId.Commands.DeleteReferenceId;
 using ProjectoCodigoFacilito.Application.ReferenceId.Commands.ModifyReferenceId;
@@ -44,34 +45,97 @@ public class ReferenceIdController : ApiControllerBase
     [Authorize]
     public async Task<ActionResult<ReferenceIdDTO>> Create(CreateReferenceIdCommand command)
     {
-        return await Mediator.Send(command);
+        try
+        {
+            return await Mediator.Send(command);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        catch (RequestFailedException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
 
     [HttpPut]
     [Authorize]
-    public async Task<ActionResult<int>> ModifyReferenceId(ModifiyReferenceIdCommand command)
+    public async Task<ActionResult<int>> ModifyReferenceId(UpdateReferenceIdCommand command)
     {
-        var result = await Mediator.Send(command);
-
-        if(result == 0)
+        try
         {
-            return NotFound(result);
+            var result = await Mediator.Send(command);
+
+            if (result == 0)
+            {
+                return NotFound(result);
+            }
+            return Ok(result);
         }
-        return Ok(result);
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        catch (RequestFailedException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
     
     [HttpDelete("{userId}/{characterId}")]
-    [Authorize(Roles = "Administrator, User")]
+    [Authorize]
     public async Task<ActionResult<int>> Delete(int userId, int characterId)
     {
-        var result = await Mediator.Send(new DeleteReferenceIdCommand { UserId = userId, CharacterId = characterId });
-        if(result == 0)
+        try
         {
-            return NotFound();
-        }
+            var result = await Mediator.Send(new DeleteReferenceIdCommand { UserId = userId, CharacterId = characterId });
+            if (result == 0)
+            {
+                return NotFound();
+            }
 
-        return Ok(result);
+            return Ok(result);
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new
+            {
+                RequestType = ex.RequestType,
+                Errors = ex.Errors
+            };
+
+            return BadRequest(errorResponse);
+        }
+        catch (RequestFailedException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }

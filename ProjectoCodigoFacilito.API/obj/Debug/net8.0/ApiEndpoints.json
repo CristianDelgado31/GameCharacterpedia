@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters.CharacterDTO",
+        "Type": "ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter.ResultCreateCharacter",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -87,7 +87,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Int32",
+        "Type": "ProjectoCodigoFacilito.Application.Characters.Commands.DeleteCharacter.ResultDeleteCharacter",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -113,7 +113,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Int32",
+        "Type": "ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter.ResultUpdateCharacter",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -179,7 +179,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "ProjectoCodigoFacilito.Application.ReferenceId.Commands.ModifyReferenceId.ModifiyReferenceIdCommand",
+        "Type": "ProjectoCodigoFacilito.Application.ReferenceId.Commands.ModifyReferenceId.UpdateReferenceIdCommand",
         "IsRequired": true
       }
     ],
@@ -293,7 +293,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProjectoCodigoFacilito.Application.Users.Queries.GetUsers.UserDTO",
+        "Type": "ProjectoCodigoFacilito.Application.Users.Commands.CreateUser.UserCreationResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -350,7 +350,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Int32",
+        "Type": "ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser.UpdateUserResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -376,7 +376,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Int32",
+        "Type": "ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser.ResultDeleteUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
+    "Method": "ConvertToBase64",
+    "RelativePath": "api/User/convert-tobase64",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -389,7 +415,7 @@
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
     "Method": "GetValuesFromToken",
-    "RelativePath": "api/User/GetTokenId/{jwtToken}",
+    "RelativePath": "api/User/GetValuesFromToken/{jwtToken}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

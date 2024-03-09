@@ -9,6 +9,7 @@ using ProjectoCodigoFacilito.Client.Models.UserModel;
 using ProjectoCodigoFacilito.Client.Models;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using ProjectoCodigoFacilito.Client.Models.ApiResponse.Character;
 
 namespace ProjectoCodigoFacilito.Client.Services
 {
@@ -35,10 +36,14 @@ namespace ProjectoCodigoFacilito.Client.Services
             return await _httpClient.GetFromJsonAsync<GetCharacterModel>($"api/Character/{id}");
         }
 
-        public async Task<string> CreateCharacter(CreateCharacterModel command, IBrowserFile imageFile)
+        public async Task<ResultCreateCharacter> CreateCharacter(CreateCharacterModel command, IBrowserFile imageFile)
         {
             try
             {
+                if(imageFile == null)
+                {
+                    return new ResultCreateCharacter { Success = false, Error = "Error: Image is required" };
+                }
 
                 // Establecer atributos en CreateCharacterCommand
                 var image = await ConvertIBrowserFileToByteArray(imageFile);
@@ -52,25 +57,33 @@ namespace ProjectoCodigoFacilito.Client.Services
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PostAsync("api/Character", content);
-                var responseContent = await response.Content.ReadAsStringAsync();
+                //var responseContent = await response.Content.ReadAsStringAsync();
+                var result = System.Text.Json.JsonSerializer.Deserialize<ResultCreateCharacter>(await response.Content.ReadAsStringAsync(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new ApplicationException(responseContent);
+                    throw new ApplicationException(result!.Error);
                 }
 
-                return "Ok";
+                return result;
             }
             catch (Exception ex)
             {
-                return "Error: " + ex.Message;
+                return new ResultCreateCharacter { Success = false, Error = "Error: " + ex.Message };
             }
         }
 
-        public async Task<string> UpdateCharacter(UpdateCharacterModel character, IBrowserFile browserFile)
+        public async Task<ResultUpdateCharacter> UpdateCharacter(UpdateCharacterModel character, IBrowserFile browserFile)
         {
             try
             {
+                if(browserFile == null)
+                {
+                    return new ResultUpdateCharacter { Success = false, Error = "Error: Image is required" };
+                }
+
                 var image = await ConvertIBrowserFileToByteArray(browserFile);
                 character.ImageStream = image.ImageStream;
                 character.nameImageStream = image.Name;
@@ -83,22 +96,24 @@ namespace ProjectoCodigoFacilito.Client.Services
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PutAsync("api/Character/update", content);
-                var responseContent = await response.Content.ReadAsStringAsync();
+                //var responseContent = await response.Content.ReadAsStringAsync();
+                var result = System.Text.Json.JsonSerializer.Deserialize<ResultUpdateCharacter>(await response.Content.ReadAsStringAsync(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new ApplicationException(responseContent);
+                    throw new ApplicationException(result!.Error);
                 }
 
-                return "Ok";
+                return result;
             }
             catch (Exception ex)
             {
-                return "Error: " + ex.Message;
+                return new ResultUpdateCharacter { Success = false, Error = "Error: " + ex.Message };
             }
         }
 
-        public async Task<string> DeleteCharacter(DeleteCharacterModel character)
+        public async Task<ResultDeleteCharacter> DeleteCharacter(DeleteCharacterModel character)
         {
             try
             {
@@ -113,19 +128,19 @@ namespace ProjectoCodigoFacilito.Client.Services
 
                 var response = await _httpClient.SendAsync(request);
 
-
-                var responseContent = await response.Content.ReadAsStringAsync();
+                var result = System.Text.Json.JsonSerializer.Deserialize<ResultDeleteCharacter>(await response.Content.ReadAsStringAsync(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new ApplicationException(responseContent);
+                    throw new ApplicationException(result!.Error);
                 }
 
-                return "Ok";
+                return result;
             }
             catch (Exception ex)
             {
-                return "Error: " + ex.Message;
+                return new ResultDeleteCharacter { Success = false, Error = "Error: " + ex.Message };
             }
         }
 

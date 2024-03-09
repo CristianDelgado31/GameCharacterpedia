@@ -34,20 +34,24 @@ public class CharacterController : ApiControllerBase
 
     [HttpPost]
     [Authorize(Roles = "Administrator")]
-    public async Task<ActionResult<CharacterDTO>> CreateCharacter(CreateCharacterCommand command)
+    public async Task<ActionResult<ResultCreateCharacter>> CreateCharacter(CreateCharacterCommand command)
     {
         try
         {
             var character = await Mediator.Send(command);
-            return Ok(character);
+
+            if (character == null)
+                return BadRequest(new ResultCreateCharacter { Error = "This name is already in use", Success = false });
+
+            return Ok(new ResultCreateCharacter { Error = null, Success = true});
 
         }
         catch (ValidationExceptionFV ex)
         {
-            var errorResponse = new
+            var errorResponse = new ResultCreateCharacter
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Success = false,
+                Error = ex.Errors.FirstOrDefault()
             };
 
             return BadRequest(errorResponse);
@@ -57,23 +61,29 @@ public class CharacterController : ApiControllerBase
 
     [HttpPut("update")]
     [Authorize(Roles = "Administrator")]
-    public async Task<ActionResult<int>> UpdateCharacter(UpdateCharacterCommand command)
+    public async Task<ActionResult<ResultUpdateCharacter>> UpdateCharacter(UpdateCharacterCommand command)
     {
         try
         {
             var result = await Mediator.Send(command);
 
             if (result == 0)
-                return BadRequest("Error updating character");
+            {
+                return BadRequest(new ResultUpdateCharacter { Error = "Error updating character", Success = false });
+            }
+            else if(result == 2)
+            {
+                return new ResultUpdateCharacter { Error = "This name is already in use", Success = false };
+            }
 
-            return Ok(result);
+            return Ok(new ResultUpdateCharacter { Success = true, Error = null });
         }
         catch (ValidationExceptionFV ex)
         {
-            var errorResponse = new
+            var errorResponse = new ResultUpdateCharacter
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Success = false,
+                Error = ex.Errors.FirstOrDefault()
             };
 
             return BadRequest(errorResponse);
@@ -83,23 +93,23 @@ public class CharacterController : ApiControllerBase
 
     [HttpDelete("delete")]
     [Authorize(Roles = "Administrator")]
-    public async Task<ActionResult<int>> DeleteCharacter(DeleteCharacterCommand command)
+    public async Task<ActionResult<ResultDeleteCharacter>> DeleteCharacter(DeleteCharacterCommand command)
     {
         try
         {
             var result = await Mediator.Send(command);
 
             if (result == 0)
-                return BadRequest("Error deleting character");
+                return BadRequest(new ResultDeleteCharacter { Error = "Error deleting character" , Success = false});
 
-            return Ok(result);
+            return Ok(new ResultDeleteCharacter { Error = null, Success = true});
         }
         catch (ValidationExceptionFV ex)
         {
-            var errorResponse = new
+            var errorResponse = new ResultDeleteCharacter
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Success = false,
+                Error = ex.Errors.FirstOrDefault()
             };
 
             return BadRequest(errorResponse);

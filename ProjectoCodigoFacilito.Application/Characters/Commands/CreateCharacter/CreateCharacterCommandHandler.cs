@@ -31,7 +31,10 @@ public class CreateCharacterCommandHandler : IRequestHandler<CreateCharacterComm
         newCharacter.ImageUrl = await _firebaseService.UploadStorage(request.nameImageStream, stream);
 
         var createdCharacter = await _characterRepository.CreateAsync(newCharacter);
-        
+
+        if (createdCharacter == null)
+            return null;
+
         return new CharacterDTO
         {
             Id = createdCharacter.Id,

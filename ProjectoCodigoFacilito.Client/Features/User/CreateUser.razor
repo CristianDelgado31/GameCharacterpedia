@@ -59,6 +59,7 @@
             responseMessage = await userService.CreateUser(user);
             if(responseMessage == null)
                 navigationManager.NavigateTo("/sign-in");
+            
                 
             user = new CreateUserModel();
         }

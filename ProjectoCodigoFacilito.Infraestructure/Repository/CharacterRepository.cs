@@ -27,6 +27,12 @@ public class CharacterRepository : ICharacterRepository
 
     public async Task<Character> CreateAsync(Character entity)
     {
+        var character = _dbContext.Characters.Where(character => character.Name == entity.Name).FirstOrDefault();
+
+        if (character != null)
+            return null;
+        
+
         await _dbContext.Characters.AddAsync(entity);
         await UnitOfWork.SaveChangesAsync();
         return entity;
@@ -34,6 +40,11 @@ public class CharacterRepository : ICharacterRepository
 
     public async Task<int> UpdateAsync(Character entity)
     {
+        var character = _dbContext.Characters.Where(character => character.Name == entity.Name).FirstOrDefault();
+
+        if (character != null)
+            return 2;
+
         return await _dbContext.Characters
             .Where(model => model.Id == entity.Id)
             .ExecuteUpdateAsync(setters => setters

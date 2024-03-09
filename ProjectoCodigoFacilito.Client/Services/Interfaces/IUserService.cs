@@ -1,4 +1,5 @@
-﻿using ProjectoCodigoFacilito.Client.Models.UserModel;
+﻿using ProjectoCodigoFacilito.Client.Models.ApiResponse.User;
+using ProjectoCodigoFacilito.Client.Models.UserModel;
 
 namespace ProjectoCodigoFacilito.Client.Services.Interfaces
 {
@@ -7,8 +8,8 @@ namespace ProjectoCodigoFacilito.Client.Services.Interfaces
         Task<string> CreateUser(CreateUserModel user);
         Task<SignInResult> SignInUser(SignInUserModel user);
         Task Logout();
-        Task<bool> UpdateProfile(SignInUserModel user);
-        Task<bool> DeleteUser(int id);
+        Task<UserUpdateResult> UpdateProfile(SignInUserModel user);
+        Task<ResultDeleteUser> DeleteUser(int id);
         Task<SignInUserModel?> GetUserFavouriteCharactersById(int id);
 
     }

@@ -60,10 +60,13 @@
                 </form>
 
             </div>
-        </div
+        </div>
     </div>
 </div>
-
+@if (responseMessage != null)
+{
+    <p class="response-message">@responseMessage</p>
+}
 
 @code {
     private SignInUserModel Profile = new SignInUserModel();
@@ -71,6 +74,7 @@
     private bool showForm = false;
     private string passwordType = "****";
     private bool showPassword = false;
+    private string? responseMessage;
 
     protected override async Task OnInitializedAsync()
     {
@@ -87,24 +91,41 @@
         Console.WriteLine("Update profile");
 
         //Editar los cambios en Profile
-        Profile.Email = updateProfile.Email;
-        Profile.Name = updateProfile.Name;
-        Profile.Password = updateProfile.Password;
+        var sendUpdateProfile = new SignInUserModel
+        {
+            Id = Profile.Id,
+            Name = updateProfile.Name,
+            Email = updateProfile.Email,
+            Password = updateProfile.Password,
+            Role = Profile.Role,
+            ListFavoriteCharacters = Profile.ListFavoriteCharacters
+        };
 
-        //Guardar los cambios en el local storage
-        await localStorage.SetItemAsync("UserFavouriteCharacters", Profile);
+        // //Guardar los cambios en el local storage
+        // await localStorage.SetItemAsync("UserFavouriteCharacters", Profile);
         //Hacer los cambios en la base de datos
-        await userService.UpdateProfile(Profile);
-
-        //Ocultar y limpiar el formulario
-        updateProfile = new SignInUserModel();
-        showForm = false;
+        var result = await userService.UpdateProfile(sendUpdateProfile);
+        if(result.Error != null)
+        {
+            responseMessage = result.Error;
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/logout");
+        }
 
     }
 
     private void ShowForm()
     {
         showForm = !showForm;
+
+        //Si se oculta el formulario, limpiar los campos
+        if (showForm == false)
+        {
+            updateProfile = new SignInUserModel();
+            responseMessage = null;
+        }
     }
 
     private void TogglePasswordVisibility()
@@ -116,14 +137,22 @@
         else
             passwordType = "****";
     }
+
     private async Task DeleteUser()
     {
         // Lógica para eliminar al usuario
         // Por ejemplo, realizar una llamada al servicio para eliminar el usuario
-        await userService.DeleteUser(Profile.Id);
-
-        // // Una vez que se ha eliminado el usuario, podrías redirigir al usuario a otra página
-        NavigationManager.NavigateTo("/logout");
+        var result = await userService.DeleteUser(Profile.Id);
+        if(result.Error != null)
+        {
+            responseMessage = result.Error;
+        }
+        else
+        {
+            // Una vez que se ha eliminado el usuario, podrías redirigir al usuario a otra página
+            NavigationManager.NavigateTo("/logout");
+        };
+        
     }
 }
 
@@ -245,7 +274,13 @@
         background-color: #7CFC00; /* Verde más claro al pasar el ratón */
     }
 
-
+    /* Estilo para el mensaje de respuesta */
+    .response-message {
+        margin-top: 10px;
+        color: #4CAF50;
+        font-weight: bold;
+        text-align: center;
+    }
 </style>
 
 

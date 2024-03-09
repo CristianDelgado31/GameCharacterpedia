@@ -2,7 +2,6 @@ using Azure.Core;
 using IdentityModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
 using ProjectoCodigoFacilito.Application.GetTokenResult;
 using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
@@ -13,8 +12,6 @@ using ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUserSignIn;
 using ProjectoCodigoFacilito.Infraestructure.Security;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using System.Text;
 
 namespace ProjectoCodigoFacilito.API.Controllers;
@@ -52,7 +49,7 @@ public class UserController : ApiControllerBase
     }
 
     [HttpGet("{id}")]
-    [Authorize(Roles = "User, Administrator")]
+    [Authorize]
     public async Task<ActionResult<UserDTO>> GetById(int id)
     {
         try
@@ -80,31 +77,45 @@ public class UserController : ApiControllerBase
 
     [HttpPost("signin-user")]
     public async Task<ActionResult<CheckUserResult>> CheckUser(CheckUserQuery checkUser)
-    {   
-        var userDto = await Mediator.Send(checkUser);
-
-        if (userDto == null)
-            return NotFound();
-
-        var generateToken = new JwtTokenGenerator(_config);
-        var token = generateToken.GenerateJwt(userDto);
-        
-        return Ok(new CheckUserResult
+    {
+        try
         {
-            Success = true,
-            Token = token,
-            Error = null
-        });
+            var userDto = await Mediator.Send(checkUser);
+
+            if (userDto == null)
+                return NotFound(new CheckUserResult { Success = false, Token = null, Error = "Usuario no encontrado"});
+
+            var generateToken = new JwtTokenGenerator(_config);
+            var token = generateToken.GenerateJwt(userDto);
+
+            return Ok(new CheckUserResult
+            {
+                Success = true,
+                Token = token,
+                Error = null
+            });
+        }
+        catch (ValidationExceptionFV ex)
+        {
+            var errorResponse = new CheckUserResult
+            {
+                Success = false,
+                Token = null,
+                Error = ex.Errors.FirstOrDefault()
+                
+            };
+
+            return BadRequest(errorResponse);
+        }
 
     }
 
     [HttpPost]
-    public async Task<ActionResult<UserDTO>> Create(CreateUserCommand command)
+    public async Task<ActionResult<UserCreationResult>> Create(CreateUserCommand command)
     {
         try
         {
-            //Descomentar esto despues de hacer la prueba con el JWT en swagger
-
+            //Es buena practica dejar esto acá? o debería ir en el handler? -> 
             var chainEmailBase64 = Convert.FromBase64String(command.Email);
             var chainUserNameBase64 = Convert.FromBase64String(command.Name);
             var chainPasswordBase64 = Convert.FromBase64String(command.Password);
@@ -115,43 +126,44 @@ public class UserController : ApiControllerBase
             var user = await Mediator.Send(command);
 
             if (user == null)
-                return BadRequest();
+                return BadRequest(new UserCreationResult { Error = "Ese email ya esta en uso.", Success = false});
 
-            return Ok(user);
+            return Ok(new UserCreationResult { Error = null, Success = true});
         }
         catch (ValidationExceptionFV ex)
         {
-            var errorResponse = new
+            var errorResponse = new UserCreationResult
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Error = ex.Errors.FirstOrDefault(),
+                Success = false
             };
+
             return BadRequest(errorResponse);
         }
     }
     
     [HttpPut("{id}")]
     [Authorize]
-    public async Task<ActionResult<int>> Update(int id, UpdateUserCommand command)
+    public async Task<ActionResult<UpdateUserResult>> Update(int id, UpdateUserCommand command)
     {
         try
         {
             if (id != command.Id)
-                return BadRequest();
+                return BadRequest(new UpdateUserResult { Error = "Id y command.Id no son iguales", Success = false});
 
             var result = await Mediator.Send(command);
 
             if (result == 0)
-                return NotFound();
+                return NotFound(new UpdateUserResult { Error = "El Nombre del Personaje elegido no existe"});
 
-            return Ok(result);
+            return Ok(new UpdateUserResult { Error = null, Success = true});
         }
-        catch(ValidationExceptionFV ex) { 
-            
-            var errorResponse = new
+        catch(ValidationExceptionFV ex) 
+        {    
+            var errorResponse = new UpdateUserResult
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Error = ex.Errors.FirstOrDefault(),
+                Success = false
             };
 
             return BadRequest(errorResponse);
@@ -162,7 +174,7 @@ public class UserController : ApiControllerBase
 
     [HttpDelete("{id}")]
     [Authorize]
-    public async Task<ActionResult<int>> Delete(int id)
+    public async Task<ActionResult<ResultDeleteUser>> Delete(int id)
     {
         try
         {
@@ -170,16 +182,17 @@ public class UserController : ApiControllerBase
             var result = await Mediator.Send(new DeleteUserCommand { Id = id });
 
             if (result == 0)
-                return NotFound();
+                return NotFound(new ResultDeleteUser { Error = "UserId not found", Success = false});
 
-            return Ok(result); //devuelve 1 si elimino el user correctamente
+            //devuelve 1 si elimino el user correctamente
+            return Ok(new ResultDeleteUser { Error = null, Success = true});
         }
         catch (ValidationExceptionFV ex)
         {
-            var errorResponse = new
+            var errorResponse = new ResultDeleteUser
             {
-                RequestType = ex.RequestType,
-                Errors = ex.Errors
+                Error = ex.Errors.FirstOrDefault(),
+                Success = false
             };
 
             return BadRequest(errorResponse);
@@ -187,7 +200,7 @@ public class UserController : ApiControllerBase
     }
 
 
-    [HttpGet("GetTokenId/{jwtToken}")]
+    [HttpGet("GetValuesFromToken/{jwtToken}")]
     [Authorize]
     public GetTokenResult GetValuesFromToken(string jwtToken)
     {
@@ -195,5 +208,11 @@ public class UserController : ApiControllerBase
         return result;
     }
 
-
+    //HtppGet para convertir a base64 los atributos de CreateUserCommand (Name, Email, Password) para swagger o postman
+    [HttpGet("convert-tobase64")]
+    public string ConvertToBase64(string value)
+    {
+        var chain = Encoding.UTF8.GetBytes(value);
+        return Convert.ToBase64String(chain);
+    }
 }

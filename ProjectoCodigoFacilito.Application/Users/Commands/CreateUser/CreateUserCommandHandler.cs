@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser.Validation;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
@@ -17,7 +18,6 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
         }
         public async Task<UserDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-
             var userEntity = new User
             {
                 Name = request.Name,
@@ -28,6 +28,7 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
                 IsDeleted = false,
                 ModifiedDate = DateTime.Now,
             };
+
             
             var result = await _userRepository.CreateAsync(userEntity);
 

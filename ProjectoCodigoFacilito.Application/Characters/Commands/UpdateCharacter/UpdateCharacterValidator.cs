@@ -11,6 +11,7 @@ namespace ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter
     {
         public UpdateCharacterValidator()
         {
+            RuleFor(x => x.Id).NotEmpty().WithMessage("El id es requerido");
             RuleFor(x => x.Name).NotEmpty().WithMessage("El nombre es requerido");
             RuleFor(x => x.Game).NotEmpty().WithMessage("El juego es requerido");
             RuleFor(x => x.History).NotEmpty().WithMessage("La historia es requerida");

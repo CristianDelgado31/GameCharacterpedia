@@ -40,7 +40,7 @@
 
             <label>Image:</label>
             <InputFile OnChange="@HandleFileSelected" />
-            <button type="submit" class="submit-button">Create Character</button>
+            <button type="submit" class="button-create">Create Character</button>
         </EditForm>
     </div>
     <div style="flex: 1;">
@@ -75,7 +75,7 @@
 
             <label>New Image:</label>
             <InputFile OnChange="@HandleFileSelected" />
-            <button type="submit" class="submit-button">Update Character</button>
+            <button type="submit" class="button-update">Update Character</button>
         </EditForm>
     </div>
     <div style="flex: 1;">
@@ -93,14 +93,14 @@
                 Game:
                 <InputText @bind-Value="@deleteModel.Game" class="input-text" />
             </label>
-            <button type="submit" class="submit-button">Delete Character</button>
+            <button type="submit" class="button-delete">Delete Character</button>
         </EditForm>
     </div>
 </div>
 
 @if (responseMessage != null)
 {
-    <p>@responseMessage</p>
+    <p class="response-message">@responseMessage</p>
 }
 
 @code {
@@ -115,7 +115,12 @@
     {
         try
         {
-            responseMessage = await characterService.CreateCharacter(createModel, uploadedImage);
+            var result = await characterService.CreateCharacter(createModel, uploadedImage);
+            if(result.Error != null)
+            {
+                responseMessage = result.Error;
+            }
+
             createModel = new CreateCharacterModel();
             //responseMessage = null;
         }
@@ -131,9 +136,26 @@
         {
             var characterList = await localStorage.GetItemAsync<List<GetCharacterModel>>("CharactersList");
             var character = characterList.FirstOrDefault(c => c.Name == deleteModel.Name && c.Game == deleteModel.Game);
-            deleteModel.Id = character.Id;
-            responseMessage = await characterService.DeleteCharacter(deleteModel);
+            if(character != null)
+            {
+                deleteModel.Id = character.Id;
+                var result = await characterService.DeleteCharacter(deleteModel);
 
+                if (result.Error != null)
+                {
+                    responseMessage = result.Error;
+                }
+                else
+                {
+                    responseMessage = "Character deleted";
+                }
+            }
+            else
+            {
+                responseMessage = "Character not found";
+            }
+            deleteModel = new DeleteCharacterModel();
+            
         }
         catch (Exception ex)
         {
@@ -147,9 +169,26 @@
         {
             var characterList = await localStorage.GetItemAsync<List<GetCharacterModel>>("CharactersList");
             var character = characterList.FirstOrDefault(c => c.Name == searchName);
-            updateModel.Id = character.Id;
-            responseMessage = await characterService.UpdateCharacter(updateModel, uploadedImage);
+            if(character != null)
+            {
+                updateModel.Id = character.Id;
+                var result = await characterService.UpdateCharacter(updateModel, uploadedImage);
 
+                if (result.Error != null)
+                {
+                    responseMessage = result.Error;
+                }
+                else
+                {
+                    responseMessage = "Character updated";
+                }
+
+            }
+            else
+            {
+                responseMessage = "Character not found";
+            }
+            searchName = string.Empty;
             updateModel = new UpdateCharacterModel();
 
         }
@@ -188,7 +227,7 @@
     }
 
     /* Estilo para el botón de enviar */
-    button[type="submit"] {
+    .button-create {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
@@ -223,4 +262,32 @@
         text-align: center;
     }
 
+    .response-message {
+        margin-top: 10px;
+        color: #4CAF50;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .button-delete {
+        background-color: #f44336;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .button-update {
+        background-color: #FF9800; /* quiero un color naranja -> #FF9800 */
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
 </style>

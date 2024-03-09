@@ -7,6 +7,7 @@ using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using ProjectoCodigoFacilito.Client.Utility;
 using ProjectoCodigoFacilito.Client.Models.GetTokenResult;
+using ProjectoCodigoFacilito.Client.Models.ApiResponse.User;
 
 
 namespace ProjectoCodigoFacilito.Client.Services
@@ -42,11 +43,13 @@ namespace ProjectoCodigoFacilito.Client.Services
                 var userPassword = Convert.ToBase64String(bytesPassword);
 
                 var response = await _httpClient.PostAsJsonAsync("api/User", new CreateUserModel { Name = userName, Email = userEmail, Password = userPassword});
-                response.EnsureSuccessStatusCode();
 
-                if(!response.IsSuccessStatusCode)
+                var result = JsonSerializer.Deserialize<UserCreationResult>(await response.Content.ReadAsStringAsync(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                if (!response.IsSuccessStatusCode)
                 {
-                    return "Email is already in use";
+                    throw new ApplicationException(result!.Error);
                 }
 
                 return null;
@@ -62,14 +65,14 @@ namespace ProjectoCodigoFacilito.Client.Services
             try
             {
                 var response = await _httpClient.PostAsJsonAsync("api/User/signin-user", user);
-                response.EnsureSuccessStatusCode();
+                //response.EnsureSuccessStatusCode();
 
                 var loginResult = JsonSerializer.Deserialize<SignInResult>(await response.Content.ReadAsStringAsync(),
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); 
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); 
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    return loginResult;
+                    throw new ApplicationException(loginResult!.Error);
                 }
 
                 await _localStorage.SetItemAsync("authToken", loginResult!.Token);
@@ -77,15 +80,12 @@ namespace ProjectoCodigoFacilito.Client.Services
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", loginResult.Token);
 
                 // solo se usa para obtener el id y el tokenExp del usuario
-                var getTokenId = await _httpClient.GetFromJsonAsync<GetTokenResult>($"api/User/GetTokenId/{loginResult.Token}");
+                var getValuesFromToken = await _httpClient.GetFromJsonAsync<GetTokenResult>($"api/User/GetValuesFromToken/{loginResult.Token}");
 
-                var expirationToken = getTokenId.ExpirationToken;
-                //var expDate = getTokenId.ExpirationDate;
-
-                //var expirationToken = new DateTime(expDate.Year, expDate.Month, expDate.Day, expTime.Hour, expTime.Minute, expTime.Second);
+                var expirationToken = getValuesFromToken.ExpirationToken;
 
                 await _localStorage.SetItemAsync("authTokenExpiration", expirationToken);
-                var userCharacterList = await GetUserFavouriteCharactersById(getTokenId!.Id);
+                var userCharacterList = await GetUserFavouriteCharactersById(getValuesFromToken!.Id);
 
 
                 await _localStorage.SetItemAsync("UserFavouriteCharacters", userCharacterList);
@@ -105,7 +105,7 @@ namespace ProjectoCodigoFacilito.Client.Services
             await _localStorage.RemoveItemAsync("authToken");
             await _localStorage.RemoveItemAsync("UserFavouriteCharacters");
             await _localStorage.RemoveItemAsync("CharactersList");
-            await _localStorage.RemoveItemAsync("authTokenExpiration"); //test
+            await _localStorage.RemoveItemAsync("authTokenExpiration");
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
 
@@ -117,28 +117,48 @@ namespace ProjectoCodigoFacilito.Client.Services
         }
 
 
-        public async Task<bool> UpdateProfile(SignInUserModel user)
+        public async Task<UserUpdateResult> UpdateProfile(SignInUserModel user)
         {
-            var response = await _httpClient.PutAsJsonAsync($"api/User/{user.Id}", user);
-            response.EnsureSuccessStatusCode();
-            if(!response.IsSuccessStatusCode)
+            try
             {
-                throw new ApplicationException(response.Content.ToString());
+                var response = await _httpClient.PutAsJsonAsync($"api/User/{user.Id}", user);
+
+                var result = JsonSerializer.Deserialize<UserUpdateResult>(await response.Content.ReadAsStringAsync(),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                //response.EnsureSuccessStatusCode();
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new ApplicationException(result!.Error);
+                }
+                return result;
             }
-            return true;
+            catch (Exception ex)
+            {
+                return new UserUpdateResult { Success = false, Error = ex.Message };
+            }
+            
         }
 
-        public async Task<bool> DeleteUser(int id)
+        public async Task<ResultDeleteUser> DeleteUser(int id)
         {
-            var response = await _httpClient.DeleteAsync($"api/User/{id}");
-            response.EnsureSuccessStatusCode();
-            if(!response.IsSuccessStatusCode)
+            try
             {
-                throw new ApplicationException(response.Content.ToString());
-            }
-            await Logout();
+                var response = await _httpClient.DeleteAsync($"api/User/{id}");
+                //response.EnsureSuccessStatusCode();
+                var result = JsonSerializer.Deserialize<ResultDeleteUser>(await response.Content.ReadAsStringAsync(),
+                                       new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new ApplicationException(result!.Error);
+                }
 
-            return true;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new ResultDeleteUser { Success = false, Error = ex.Message };
+            }
+            
         }
     }
 

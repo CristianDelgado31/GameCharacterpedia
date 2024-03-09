@@ -4,10 +4,10 @@ namespace ProjectoCodigoFacilito.Client.Models.CharacterModel
 {
     public class CreateCharacterModel : IBaseCharacterModel
     {
-        public string Name { get; set; }
-        public string Game { get; set; }
-        public string History { get; set; }
-        public string Role { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Game { get; set; } = string.Empty;
+        public string History { get; set; } = string.Empty;
+        public string Role { get; set; } = string.Empty;
         public int CreatedById { get; set; } // Atributo propio de CreateCharacterModel
         public byte[] ImageStream { get; set; }
         public string nameImageStream { get; set; }
