@@ -1,0 +1,13 @@
+
+.footer[b-mmkr6xc6w3] {
+    background-color: #333;
+    color: white;
+    height: 50px;  /*Altura del footer*/ 
+}
+
+.footer .container[b-mmkr6xc6w3] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

@@ -1,5 +1,3 @@
-using Azure.Core;
-using IdentityModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectoCodigoFacilito.Application.Common.Exceptions;
@@ -20,7 +18,6 @@ namespace ProjectoCodigoFacilito.API.Controllers;
 [ApiController]
 public class UserController : ApiControllerBase
 {
-
     public UserController(IConfiguration config)
     {
         _config = config;
@@ -34,7 +31,8 @@ public class UserController : ApiControllerBase
         {
             var users = await Mediator.Send(new GetUserQuery());
             return Ok(users);
-        }catch(ValidationExceptionFV ex)
+        }
+        catch(ValidationExceptionFV ex)
         {
             var errorResponse = new
             {

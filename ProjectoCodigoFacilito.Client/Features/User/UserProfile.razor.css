@@ -1,0 +1,124 @@
+﻿/* Estilos para el contenedor principal */
+.profile-container {
+    margin-top: 70px;
+    padding: 20px; /* Espacio interior para mejorar la apariencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear el contenido en columna */
+    text-align: center; /* Centrar el texto */
+    border-radius: 10px; /* Borde redondeado */
+    background-color: #d2b48c; /* Color de fondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el título */
+.profile-title {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos del contenedor */
+    align-items: center;
+}
+
+/* Estilos para los elementos del perfil */
+.profile-item {
+    margin-bottom: 15px; /* Espacio entre elementos */
+}
+
+/* Estilos para el botón de logout */
+.btn-logout {
+    background-color: #c82333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-logout:hover {
+        background-color: #dc3545;
+    }
+
+.btn-modify {
+    background-color: #c0a700; /* Amarillo */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-modify:hover {
+        background-color: #ecd233; /* Amarillo oscurecido al pasar el ratón */
+    }
+
+.btn-delete {
+    background-color: #333; /* Rojo */
+    color: #dc3545;
+    border: none;
+    margin-left: 120px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-delete:hover {
+        /* background-color: #333; */ /* Rojo oscurecido al pasar el ratón */
+        color: #dc2110;
+    }
+
+/* Estilos para la tarjeta */
+.profile-card {
+    width: 100%;
+    background-color: #f8f9fa;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------------- */
+/* Estilos para los campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo ajustado para los inputs */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
+.btn-submit {
+    background-color: #9ACD32; /* Verde claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-submit:hover {
+        background-color: #7CFC00; /* Verde más claro al pasar el ratón */
+    }
+
+/* Estilo para el mensaje de respuesta */
+.response-message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+}

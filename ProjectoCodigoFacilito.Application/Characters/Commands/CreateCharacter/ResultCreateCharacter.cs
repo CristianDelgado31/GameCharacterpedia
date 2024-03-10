@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter
 {
-    public class ResultCreateCharacter
+    public class ResultCreateCharacter : BaseResultResponse.BaseResultResponse
     {
-        public string? Error { get; set; }
-        public bool Success { get; set; }
+
     }
 }

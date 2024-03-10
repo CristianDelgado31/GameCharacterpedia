@@ -1,0 +1,31 @@
+.character-details[b-60zpituw3j] {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.character-info[b-60zpituw3j] {
+    margin-bottom: 20px;
+}
+
+    .character-info h2[b-60zpituw3j] {
+        margin-top: 0;
+    }
+
+    .character-info p[b-60zpituw3j] {
+        margin-bottom: 10px;
+    }
+
+    .character-info img.character-image[b-60zpituw3j] {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 20px;
+    }
+
+.like-icon[b-60zpituw3j] {
+    float: right;
+}

@@ -13,25 +13,17 @@
 
 
 <PageTitle>Character</PageTitle>
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-</head>
-<body>
 
-    <div class="character-details">
+<div class="character-details">
 
-        <h1>
-            Character Details
-            <AuthorizeView>
-                <Authorized>
-                    <i class="fa fa-heart like-icon" @onclick="ToggleLike" style="@likeIconStyle"></i>
-                </Authorized>
-            </AuthorizeView>
-        </h1>
-
-
+    <h1>
+        Character Details
+        <AuthorizeView>
+            <Authorized>
+                <i class="fa fa-heart like-icon" @onclick="ToggleLike" style="@likeIconStyle"></i>
+            </Authorized>
+        </AuthorizeView>
+    </h1>
 
 
     @if (Character != null)
@@ -51,45 +43,6 @@
         <p>Character not found.</p>
     }
 </div>
-
-    <style>
-        .character-details {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .character-info {
-            margin-bottom: 20px;
-        }
-
-        .character-info h2 {
-            margin-top: 0;
-        }
-
-        .character-info p {
-            margin-bottom: 10px;
-        }
-
-        .character-info img.character-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-top: 20px;
-        }
-
-        .like-icon {
-            float: right;
-        }
-    </style>
-
-</body>
-
-</html>
-
 
 
 

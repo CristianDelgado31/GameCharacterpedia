@@ -1,0 +1,84 @@
+/* Estilo para el formulario */
+[b-ywg1hy2h6e] form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para los campos de entrada */
+[b-ywg1hy2h6e] input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de enviar */
+[b-ywg1hy2h6e] .button-create {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para el mensaje de respuesta */
+[b-ywg1hy2h6e] .response-message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+[b-ywg1hy2h6e] label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+[b-ywg1hy2h6e] .input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+[b-ywg1hy2h6e] h1 {
+    text-align: center;
+}
+
+[b-ywg1hy2h6e] .response-message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+}
+
+[b-ywg1hy2h6e] .button-delete {
+    background-color: #f44336;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+[b-ywg1hy2h6e] .button-update {
+    background-color: #FF9800; /* quiero un color naranja -> #FF9800 */
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}

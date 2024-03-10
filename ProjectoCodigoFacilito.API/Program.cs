@@ -3,11 +3,23 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProjectoCodigoFacilito.Application;
 using ProjectoCodigoFacilito.Infraestructure;
+using Serilog;
+using Serilog.Events;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Host.UseSerilog();
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .Enrich.FromLogContext()
+    .WriteTo.File(builder.Configuration["Log:File"]!)
+    .WriteTo.Console()
+    .CreateLogger();
+
+
 // Add layer dependencies
 
 builder.Services.AddApplicationServices();
@@ -32,7 +44,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
-            ClockSkew = TimeSpan.Zero // the default for this setting is 5 minutes
+            ClockSkew = TimeSpan.FromMinutes(1) // 1 minute tolerance for the expiration date
 
         };
     });

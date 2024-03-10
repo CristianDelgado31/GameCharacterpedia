@@ -8,7 +8,7 @@
 @inject ILocalStorageService localStorage
 @inject ICharacterService characterService
 @attribute [Authorize(Roles = "Administrator")]
-
+ 
 <CheckExpirationToken />
 <PageTitle>Character operations</PageTitle>
 @* FORM CREATE CHARACTER *@
@@ -204,7 +204,7 @@
     }
 }
 
-<style>
+@* <style>
     /* Tu CSS aquí */
     /* Estilo para el formulario */
     form {
@@ -290,4 +290,4 @@
         color: white;
         cursor: pointer;
     }
-</style>
+</style> *@

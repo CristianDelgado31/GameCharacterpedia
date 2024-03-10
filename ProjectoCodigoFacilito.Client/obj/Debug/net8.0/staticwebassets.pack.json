@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
+      "Id": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectoCodigoFacilito.Client.styles.css",
+      "PackagePath": "staticwebassets\\ProjectoCodigoFacilito.Client.styles.css"
+    },
+    {
       "Id": "D:\\PROGRAMAS\\RiderProjects\\ProjectoCodigoFacilito\\ProjectoCodigoFacilito.Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

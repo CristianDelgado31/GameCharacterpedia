@@ -1,0 +1,31 @@
+﻿.character-details {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.character-info {
+    margin-bottom: 20px;
+}
+
+    .character-info h2 {
+        margin-top: 0;
+    }
+
+    .character-info p {
+        margin-bottom: 10px;
+    }
+
+    .character-info img.character-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 20px;
+    }
+
+.like-icon {
+    float: right;
+}

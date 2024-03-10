@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectoCodigoFacilito.Application.Users.Commands.DeleteUser
 {
-    public class ResultDeleteUser
+    public class ResultDeleteUser : BaseResultResponse.BaseResultResponse
     {
-        public string? Error { get; set; }
-        public bool Success { get; set; }
+
     }
 }

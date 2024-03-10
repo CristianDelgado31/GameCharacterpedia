@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectoCodigoFacilito.Application.Characters.Commands.DeleteCharacter
 {
-    public class ResultDeleteCharacter
+    public class ResultDeleteCharacter : BaseResultResponse.BaseResultResponse
     {
-        public bool Success { get; set; }
-        public string? Error { get; set; }
+
     }
 }

@@ -1,0 +1,65 @@
+/* Estilo para el formulario */
+.form-container[b-j2d58fhtro] {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 40px;
+    padding-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para los campos de entrada */
+.form-control[b-j2d58fhtro] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de enviar */
+.btn[b-j2d58fhtro] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary[b-j2d58fhtro] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .btn-primary:hover[b-j2d58fhtro] {
+        background-color: #0056b3;
+    }
+
+/* Estilo para el mensaje de respuesta */
+.response-message[b-j2d58fhtro] {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Estilo para las etiquetas */
+label[b-j2d58fhtro] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+h1[b-j2d58fhtro] {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p[b-j2d58fhtro] {
+    text-align: center;
+}

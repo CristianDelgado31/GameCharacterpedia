@@ -1,0 +1,84 @@
+﻿/* Estilo para el formulario */
+::deep form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para los campos de entrada */
+::deep input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de enviar */
+::deep .button-create {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para el mensaje de respuesta */
+::deep .response-message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+::deep label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+::deep .input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+::deep h1 {
+    text-align: center;
+}
+
+::deep .response-message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+}
+
+::deep .button-delete {
+    background-color: #f44336;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+::deep .button-update {
+    background-color: #FF9800; /* quiero un color naranja -> #FF9800 */
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
