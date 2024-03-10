@@ -19,7 +19,7 @@
             <li class="character-item">
                 <a href="javascript:void(0);" @onclick="(() => NavigateToCharacter(character.Id))" style="text-decoration: none;">
                     <img src="@character.ImageUrl" alt="@character.Name" />
-                    <p>@character.Name</p>
+                    <p class="name">@character.Name</p>
                 </a>
             </li>
         }
@@ -41,35 +41,3 @@
         NavigationManager.NavigateTo($"/get-character-by-id/{characterId}");
     }
 }
-
-@* <style>
-    .character-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-    }
-
-    .character-item {
-        max-width: 300px;
-        padding: 10px;
-        text-align: center;
-        margin: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f2f2f2;
-    }
-
-    .character-item img {
-        max-width: 200px;
-        max-height: 200px;
-        display: block;
-        margin: auto;
-    }
-
-    h1 {
-        text-align: center;
-    }
-</style>
- *@

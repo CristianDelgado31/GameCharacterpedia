@@ -1,5 +1,6 @@
 /* /Features/Character/CharacterOperations.razor.rz.scp.css */
 /* Estilo para el formulario */
+
 [b-ywg1hy2h6e] form {
     max-width: 400px;
     margin: auto;
@@ -84,6 +85,7 @@
     cursor: pointer;
 }
 /* /Features/Character/GetAllCharacters.razor.rz.scp.css */
+
 .character-list[b-k5a4dik5ln] {
     display: flex;
     flex-wrap: wrap;
@@ -112,6 +114,13 @@
 h1[b-k5a4dik5ln] {
     text-align: center;
 }
+.name[b-k5a4dik5ln] {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 /* /Features/Character/GetCharacterById.razor.rz.scp.css */
 .character-details[b-60zpituw3j] {
     padding: 20px;
@@ -122,16 +131,23 @@ h1[b-k5a4dik5ln] {
     max-width: 600px;
 }
 
+    .character-details h1[b-60zpituw3j] {
+        font-family: Arial, sans-serif; /* Cambia la fuente del título */
+        font-size: 24px; /* Cambia el tamaño del título */
+        color: #333333; /* Cambia el color del texto del título */
+        font-weight: bold; /* Hace que el título sea más grueso */
+    }
+
 .character-info[b-60zpituw3j] {
     margin-bottom: 20px;
 }
 
-    .character-info h2[b-60zpituw3j] {
-        margin-top: 0;
-    }
-
-    .character-info p[b-60zpituw3j] {
-        margin-bottom: 10px;
+    .character-info h2[b-60zpituw3j], .character-info p[b-60zpituw3j] {
+        font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+        font-size: 16px; /* Cambia el tamaño del texto */
+        color: #333333; /* Cambia el color del texto */
+        margin-bottom: 10px; /* Añade un espacio entre los párrafos */
+        line-height: 1.6; /* Ajusta la altura de línea para hacer el texto más legible */
     }
 
     .character-info img.character-image[b-60zpituw3j] {
@@ -158,45 +174,56 @@ h1[b-k5a4dik5ln] {
     align-items: center;
     height: 100%;
 }
-/* /Features/Components/Header.razor.rz.scp.css */
-/*body {
-    margin: 0;
-    padding: 0;
+.github-link[b-mmkr6xc6w3] {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Opcional: Puedes añadir negrita al texto si lo deseas */
 }
 
-.header {
+    .github-link:hover[b-mmkr6xc6w3] {
+        text-decoration: underline; /* Opcional: Subrayado al pasar el mouse por encima */
+    }
+/* /Features/Components/Header.razor.rz.scp.css */
+
+
+.header[b-gtj64fezvg] {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    height: 50px;*/ /* Ajusta la altura según tus necesidades */
-/*}
+    height: 50px; /* Ajusta la altura según tus necesidades */
+    
+}
 
-    .header button {
+    .header button[b-gtj64fezvg] {
         background-color: transparent;
-        color: white;
+        color: #ffffff;
         border: none;
         cursor: pointer;
         font-size: 16px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
     }
 
-        .header button:hover {
-            text-decoration: underline;
-        }
-
-.container {
-    max-width: 1200px;*/ /* Ajusta el ancho máximo según tus necesidades */
-    /*margin: auto;
+.header button:hover[b-gtj64fezvg] {
+    text-decoration: underline;
 }
 
-.header div {
+.container[b-gtj64fezvg] {
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+}
+
+.header div[b-gtj64fezvg] {
     display: flex;
     align-items: center;
 }
 
-.btn-create-character {
+.btn-create-character[b-gtj64fezvg] {
     background-color: transparent;
     color: white;
     border: none;
@@ -204,9 +231,10 @@ h1[b-k5a4dik5ln] {
     font-size: 16px;
 }
 
-    .btn-create-character:hover {
+    .btn-create-character:hover[b-gtj64fezvg] {
         text-decoration: underline;
-    }*/
+    }
+
 /* /Features/User/CreateUser.razor.rz.scp.css */
  /*Estilo para el formulario*/ 
 .form-container[b-51gg7j4x9p] {
@@ -368,18 +396,25 @@ p[b-j2d58fhtro] {
 h1[b-u4wpx43ncg] {
     text-align: center;
 }
+
+.name[b-u4wpx43ncg] {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 /* /Features/User/UserProfile.razor.rz.scp.css */
 /* Estilos para el contenedor principal */
 .profile-container[b-46yk8sfk5l] {
-    margin-top: 70px;
+    margin-top: 50px; /* Reducido el margen superior */
     padding: 20px; /* Espacio interior para mejorar la apariencia */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Alinear el contenido en columna */
-    text-align: center; /* Centrar el texto */
     border-radius: 10px; /* Borde redondeado */
-    background-color: #d2b48c; /* Color de fondo */
+    background-color: #f3f3f3; /* Color de fondo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -393,64 +428,60 @@ h1[b-u4wpx43ncg] {
 /* Estilos para los elementos del perfil */
 .profile-item[b-46yk8sfk5l] {
     margin-bottom: 15px; /* Espacio entre elementos */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
 }
 
-/* Estilos para el botón de logout */
-.btn-logout[b-46yk8sfk5l] {
-    background-color: #c82333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Estilos para los botones */
+.btn-logout[b-46yk8sfk5l],
+.btn-modify[b-46yk8sfk5l],
+.btn-delete[b-46yk8sfk5l],
+.btn-submit[b-46yk8sfk5l] {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-bottom: 10px; /* Espacio inferior */
 }
 
+.btn-modify[b-46yk8sfk5l]{
+    background-color: #ffc107; /* Color de fondo */
+}
+.btn-submit[b-46yk8sfk5l]{
+    background-color: #28a745; /* Color de fondo */
+}
+.btn-delete[b-46yk8sfk5l]{
+    background-color: #dc3545; /* Color de fondo */
+}
+
+    /* Estilos para los botones al pasar el ratón */
     .btn-logout:hover[b-46yk8sfk5l] {
-        background-color: #dc3545;
+        background-color: #0056b3; /* Color de fondo oscuro */
     }
 
-.btn-modify[b-46yk8sfk5l] {
-    background-color: #c0a700; /* Amarillo */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-modify:hover[b-46yk8sfk5l] {
-        background-color: #ecd233; /* Amarillo oscurecido al pasar el ratón */
+    .btn-modify:hover[b-46yk8sfk5l]{
+        background-color: #d39e00; /* Color de fondo oscuro */
     }
-
-.btn-delete[b-46yk8sfk5l] {
-    background-color: #333; /* Rojo */
-    color: #dc3545;
-    border: none;
-    margin-left: 120px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-delete:hover[b-46yk8sfk5l] {
-        /* background-color: #333; */ /* Rojo oscurecido al pasar el ratón */
-        color: #dc2110;
+    .btn-submit:hover[b-46yk8sfk5l]{
+        background-color: #218838; /* Color de fondo oscuro */
+    }
+    .btn-delete:hover[b-46yk8sfk5l]{
+        background-color: #c82333; /* Color de fondo oscuro */
     }
 
 /* Estilos para la tarjeta */
 .profile-card[b-46yk8sfk5l] {
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #fff; /* Color de fondo */
     max-width: 400px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --------------------------------------- */
 /* Estilos para los campos de formulario */
 .form-group[b-46yk8sfk5l] {
     margin-bottom: 20px;
@@ -460,6 +491,7 @@ label[b-46yk8sfk5l] {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #333; /* Color de texto */
 }
 
 .form-control[b-46yk8sfk5l] {
@@ -471,25 +503,10 @@ label[b-46yk8sfk5l] {
     border-radius: 5px;
 }
 
-/* Estilos para el botón de envío */
-.btn-submit[b-46yk8sfk5l] {
-    background-color: #9ACD32; /* Verde claro */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-submit:hover[b-46yk8sfk5l] {
-        background-color: #7CFC00; /* Verde más claro al pasar el ratón */
-    }
-
 /* Estilo para el mensaje de respuesta */
 .response-message[b-46yk8sfk5l] {
     margin-top: 10px;
-    color: #4CAF50;
+    color: #28a745; /* Verde */
     font-weight: bold;
     text-align: center;
 }
@@ -502,4 +519,5 @@ label[b-46yk8sfk5l] {
 
 .content[b-pcs91oqswx] {
     flex: 1; /*Hace que el contenido ocupe todo el espacio disponible */
+    /*background-color: #ff6a00;*/
 }

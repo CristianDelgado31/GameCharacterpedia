@@ -1,4 +1,5 @@
 ﻿/* Estilo para el formulario */
+
 ::deep form {
     max-width: 400px;
     margin: auto;

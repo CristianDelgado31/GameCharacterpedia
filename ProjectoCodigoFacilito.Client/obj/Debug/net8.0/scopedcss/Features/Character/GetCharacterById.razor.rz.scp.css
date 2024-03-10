@@ -7,16 +7,23 @@
     max-width: 600px;
 }
 
+    .character-details h1[b-60zpituw3j] {
+        font-family: Arial, sans-serif; /* Cambia la fuente del título */
+        font-size: 24px; /* Cambia el tamaño del título */
+        color: #333333; /* Cambia el color del texto del título */
+        font-weight: bold; /* Hace que el título sea más grueso */
+    }
+
 .character-info[b-60zpituw3j] {
     margin-bottom: 20px;
 }
 
-    .character-info h2[b-60zpituw3j] {
-        margin-top: 0;
-    }
-
-    .character-info p[b-60zpituw3j] {
-        margin-bottom: 10px;
+    .character-info h2[b-60zpituw3j], .character-info p[b-60zpituw3j] {
+        font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+        font-size: 16px; /* Cambia el tamaño del texto */
+        color: #333333; /* Cambia el color del texto */
+        margin-bottom: 10px; /* Añade un espacio entre los párrafos */
+        line-height: 1.6; /* Ajusta la altura de línea para hacer el texto más legible */
     }
 
     .character-info img.character-image[b-60zpituw3j] {

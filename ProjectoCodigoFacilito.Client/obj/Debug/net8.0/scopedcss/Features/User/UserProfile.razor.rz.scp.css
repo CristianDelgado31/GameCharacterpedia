@@ -1,14 +1,13 @@
 /* Estilos para el contenedor principal */
 .profile-container[b-46yk8sfk5l] {
-    margin-top: 70px;
+    margin-top: 50px; /* Reducido el margen superior */
     padding: 20px; /* Espacio interior para mejorar la apariencia */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Alinear el contenido en columna */
-    text-align: center; /* Centrar el texto */
     border-radius: 10px; /* Borde redondeado */
-    background-color: #d2b48c; /* Color de fondo */
+    background-color: #f3f3f3; /* Color de fondo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -22,64 +21,60 @@
 /* Estilos para los elementos del perfil */
 .profile-item[b-46yk8sfk5l] {
     margin-bottom: 15px; /* Espacio entre elementos */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
 }
 
-/* Estilos para el botón de logout */
-.btn-logout[b-46yk8sfk5l] {
-    background-color: #c82333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Estilos para los botones */
+.btn-logout[b-46yk8sfk5l],
+.btn-modify[b-46yk8sfk5l],
+.btn-delete[b-46yk8sfk5l],
+.btn-submit[b-46yk8sfk5l] {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-bottom: 10px; /* Espacio inferior */
 }
 
+.btn-modify[b-46yk8sfk5l]{
+    background-color: #ffc107; /* Color de fondo */
+}
+.btn-submit[b-46yk8sfk5l]{
+    background-color: #28a745; /* Color de fondo */
+}
+.btn-delete[b-46yk8sfk5l]{
+    background-color: #dc3545; /* Color de fondo */
+}
+
+    /* Estilos para los botones al pasar el ratón */
     .btn-logout:hover[b-46yk8sfk5l] {
-        background-color: #dc3545;
+        background-color: #0056b3; /* Color de fondo oscuro */
     }
 
-.btn-modify[b-46yk8sfk5l] {
-    background-color: #c0a700; /* Amarillo */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-modify:hover[b-46yk8sfk5l] {
-        background-color: #ecd233; /* Amarillo oscurecido al pasar el ratón */
+    .btn-modify:hover[b-46yk8sfk5l]{
+        background-color: #d39e00; /* Color de fondo oscuro */
     }
-
-.btn-delete[b-46yk8sfk5l] {
-    background-color: #333; /* Rojo */
-    color: #dc3545;
-    border: none;
-    margin-left: 120px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-delete:hover[b-46yk8sfk5l] {
-        /* background-color: #333; */ /* Rojo oscurecido al pasar el ratón */
-        color: #dc2110;
+    .btn-submit:hover[b-46yk8sfk5l]{
+        background-color: #218838; /* Color de fondo oscuro */
+    }
+    .btn-delete:hover[b-46yk8sfk5l]{
+        background-color: #c82333; /* Color de fondo oscuro */
     }
 
 /* Estilos para la tarjeta */
 .profile-card[b-46yk8sfk5l] {
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #fff; /* Color de fondo */
     max-width: 400px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --------------------------------------- */
 /* Estilos para los campos de formulario */
 .form-group[b-46yk8sfk5l] {
     margin-bottom: 20px;
@@ -89,6 +84,7 @@ label[b-46yk8sfk5l] {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #333; /* Color de texto */
 }
 
 .form-control[b-46yk8sfk5l] {
@@ -100,25 +96,10 @@ label[b-46yk8sfk5l] {
     border-radius: 5px;
 }
 
-/* Estilos para el botón de envío */
-.btn-submit[b-46yk8sfk5l] {
-    background-color: #9ACD32; /* Verde claro */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    .btn-submit:hover[b-46yk8sfk5l] {
-        background-color: #7CFC00; /* Verde más claro al pasar el ratón */
-    }
-
 /* Estilo para el mensaje de respuesta */
 .response-message[b-46yk8sfk5l] {
     margin-top: 10px;
-    color: #4CAF50;
+    color: #28a745; /* Verde */
     font-weight: bold;
     text-align: center;
 }

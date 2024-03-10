@@ -11,3 +11,12 @@
     align-items: center;
     height: 100%;
 }
+.github-link {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Opcional: Puedes añadir negrita al texto si lo deseas */
+}
+
+    .github-link:hover {
+        text-decoration: underline; /* Opcional: Subrayado al pasar el mouse por encima */
+    }

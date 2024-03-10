@@ -1,41 +1,43 @@
-/*body {
-    margin: 0;
-    padding: 0;
-}
 
-.header {
+
+.header[b-gtj64fezvg] {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    height: 50px;*/ /* Ajusta la altura según tus necesidades */
-/*}
+    height: 50px; /* Ajusta la altura según tus necesidades */
+    
+}
 
-    .header button {
+    .header button[b-gtj64fezvg] {
         background-color: transparent;
-        color: white;
+        color: #ffffff;
         border: none;
         cursor: pointer;
         font-size: 16px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
     }
 
-        .header button:hover {
-            text-decoration: underline;
-        }
-
-.container {
-    max-width: 1200px;*/ /* Ajusta el ancho máximo según tus necesidades */
-    /*margin: auto;
+.header button:hover[b-gtj64fezvg] {
+    text-decoration: underline;
 }
 
-.header div {
+.container[b-gtj64fezvg] {
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+}
+
+.header div[b-gtj64fezvg] {
     display: flex;
     align-items: center;
 }
 
-.btn-create-character {
+.btn-create-character[b-gtj64fezvg] {
     background-color: transparent;
     color: white;
     border: none;
@@ -43,6 +45,7 @@
     font-size: 16px;
 }
 
-    .btn-create-character:hover {
+    .btn-create-character:hover[b-gtj64fezvg] {
         text-decoration: underline;
-    }*/
+    }
+
