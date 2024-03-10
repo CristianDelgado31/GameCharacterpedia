@@ -1,3 +1,4 @@
+using AutoMapper;
 using MediatR;
 using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
 using ProjectoCodigoFacilito.Domain.Entities;
@@ -8,9 +9,11 @@ namespace ProjectoCodigoFacilito.Application.Users.Queries.GetUserById;
 public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDTO>
 {
     private readonly IUserRepository _userRepository;
-    public GetUserByIdQueryHandler(IUserRepository userRepository)
+    private readonly IMapper _mapper;
+    public GetUserByIdQueryHandler(IUserRepository userRepository, IMapper mapper)
     {
         _userRepository = userRepository;
+        _mapper = mapper;
     }
     
     public async Task<UserDTO> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
@@ -19,9 +22,7 @@ public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDTO
 
         if (user == null)
             return null;
-        
-        return new UserDTO(user.Id, user.Name, user.Email, user.Password, user.Role, user.listFavoriteCharacters,
-            user.IsDeleted, user.CreatedDate, user.ModifiedDate);
 
+        return _mapper.Map<UserDTO>(user);
     }
 }

@@ -551,7 +551,6 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\ProjectoCodigoFacilito.API.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\ProjectoCodigoFacilito.API.pdb
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\AutoMapper.dll
-D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\Azure.Core.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\Azure.Identity.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\Firebase.Auth.dll
@@ -820,3 +819,4 @@ D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\obj\Debug\net8.0\Projecto.77FB6284.Up2Date
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\IdentityModel.dll
+D:\PROGRAMAS\RiderProjects\ProjectoCodigoFacilito\ProjectoCodigoFacilito.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

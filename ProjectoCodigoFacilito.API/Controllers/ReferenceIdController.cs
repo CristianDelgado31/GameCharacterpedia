@@ -23,7 +23,7 @@ public class ReferenceIdController : ApiControllerBase
     [Authorize(Roles = "Administrator")]
     public async Task<ActionResult<List<ReferenceIdDTO>>> GetAll()
     {
-        return await Mediator.Send(new GetReferenceIdQuery());
+        return await Mediator.Send(new GetAllReferenceIdQuery());
         
     }
 

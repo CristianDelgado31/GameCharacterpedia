@@ -1,4 +1,5 @@
 using System.Reflection;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,7 +11,9 @@ public static class ConfigureServices
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        //services.AddAutoMapper(Assembly.GetExecutingAssembly()); // Add AutoMapper
+
+        services.AddAutoMapper(Assembly.GetExecutingAssembly()); // Add AutoMapper
+
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()); // Add FluentValidation validators
         services.AddMediatR(ctg =>
         {

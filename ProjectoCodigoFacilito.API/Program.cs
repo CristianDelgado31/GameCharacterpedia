@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProjectoCodigoFacilito.Application;
-using ProjectoCodigoFacilito.Domain.Repository;
 using ProjectoCodigoFacilito.Infraestructure;
 using System.Text;
 
@@ -18,6 +17,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
+// Add JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -82,7 +82,6 @@ app.UseCors(builder =>
            .AllowAnyHeader()
            .AllowAnyMethod();
 });
-
 
 
 app.MapControllers();

@@ -57,7 +57,7 @@ namespace ProjectoCodigoFacilito.Client.Services
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PostAsync("api/Character", content);
-                //var responseContent = await response.Content.ReadAsStringAsync();
+
                 var result = System.Text.Json.JsonSerializer.Deserialize<ResultCreateCharacter>(await response.Content.ReadAsStringAsync(),
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
@@ -96,7 +96,7 @@ namespace ProjectoCodigoFacilito.Client.Services
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PutAsync("api/Character/update", content);
-                //var responseContent = await response.Content.ReadAsStringAsync();
+
                 var result = System.Text.Json.JsonSerializer.Deserialize<ResultUpdateCharacter>(await response.Content.ReadAsStringAsync(),
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 

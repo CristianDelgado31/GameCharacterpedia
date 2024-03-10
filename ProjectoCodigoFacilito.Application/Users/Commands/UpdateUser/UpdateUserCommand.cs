@@ -10,5 +10,6 @@ public class UpdateUserCommand : IRequest<int>
     public string Email { get; set; }
     public string Password { get; set; }
     public string Role { get; set; }
+    public DateTime ModifiedDate { get; set; } = DateTime.Now;
 
 }

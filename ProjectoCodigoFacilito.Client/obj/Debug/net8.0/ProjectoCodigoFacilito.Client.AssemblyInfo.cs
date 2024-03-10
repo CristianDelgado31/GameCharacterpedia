@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectoCodigoFacilito.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd9bda4953e7382cdaa35d9c7f9b69e023698e3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e977b435110d1648a7837cd90cebe7e6e3f0956a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectoCodigoFacilito.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectoCodigoFacilito.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

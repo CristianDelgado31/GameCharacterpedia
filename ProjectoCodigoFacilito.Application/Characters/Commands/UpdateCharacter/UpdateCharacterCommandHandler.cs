@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
 using System;
@@ -13,23 +14,16 @@ namespace ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter
     {
         private readonly ICharacterRepository _characterRepository;
         private readonly IFirebaseService _firebaseService;
-        public UpdateCharacterCommandHandler(ICharacterRepository characterRepository, IFirebaseService firebaseService)
+        private readonly IMapper _mapper;
+        public UpdateCharacterCommandHandler(ICharacterRepository characterRepository, IFirebaseService firebaseService, IMapper mapper)
         {
             _characterRepository = characterRepository;
             _firebaseService = firebaseService;
+            _mapper = mapper;
         }
         public async Task<int> Handle(UpdateCharacterCommand request, CancellationToken cancellationToken)
         {
-            var newCharacter = new Character
-            {
-                Id = request.Id,
-                Name = request.Name,
-                Game = request.Game,
-                History = request.History,
-                Role = request.Role,
-                ModifiedById = request.ModifiedById,
-                ModifiedDate = DateTime.Now,
-            };
+            var newCharacter = _mapper.Map<Character>(request);
 
             MemoryStream stream = new MemoryStream(request.ImageStream);
             newCharacter.ImageUrl = await _firebaseService.UploadStorage(request.nameImageStream, stream);

@@ -23,12 +23,23 @@ public class ReferenceIdRepository : IReferenceIdRepository
     
     public async Task<int> DeleteReferenceAsync(int userId, int characterId)
     {
-        return await _dbContext.ReferenceIds
-            .Where(r => r.UserId == userId && r.CharacterId == characterId)
-            .ExecuteUpdateAsync(setters => setters
-                .SetProperty(r => r.IsVisible, false));
+        var reference = await _dbContext.ReferenceIds
+        .Where(r => r.UserId == userId && r.CharacterId == characterId)
+        .FirstOrDefaultAsync();
+
+        if (reference == null)
+        {
+            return 0; // No se encontró ningún registro que coincida con el userId y el characterId dados
+        }
+
+        reference.IsVisible = false; // Cambiar el valor de IsVisible a false
+        _dbContext.Update(reference); // Marcar la entidad como modificada
+        await UnitOfWork.SaveChangesAsync(); // Guardar los cambios en la base de datos
+
+        return 1; // Se cambió el valor de IsVisible a false
+
     }
-    
+
     public async Task<ReferenceId> CreateAsync(ReferenceId entity)
     {
         await _dbContext.ReferenceIds.AddAsync(entity);
@@ -36,7 +47,7 @@ public class ReferenceIdRepository : IReferenceIdRepository
         return entity;
     }
 
-    //En uso este get by id
+
     public async Task<ReferenceId?> GetByReferenceIdAsync(int userId, int characterId)
     {
         return await _dbContext.ReferenceIds
@@ -46,9 +57,20 @@ public class ReferenceIdRepository : IReferenceIdRepository
 
     public async Task<int> UpdateReferenceAsync(int userId, int characterId)
     {
-        return await _dbContext.ReferenceIds
-            .Where(r => r.UserId == userId && r.CharacterId == characterId)
-            .ExecuteUpdateAsync(setters => setters
-                           .SetProperty(r => r.IsVisible, true));
+
+        var reference = await _dbContext.ReferenceIds
+        .Where(r => r.UserId == userId && r.CharacterId == characterId)
+        .FirstOrDefaultAsync();
+
+        if (reference == null)
+        {
+            return 0; // No se encontró ningún registro que coincida con el userId y el characterId dados
+        }
+
+        reference.IsVisible = true;
+        _dbContext.Update(reference);
+        await UnitOfWork.SaveChangesAsync();
+
+        return 1; // Se cambió el valor de IsVisible a true
     }
 }

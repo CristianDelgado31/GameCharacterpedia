@@ -11,33 +11,20 @@ namespace ProjectoCodigoFacilito.Application.Users.Commands.CreateUser
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDTO>
     {
         private readonly IUserRepository _userRepository;
-        
-        public CreateUserCommandHandler(IUserRepository userRepository)
+        private readonly IMapper _mapper;
+        public CreateUserCommandHandler(IUserRepository userRepository, IMapper mapper)
         {
             _userRepository = userRepository;
+            _mapper = mapper;
         }
         public async Task<UserDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var userEntity = new User
-            {
-                Name = request.Name,
-                Email = request.Email,
-                Password = request.Password,
-                Role = request.Role,
-                CreatedDate = DateTime.Now,
-                IsDeleted = false,
-                ModifiedDate = DateTime.Now,
-            };
 
-            
-            var result = await _userRepository.CreateAsync(userEntity);
+            User test = _mapper.Map<User>(request);
 
-            if(result == null)
-                return null;
-            
-            return new UserDTO(result.Id, result.Name, result.Email, result.Password, result.Role, result.listFavoriteCharacters,
-                result.IsDeleted, result.CreatedDate, result.ModifiedDate);
+            var result = await _userRepository.CreateAsync(test);
 
+            return _mapper.Map<UserDTO>(result);
         }
     }
 }

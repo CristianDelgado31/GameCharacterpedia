@@ -13,4 +13,5 @@ public class CreateCharacterCommand : IRequest<CharacterDTO>
     public int CreatedById { get; set; }
     public byte[] ImageStream { get; set; }
     public string nameImageStream { get; set; }
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
 }

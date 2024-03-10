@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ProjectoCodigoFacilito.Client",
   "resources": {
-    "hash": "sha256-X9OeopR27lNmxA1Yf8KWswhhSEkNrg917c0XlSJM3eA=",
+    "hash": "sha256-ByLdq5uonrbm6pli3/6w2VH3YsVKkzXPOgPrXkvXbRk=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.r5je6wb4ro.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -211,10 +211,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "ProjectoCodigoFacilito.Client.wasm": "sha256-SYr6/RKkGyUeIMbfFtU4iULYeph/5TC/rFuPmRqQeUY="
+      "ProjectoCodigoFacilito.Client.wasm": "sha256-7JGitO9PwLV50/V+Bg+jmNyUqbXJ0ecW6dDtxRB5gGc="
     },
     "pdb": {
-      "ProjectoCodigoFacilito.Client.pdb": "sha256-DU04Q6FSLzq2g00vAo6/kSHVeVjk+DpkrGVEl/PCIa4="
+      "ProjectoCodigoFacilito.Client.pdb": "sha256-RBA77Ohdlvw9kQZjv2K7KlhXymjP6XycNs02p2jPF+g="
     }
   },
   "cacheBootResources": true,

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Appl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectoCodigoFacilito.Client", "ProjectoCodigoFacilito.Client\ProjectoCodigoFacilito.Client.csproj", "{7D254883-A1E3-4A1B-9E3F-59920820D30B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCodigoFacilito.UnitTesting.Api.Test", "ProjectoCodigoFacilito.UnitTesting.Api.Test\ProjectoCodigoFacilito.UnitTesting.Api.Test.csproj", "{5FA0E4DB-1BB0-46C3-AE81-85FC5666C9DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D254883-A1E3-4A1B-9E3F-59920820D30B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA0E4DB-1BB0-46C3-AE81-85FC5666C9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA0E4DB-1BB0-46C3-AE81-85FC5666C9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA0E4DB-1BB0-46C3-AE81-85FC5666C9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA0E4DB-1BB0-46C3-AE81-85FC5666C9DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

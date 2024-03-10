@@ -3,6 +3,7 @@ using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
 using ProjectoCodigoFacilito.Domain.Entities;
 using ProjectoCodigoFacilito.Domain.Repository;
 using ProjectoCodigoFacilito.Infraestructure.Data;
+using System.Data;
 
 namespace ProjectoCodigoFacilito.Infraestructure.Repository;
 
@@ -58,7 +59,7 @@ public class UserRepository : IUserRepository
     public async Task<User?> GetUserSignIn(User user)
     {
         var userEntity = await _dbContext.Users
-            .Where(model => model.Email == user.Email && model.Password == user.Password)
+            .Where(model => model.Email == user.Email && model.Password == user.Password && model.IsDeleted == false)
             .FirstOrDefaultAsync();
         
         return userEntity;
@@ -67,7 +68,7 @@ public class UserRepository : IUserRepository
     public async Task<User> CreateAsync(User entity)
     {
         var user = await _dbContext.Users
-            .Where(model => model.Email == entity.Email)
+            .Where(model => model.Email == entity.Email && model.IsDeleted == false)
             .FirstOrDefaultAsync();
 
         if (user != null)
@@ -83,14 +84,27 @@ public class UserRepository : IUserRepository
 
     public async Task<int> DeleteAsync(int id) // Soft delete (IsDeleted = true) no se borra fisicamente
     {
-        return await _dbContext.Users
+        var user = await _dbContext.Users
             .Where(model => model.Id == id)
-            .ExecuteUpdateAsync(setters => setters
-                .SetProperty(m => m.IsDeleted, true));
+            .FirstOrDefaultAsync();
+        if (user == null) return 0;
+
+        user.IsDeleted = true;
+        _dbContext.Update(user);
+        await UnitOfWork.SaveChangesAsync();
+        return 1;
+
     }
 
     public async Task<int> UpdateUserAsync(int id, User entity)
     {
+        var user = await _dbContext.Users
+            .Where(model => model.Email == entity.Email && model.IsDeleted == false)
+            .FirstOrDefaultAsync();
+
+        if (user != null)
+            return 0; // Email ya existe
+
         return await _dbContext.Users
             .Where(model => model.Id == id)
             .ExecuteUpdateAsync(setters => setters

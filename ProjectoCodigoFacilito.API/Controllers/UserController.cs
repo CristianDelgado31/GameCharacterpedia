@@ -20,7 +20,6 @@ namespace ProjectoCodigoFacilito.API.Controllers;
 [ApiController]
 public class UserController : ApiControllerBase
 {
-    //private readonly IConfiguration _config;
 
     public UserController(IConfiguration config)
     {
@@ -83,7 +82,7 @@ public class UserController : ApiControllerBase
             var userDto = await Mediator.Send(checkUser);
 
             if (userDto == null)
-                return NotFound(new CheckUserResult { Success = false, Token = null, Error = "Usuario no encontrado"});
+                return NotFound(new CheckUserResult { Success = false, Token = null, Error = "User not found" });
 
             var generateToken = new JwtTokenGenerator(_config);
             var token = generateToken.GenerateJwt(userDto);
@@ -115,8 +114,8 @@ public class UserController : ApiControllerBase
     {
         try
         {
-            //Es buena practica dejar esto acá? o debería ir en el handler? -> 
-            var chainEmailBase64 = Convert.FromBase64String(command.Email);
+            //Vuelve los datos a su estado original antes de la validacion de FV
+           var chainEmailBase64 = Convert.FromBase64String(command.Email);
             var chainUserNameBase64 = Convert.FromBase64String(command.Name);
             var chainPasswordBase64 = Convert.FromBase64String(command.Password);
             command.Email = Encoding.UTF8.GetString(chainEmailBase64);
@@ -126,7 +125,7 @@ public class UserController : ApiControllerBase
             var user = await Mediator.Send(command);
 
             if (user == null)
-                return BadRequest(new UserCreationResult { Error = "Ese email ya esta en uso.", Success = false});
+                return BadRequest(new UserCreationResult { Error = "That email is already in use.", Success = false});
 
             return Ok(new UserCreationResult { Error = null, Success = true});
         }
@@ -149,12 +148,12 @@ public class UserController : ApiControllerBase
         try
         {
             if (id != command.Id)
-                return BadRequest(new UpdateUserResult { Error = "Id y command.Id no son iguales", Success = false});
+                return BadRequest(new UpdateUserResult { Error = "Id and command.Id are not the same", Success = false});
 
             var result = await Mediator.Send(command);
 
             if (result == 0)
-                return NotFound(new UpdateUserResult { Error = "El Nombre del Personaje elegido no existe"});
+                return NotFound(new UpdateUserResult { Error = "The chosen email is already in use or there are problems with the server" });
 
             return Ok(new UpdateUserResult { Error = null, Success = true});
         }

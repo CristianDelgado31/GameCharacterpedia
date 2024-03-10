@@ -1,47 +1,25 @@
-using System.Reflection;
-using AutoMapper;
+﻿using AutoMapper;
+using ProjectoCodigoFacilito.Application.Characters.Commands.CreateCharacter;
+using ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter;
+using ProjectoCodigoFacilito.Application.Characters.Queries.GetCharacters;
+using ProjectoCodigoFacilito.Application.Users.Commands.CreateUser;
+using ProjectoCodigoFacilito.Application.Users.Commands.UpdateUser;
+using ProjectoCodigoFacilito.Application.Users.Queries.GetUsers;
+using ProjectoCodigoFacilito.Domain.Entities;
 
-namespace ProjectoCodigoFacilito.Application.Common.Mapping;
 
-public class MappingProfile
+namespace ProjectoCodigoFacilito.Application.Common.Mapping
 {
-    public MappingProfile()
+    public class MappingProfile : Profile
     {
-        ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
-    }
-    
-    private void ApplyMappingsFromAssembly(Assembly assembly)
-    {
-        var mapFromType = typeof(IMapFrom<>);
-        var mappingMethodName = nameof(IMapFrom<object>.Mapping);
-        bool HasInterface(Type t) => t.IsGenericType && t.GetGenericTypeDefinition() == mapFromType;
-        var types = assembly.GetExportedTypes().Where(t => t.GetInterfaces().Any(HasInterface)).ToList();
-        var argumentTypes = new Type[] { typeof(Profile) };
-        
-        foreach (var type in types)
+        public MappingProfile()
         {
-            var instance = Activator.CreateInstance(type);
-            
-            var methodInfo = type.GetMethod(mappingMethodName);
-            
-            if (methodInfo != null)
-            {
-                methodInfo.Invoke(instance, new object[] { this });
-            }
-            else
-            {
-                var interfaces = type.GetInterfaces().Where(HasInterface).ToList();
-                
-                if(interfaces.Count > 0)
-                {
-                    foreach (var @interface in interfaces)
-                    {
-                        var interfaceMethodInfo = @interface.GetMethod(mappingMethodName, argumentTypes);
-                        interfaceMethodInfo?.Invoke(instance, new object[] { this });
-                    }
-                }
-
-            }
+            CreateMap<CreateUserCommand, User>(); // Esto retorna un User
+            CreateMap<UpdateUserCommand, User>();
+            CreateMap<User,UserDTO>();
+            CreateMap<CreateCharacterCommand, Character>();
+            CreateMap<Character, CharacterDTO>();
+            CreateMap<UpdateCharacterCommand, Character>();
         }
     }
 }

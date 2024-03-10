@@ -17,5 +17,7 @@ namespace ProjectoCodigoFacilito.Application.Characters.Commands.UpdateCharacter
         public int ModifiedById { get; set; }
         public byte[] ImageStream { get; set; }
         public string nameImageStream { get; set; }
+        public DateTime ModifiedDate { get; set; } = DateTime.Now;
+        public string ImageUrl { get; set; } = "";
     }
 }
