@@ -41,28 +41,28 @@
 }
 
 .btn-modify[b-46yk8sfk5l]{
-    background-color: #ffc107; /* Color de fondo */
+    background-color: #ffc107;
 }
 .btn-submit[b-46yk8sfk5l]{
-    background-color: #28a745; /* Color de fondo */
+    background-color: #28a745;
 }
 .btn-delete[b-46yk8sfk5l]{
-    background-color: #dc3545; /* Color de fondo */
+    background-color: #dc3545;
 }
 
     /* Estilos para los botones al pasar el ratón */
     .btn-logout:hover[b-46yk8sfk5l] {
-        background-color: #0056b3; /* Color de fondo oscuro */
+        background-color: #0056b3;
     }
 
     .btn-modify:hover[b-46yk8sfk5l]{
-        background-color: #d39e00; /* Color de fondo oscuro */
+        background-color: #d39e00; 
     }
     .btn-submit:hover[b-46yk8sfk5l]{
-        background-color: #218838; /* Color de fondo oscuro */
+        background-color: #218838;
     }
     .btn-delete:hover[b-46yk8sfk5l]{
-        background-color: #c82333; /* Color de fondo oscuro */
+        background-color: #c82333;
     }
 
 /* Estilos para la tarjeta */

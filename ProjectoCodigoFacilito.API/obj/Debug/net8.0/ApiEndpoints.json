@@ -389,7 +389,7 @@
   {
     "ContainingType": "ProjectoCodigoFacilito.API.Controllers.UserController",
     "Method": "ConvertToBase64",
-    "RelativePath": "api/User/convert-tobase64",
+    "RelativePath": "api/User/convert-tobase64/{value}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -397,7 +397,7 @@
       {
         "Name": "value",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

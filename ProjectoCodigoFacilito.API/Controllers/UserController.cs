@@ -112,8 +112,9 @@ public class UserController : ApiControllerBase
     {
         try
         {
+
             //Vuelve los datos a su estado original antes de la validacion de FV
-           var chainEmailBase64 = Convert.FromBase64String(command.Email);
+            var chainEmailBase64 = Convert.FromBase64String(command.Email);
             var chainUserNameBase64 = Convert.FromBase64String(command.Name);
             var chainPasswordBase64 = Convert.FromBase64String(command.Password);
             command.Email = Encoding.UTF8.GetString(chainEmailBase64);
@@ -206,7 +207,7 @@ public class UserController : ApiControllerBase
     }
 
     //HtppGet para convertir a base64 los atributos de CreateUserCommand (Name, Email, Password) para swagger o postman
-    [HttpGet("convert-tobase64")]
+    [HttpGet("convert-tobase64/{value}")]
     public string ConvertToBase64(string value)
     {
         var chain = Encoding.UTF8.GetBytes(value);
