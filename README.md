@@ -32,8 +32,12 @@ La aplicación ofrece una experiencia personalizada al permitir que los usuarios
 - **Validación de datos:** Fluent Validation
 - **Mapeo de objetos:** AutoMapper
 - **Registro de eventos y trazabilidad:** Serilog
+- **Pruebas unitarias:** XUnit.net, Entity Framework In-Memory
 ---
 
+## Despliegue
+1. Se utilizo Azure para el despliegue de la web api, el cliente y la creacion de la base de datos
+ 
 ## Instrucciones de instalación
 
 1. Clona este repositorio en tu máquina local.
