@@ -1,9 +1,9 @@
-﻿@* @page "/get-all-characters" *@
+@* @page "/get-all-characters" *@
 @page "/"
 @using System.Net.Http.Json
-@using ProjectoCodigoFacilito.Client.Models.CharacterModel
-@using ProjectoCodigoFacilito.Client.Services.Interfaces
-@using ProjectoCodigoFacilito.Client.Features.Components
+@using ProjectCodigoFacilito.Client.Models.CharacterModel
+@using ProjectCodigoFacilito.Client.Services.Interfaces
+@using ProjectCodigoFacilito.Client.Features.Components
 
 @inject ICharacterService characterService
 @inject NavigationManager NavigationManager
@@ -11,6 +11,12 @@
 
 <PageTitle>Home</PageTitle>
 <h1>Characters</h1>
+
+<div class="search-container">
+    <input type="text" @bind="searchTerm" placeholder="Search by name" class="search-input" />
+    <button @onclick="SearchCharacter" disabled="@(searchTerm=="")" class="search-button">Search</button>
+</div>
+
 <ul class="character-list">
     @foreach (var character in characters)
     {
@@ -30,6 +36,7 @@
 
 @code {
     private List<GetCharacterModel> characters = new List<GetCharacterModel>();
+    private string searchTerm = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -40,4 +47,48 @@
     {
         NavigationManager.NavigateTo($"/get-character-by-id/{characterId}");
     }
+
+    private async Task SearchCharacter()
+    {
+        var resultSearch = characters.Where(c => c.Name.ToLower().Contains(searchTerm.ToLower())).FirstOrDefault();
+        if (resultSearch != null)
+        {
+            await NavigateToCharacter(resultSearch.Id);
+        }
+        else
+        {
+            searchTerm = "";
+        }
+    }
 }
+
+@* No me funciona los estilos del input search by name en el CSS Isolation del componente asi que lo agrego acá *@
+<style>
+    .search-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 300px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .search-button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+</style>
