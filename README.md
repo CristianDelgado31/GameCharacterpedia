@@ -12,7 +12,7 @@ La aplicación ofrece una experiencia personalizada al permitir que los usuarios
 
 ## Funcionalidades clave
 
-1. **Exploración de personajes:** Los usuarios pueden buscar y explorar una amplia variedad de personajes de videojuegos utilizando filtros y categorías. (pendiente)
+1. **Exploración de personajes:** Los usuarios pueden buscar y explorar una amplia variedad de personajes de videojuegos utilizando filtro por nombre del personaje. (pendiente)
 
 2. **Guardado de favoritos:** Los usuarios registrados pueden guardar sus personajes favoritos en la sección "Favorites" para acceder fácilmente a ellos más tarde.
 
