@@ -24,7 +24,7 @@ La aplicación ofrece una experiencia personalizada al permitir que los usuarios
 
 ## Tecnologías utilizadas
 
-- **Frontend:** HTML, CSS Isolation, Blazor Webassembly
+- **Frontend:** HTML, CSS Isolation, C#
 - **Backend:** C# con .NET Core
 - **Base de datos:** SQL Server para almacenar información de usuario y personajes favoritos
 - **Autenticación:** JSON Web Tokens (JWT) para autenticación de usuarios
