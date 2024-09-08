@@ -8,9 +8,9 @@ namespace ProjectoCodigoFacilito.Infraestructure.FireBaseService;
 public class FirebaseService : IFirebaseService
 {
     private static readonly string route = "projectcodigofacilito.appspot.com";
-    private static readonly string apiKey = "AIzaSyByBJ4KU9GdhfvS-dn5FJugw0bNWVE-ig4";
-    private static readonly string email = "sniperfrogen@gmail.com";
-    private static readonly string password = "1822323302LOL";
+    private static readonly string apiKey = "API-KEY example";
+    private static readonly string email = "example@gmail.com";
+    private static readonly string password = "PASSWORD EXAMPLE";
 
     public async Task<string> UploadStorage(string imageName, Stream stream)
     {
